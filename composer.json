@@ -15,7 +15,8 @@
         "laravel-frontend-presets/tall": "^2.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.3"
+        "livewire/livewire": "^2.3",
+        "laravel/nova": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -24,6 +25,12 @@
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
