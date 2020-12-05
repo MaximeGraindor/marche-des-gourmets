@@ -13,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::view('/', 'home')->name('home');
+Route::view('/qui-sommes-nous', 'pages.about')->name('about');
+Route::view('/exposants', 'pages.exhibitors')->name('exhibitors');
+Route::view('/informations-pratique', 'pages.informations')->name('informations');
+Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/billeterie', 'pages.ticketing')->name('ticketing');
