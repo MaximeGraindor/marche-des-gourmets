@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Accueil - Marché des Gourmets</title>
 
-        <link rel="stylesheet" href="{{ asset('css/app.css')) }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @livewireStyles
 
-        <script src="{{ asset('js/app.js')) }}" defer></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
     </head>
 
