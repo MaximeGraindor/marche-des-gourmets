@@ -1,0 +1,23 @@
+.footer{
+    font-family: 'Titillium Web', sans-serif;
+    .footer-top{
+        background-color: $color-red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+    }
+    .footer-bottom{
+        background-color: $color-red-dark;
+        padding: 1.3em;
+        .footer-menu{
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .footer-menu-link{
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
