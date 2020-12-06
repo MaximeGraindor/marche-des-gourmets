@@ -1,5 +1,10 @@
 .footer{
     font-family: 'Titillium Web', sans-serif;
+
+    .active{
+        border-bottom: 1px solid white ;
+    }
+
     .footer-top{
         background-color: $color-red;
         display: flex;

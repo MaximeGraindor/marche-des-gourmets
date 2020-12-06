@@ -140,6 +140,10 @@ table {
   font-family: "Titillium Web", sans-serif;
 }
 
+.footer .active {
+  border-bottom: 1px solid white;
+}
+
 .footer .footer-top {
   background-color: #562121;
   display: flex;
