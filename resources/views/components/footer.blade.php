@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer-top">
-        <img src="" alt="Logo du Marché des Gourmets">
+        <img src="{{ asset('/storage/assets/logoMdgWhite.png') }}" alt="Logo du Marché des Gourmets">
     </div>
     <div class="footer-bottom">
         <ul class="footer-menu">
