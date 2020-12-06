@@ -1,0 +1,23 @@
+.header-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2rem;
+    font-family: $font-content;
+    font-size: 1.2rem;
+
+    .active{
+        border-bottom: 1px solid $color-red;
+    }
+
+    .header-menu-item{
+        img{
+            width: 180px;
+        }
+    }
+    .header-menu-link{
+        color: black;
+        text-decoration: none;
+    }
+}
