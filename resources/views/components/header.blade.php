@@ -34,4 +34,5 @@
             </a>
         </li>
     </ul>
+    <div class="header-background"></div>
 </header>
