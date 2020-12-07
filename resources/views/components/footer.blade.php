@@ -1,3 +1,8 @@
+<section class="home-partenaires">
+    <h2 class="hidden partenaires-title">Nos partenaires</h2>
+    <img src="{{ asset('/storage/assets/logoProvinceDeLiege.png') }}" alt="">
+    <img src="{{ asset('/storage/assets/logoClub.png') }}" alt="">
+</section>
 <footer class="footer">
     <div class="footer-top">
         <img src="{{ asset('/storage/assets/logoMdgWhite.png') }}" alt="Logo du Marché des Gourmets">

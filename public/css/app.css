@@ -188,6 +188,20 @@ body {
   background-repeat: no-repeat;
 }
 
+.home-partenaires {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding: 3rem;
+}
+
+.home-partenaires img {
+  width: 20%;
+  height: auto;
+}
+
 .footer {
   font-family: "Titillium Web", sans-serif;
 }
