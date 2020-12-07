@@ -1,0 +1,88 @@
+.about{
+    @include max-width;
+    padding: 7rem;
+    p{
+        font-family: $font-content;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+    section:not(:last-child){
+        margin-bottom: 6rem;
+    }
+}
+
+.about-mdg{
+    display: flex;
+    .mdg-left{
+        padding-right: 2rem;
+        img{
+            width: 650px;
+            height: 670px;
+            object-fit: cover;
+            border: 2px solid $color-red;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.151);
+        }
+    }
+
+    .mdg-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-rf{
+    display: flex;
+    flex-direction: row-reverse;
+    .rf-left{
+        padding-left: 2rem;
+        img{
+            width: 650px;
+            height: 470px;
+            object-fit: cover;
+            border: 2px solid $color-red;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.151);
+        }
+    }
+
+    .rf-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.r-top{
+    display: flex;
+    margin-bottom: 2.5rem;
+    .r-left{
+        padding-right: 2rem;
+        img{
+            width: 650px;
+            height: 516px;
+            object-fit: cover;
+            border: 2px solid $color-red;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.151);
+        }
+    }
+
+    .r-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.r-actions-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    .r-actions-item{
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
