@@ -1,0 +1,85 @@
+.home-intro{
+    font-family: $font-content;
+
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding: 3.5rem;
+
+    .home-intro-text{
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .home-intro-link{
+        text-decoration: none;
+        color: black;
+        background-color: $color-cta;
+        border: 1px solid $color-red;
+        padding: 0.9rem;
+        border-radius: 9px;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        &:hover{
+            background-color: $color-red;
+            border-color: $color-cta;
+            color: white;
+        }
+    }
+}
+
+.home-countdown {
+    width: 100%;
+    height: 300px;
+    background-image: url('/storage/img/background-countdown.jpg');
+    background-position: center -750px;
+    background-repeat: no-repeat;
+    font-family: $font-heading;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home-countdown-text{
+        text-align: center;
+        font-size: 3rem;
+        text-style: italic;
+        margin-bottom: 2.5rem;
+    }
+
+    .countdown-wrapper{
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        .countdown-item{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color:red
+        }
+    }
+}
+
+.home-album{
+    @include max-width;
+    padding: 2.5rem;
+    .album-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.album-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .album-item{
+        background-color: red;
+        width: 300px;
+        height: 300px;
+    }
+}

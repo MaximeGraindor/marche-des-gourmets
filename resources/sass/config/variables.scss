@@ -3,6 +3,13 @@ $color-red-dark: #411A1A;
 $color-red-light: #703838;
 
 $color-background: #F4F4F4;
+$color-cta :#FDEEDB;
+$color-background-image:#D6C1AC;
 
 $font-heading : 'Amaranth', Verdana, Arial, Helvetica, sans-serif;
-$font-content: 'Titillium Web', Verdana, Arial, Helvetica, sans-serif;;
+$font-content: 'Titillium Web', Verdana, Arial, Helvetica, sans-serif;
+
+@mixin max-width {
+    max-width: 1340px;
+    margin: 0 auto;
+}
