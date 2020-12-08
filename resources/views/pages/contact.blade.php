@@ -12,14 +12,60 @@
         </h2>
         <div class="contact-wrapper">
             <div class="contact-left">
+                <dl class="contact-left-list">
+                    <dd class="list-email">Email</dd>
+                    <dt>info@marchedesgourmets.be</dt>
 
+                    <dd class="list-telephone">Téléphone</dd>
+                    <dt>00 32 (0) 475 311 105</dt>
+
+                    <dd class="list-courrier">Courrier</dd>
+                    <dt>
+                        <span>c/o Philippe Vanstalle</span>
+                        <span>Quai de Rome, 10/23</span>
+                        <span>4000 Liège</span>
+                    </dt>
+                </dl>
             </div>
             <div class="contact-right">
                 <form action="#" method="post" class="contact-form">
-
+                    <div class="form-name">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-email">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="form-subject">
+                        <label for="subject">Sujet</label>
+                        <input type="text" name="subject" id="subject">
+                    </div>
+                    <div class="form-informations">
+                        <label for="informations">Informations supplémentaire</label>
+                        <textarea type="text" name="informations" id="informations"> </textarea>
+                    </div>
+                    <input type="submit" value="Postuler" class="form-submit">
                 </form>
             </div>
         </div>
+
+        <section class="missingInfo">
+            <h2 class="missingInfo-title">
+                Vous avez peut-être manqué ?
+            </h2>
+            <div class="missingInfo-wrapper">
+                <div class="missingInfo-item">
+                    <img src="" alt="">
+                    <span>infos</span>
+                </div>
+                <span>Ou</span>
+                <div class="missingInfo-item">
+                    <img src="" alt="">
+                    <span>infos</span>
+                </div>
+            </div>
+        </section>
     </main>
 
     <x-footer/>

@@ -649,3 +649,108 @@ body {
   margin-bottom: 2rem;
 }
 
+.contact-wrapper {
+  display: flex;
+  margin-bottom: 7rem;
+}
+
+.contact-left {
+  background-color: #562121;
+  color: white;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-left-list dd {
+  font-size: 1.6rem;
+  font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.contact-left-list dt {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.contact-left-list dt:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.contact-left-list .list-email::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url("/storage/assets/email.svg");
+  vertical-align: text-top;
+  margin-right: 10px;
+}
+
+.contact-left-list .list-telephone::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url("/storage/assets/phone.svg");
+  vertical-align: text-top;
+  margin-right: 10px;
+}
+
+.contact-left-list .list-courrier::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url("/storage/assets/letter.svg");
+  vertical-align: text-top;
+  margin-right: 10px;
+}
+
+.contact-right {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem 7rem;
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form div label {
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.contact-form div input,
+.contact-form div textarea {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  padding: 0.8rem 0.9rem;
+  font-size: 1.05rem;
+  border: 1px solid #562121;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.226);
+  resize: none;
+}
+
+.contact-form div input:focus,
+.contact-form div textarea:focus {
+  background-color: #FDEEDB;
+}
+
+.contact-form .form-subject {
+  grid-column: 1/3;
+}
+
+.missingInfo .missingInfo-title {
+  font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
