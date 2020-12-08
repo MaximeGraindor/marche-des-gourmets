@@ -69,27 +69,28 @@
                 <div class="r-actions-wrapper">
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>Construire la paix</span>
                     </div>
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>Combattre les maladies</span>
                     </div>
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>apporter l’eau potable,
+                            l’assainissement et l’hygiène</span>
                     </div>
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>soigner les mères et leurs enfants</span>
                     </div>
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>soutenir l’éducation</span>
                     </div>
                     <div class="r-actions-item">
                         <img src="" alt="Photo">
-                        <span>nom actions</span>
+                        <span>développer les économies locales</span>
                     </div>
                 </div>
             </section>

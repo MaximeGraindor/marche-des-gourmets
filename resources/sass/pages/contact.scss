@@ -1,0 +1,9 @@
+.contact{
+    @include max-width;
+    padding: 7rem;
+    .contact-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
