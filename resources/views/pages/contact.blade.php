@@ -55,15 +55,15 @@
                 Vous avez peut-être manqué ?
             </h2>
             <div class="missingInfo-wrapper">
-                <div class="missingInfo-item">
-                    <img src="" alt="">
-                    <span>infos</span>
-                </div>
-                <span>Ou</span>
-                <div class="missingInfo-item">
-                    <img src="" alt="">
-                    <span>infos</span>
-                </div>
+                <a href="#" class="missingInfo-item">
+                    <img src="{{ asset('/storage/img/missingInfo-exhibitor.jpg') }}" alt="">
+                    <span>Informations pratiques</span>
+                </a>
+                <span class="missingInfo-span">Ou</span>
+                <a href="#" class="missingInfo-item">
+                    <img src="{{ asset('/storage/img/missingInfo-exhibitor.jpg') }}" alt="">
+                    <span>Devenir exposant</span>
+                </a>
             </div>
         </section>
     </main>
