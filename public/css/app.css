@@ -393,7 +393,7 @@ body {
 
 .r-top {
   display: flex;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .r-top .r-left {
@@ -418,12 +418,27 @@ body {
 .r-actions-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
 }
 
 .r-actions-wrapper .r-actions-item {
-  background-color: red;
   display: flex;
   flex-direction: column;
+}
+
+.r-actions-wrapper .r-actions-item img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.r-actions-wrapper .r-actions-item span {
+  background-color: #562121;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
 }
 
 .exhibitors {

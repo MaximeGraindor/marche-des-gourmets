@@ -57,7 +57,7 @@
 
 .r-top{
     display: flex;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
     .r-left{
         padding-right: 2rem;
         img{
@@ -79,10 +79,21 @@
 .r-actions-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    font-family: $font-content;
     .r-actions-item{
-        background-color: red;
         display: flex;
         flex-direction: column;
+        img{
+            width: 300px;
+            height: 300px;object-fit: cover;
+        }
+        span{
+            background-color: $color-red;
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
     }
 
 }

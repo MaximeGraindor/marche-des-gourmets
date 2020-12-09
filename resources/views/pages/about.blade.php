@@ -68,28 +68,28 @@
                 </h3>
                 <div class="r-actions-wrapper">
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-peace.jpg') }}" alt="Photo">
                         <span>Construire la paix</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-desease.jpg') }}" alt="Photo">
                         <span>Combattre les maladies</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-hygiene.jpg') }}" alt="Photo">
                         <span>apporter l’eau potable,
                             l’assainissement et l’hygiène</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-motherAndChildren.jpg') }}" alt="Photo">
                         <span>soigner les mères et leurs enfants</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-classroom.jpg') }}" alt="Photo">
                         <span>soutenir l’éducation</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-localEconomy.jpg') }}" alt="Photo">
                         <span>développer les économies locales</span>
                     </div>
                 </div>
