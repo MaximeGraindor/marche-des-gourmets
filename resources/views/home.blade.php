@@ -55,6 +55,18 @@
             </div>
         </div>
 
+        <div class="home-infos">
+            <div class="infos-item">
+                <span>27 et 28 mars</span>
+            </div>
+            <div class="infos-item">
+                <span>5€ l'entrée</span>
+            </div>
+            <div class="infos-item">
+                <span>Chateau du Val Saint Lambert</span>
+            </div>
+        </div>
+
         <section class="home-album">
             <h2 class="album-title">
                 Anciennes éditions

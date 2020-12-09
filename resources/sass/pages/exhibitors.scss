@@ -8,10 +8,23 @@
 }
 
 .exhibitors-top{
+    display: flex;
+    justify-content: space-between;
     .top-title{
         font-family: $font-heading;
         font-size: 2.5rem;
         margin-bottom: 2rem;
+    }
+}
+
+.top-filter{
+    display: flex;
+    gap: 2rem;
+    select, input{
+        font-family: $font-content;
+        font-size: 1.1rem;
+        border: 2px solid $color-red;
+        padding: 0.5rem 0.9rem;
     }
 }
 

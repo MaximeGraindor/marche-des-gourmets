@@ -9,7 +9,32 @@
                 <h1 class="top-title">
                     Les exposants
                 </h1>
-                <form action="post"></form>
+                <form action="post" class="top-filter">
+                    <div>
+                        <label for="country" class="hidden">Pays</label>
+                        <select name="country" id="country">
+                            <option value="belgique">Belgique</option>
+                            <option value="espagne">Espagne</option>
+                            <option value="allemagne">Allemagne</option>
+                            <option value="pays-bas">Pays-Bas</option>
+                            <option value="luxemboug">Luxembourg</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="productCategory" class="hidden">Pays</label>
+                        <select name="productCategory" id="productCategory">
+                            <option value="Vin">Vin</option>
+                            <option value="épices">épices</option>
+                            <option value="Confiseries">Confiseries</option>
+                            <option value="pays-bas">Pays-Bas</option>
+                            <option value="luxemboug">Luxembourg</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="search" class="hidden">Pays</label>
+                        <input type="text" name="search" id="search">
+                    </div>
+                </form>
             </div>
             <div class="exhibitors-wrapper">
                 <div class="exhibitors-item">
