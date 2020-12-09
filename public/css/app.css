@@ -184,6 +184,7 @@ body {
   width: 100%;
   height: 400px;
   background-image: url("/storage/img/background-header.jpg");
+  background-size: 100%;
   background-position: center -750px;
   background-repeat: no-repeat;
 }
@@ -272,6 +273,7 @@ body {
   width: 100%;
   height: 300px;
   background-image: url("/storage/img/background-countdown.jpg");
+  background-size: 100%;
   background-position: center -750px;
   background-repeat: no-repeat;
   font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
@@ -322,6 +324,13 @@ body {
   background-color: red;
   width: 300px;
   height: 300px;
+}
+
+.album-wrapper .album-item img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about {

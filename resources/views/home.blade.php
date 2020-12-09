@@ -61,19 +61,19 @@
             </h2>
             <div class="album-wrapper">
                 <div class="album-item">
-                    <img src="" alt="Photo aléatoire de l'album">
+                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
                     <span>Titre de l'édition</span>
                 </div>
                 <div class="album-item">
-                    <img src="" alt="Photo aléatoire de l'album">
+                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
                     <span>Titre de l'édition</span>
                 </div>
                 <div class="album-item">
-                    <img src="" alt="Photo aléatoire de l'album">
+                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
                     <span>Titre de l'édition</span>
                 </div>
                 <div class="album-item">
-                    <img src="" alt="Photo aléatoire de l'album">
+                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
                     <span>Titre de l'édition</span>
                 </div>
             </div>
