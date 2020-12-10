@@ -1,8 +1,10 @@
 @extends('layouts.base')
 @section('title', 'Qui sommes-nous ?')
 @section('content')
+    <h1 class="hidden">
+        Qui sommes-nous ? - Marché des Gourmets
+    </h1>
     <x-header/>
-
     <main class="about">
         <section class="about-mdg">
             <div class="mdg-left">

@@ -1,14 +1,17 @@
 @extends('layouts.base')
 @section('title', 'Informations pratiques')
 @section('content')
+    <h1 class="hidden">
+        Informations pratiques - Marché des Gourmets
+    </h1>
     <x-header/>
 
     <main class="informations">
-        <div class="informations-wrapper">
+        <section class="informations-wrapper">
             <div class="informations-left">
-                <h1 class="informations-title">
+                <h2 class="informations-title">
                     Informations pratiques
-                </h1>
+                </h2>
                 <div class="left-wrapper">
                     <dl class="left-list">
                         <dd>Quand ?</dd>
@@ -32,7 +35,7 @@
                     tabindex="0">
                 </iframe>
             </div>
-        </div>
+        </section>
 
         <section class="informations-supp">
             <h2 class="supp-title">

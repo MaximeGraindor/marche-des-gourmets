@@ -1,14 +1,17 @@
 @extends('layouts.base')
 @section('title', 'Exposants')
 @section('content')
+    <h1 class="hidden">
+        Exposants - Marché des Gourmets
+    </h1>
     <x-header/>
 
     <main class="exhibitors">
-        <div class="exhibitors-list">
+        <section class="exhibitors-list">
             <div class="exhibitors-top">
-                <h1 class="top-title">
+                <h2 class="top-title">
                     Les exposants
-                </h1>
+                </h2>
                 <form action="post" class="top-filter">
                     <div>
                         <label for="country" class="hidden">Pays</label>
@@ -135,7 +138,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section class="become-exhibitor">
             <h2 class="be-title">Postuler pour devenir exposant</h2>
