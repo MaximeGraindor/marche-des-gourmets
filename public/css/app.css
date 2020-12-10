@@ -626,6 +626,22 @@ body {
   margin-right: 10px;
 }
 
+.exhibitors-item .item-keywords {
+  margin-top: 10px;
+}
+
+.exhibitors-item .item-keywords span {
+  background-color: white;
+  border-radius: 30px;
+  padding: 3px 10px;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.exhibitors-item .item-keywords span:not(:last-child) {
+  margin-right: 5px;
+}
+
 .become-exhibitor .be-title {
   font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;

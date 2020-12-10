@@ -77,6 +77,21 @@
 
         }
     }
+
+
+    .item-keywords{
+        margin-top: 10px;
+        span{
+            background-color: white;
+            border-radius: 30px;
+            padding: 3px 10px;
+            color: black;
+            font-size: 0.9rem;
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 

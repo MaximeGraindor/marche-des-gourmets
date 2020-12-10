@@ -23,11 +23,9 @@
                     <div>
                         <label for="productCategory" class="hidden">Pays</label>
                         <select name="productCategory" id="productCategory">
-                            <option value="Vin">Vin</option>
-                            <option value="épices">épices</option>
-                            <option value="Confiseries">Confiseries</option>
-                            <option value="pays-bas">Pays-Bas</option>
-                            <option value="luxemboug">Luxembourg</option>
+                            <option value="alcool/vin">Alcool/vin</option>
+                            <option value="bioo">Bio</option>
+                            <option value="gastronomie">gastronomie</option>
                         </select>
                     </div>
                     <div>
@@ -42,54 +40,99 @@
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
                 <div class="exhibitors-item">
                     <span class="item-title">Amitié Amay behin</span>
                     <span class="item-description">Bière le mur de huy Belgique</span>
                     <span class="item-placement">Emplacement 15</span>
                     <span class="item-country">France</span>
+                    <div class="item-keywords">
+                        <span>Alcool/vin</span>
+                        <span>Bio</span>
+                        <span>Gastronomie</span>
+                    </div>
                 </div>
             </div>
         </div>
