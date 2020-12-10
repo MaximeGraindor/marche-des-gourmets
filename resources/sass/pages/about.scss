@@ -84,9 +84,15 @@
     .r-actions-item{
         display: flex;
         flex-direction: column;
+        &:hover{
+            transform: scale(1.2);
+            transition: 0.5s;
+            transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
         img{
-            width: 300px;
-            height: 300px;object-fit: cover;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
         span{
             background-color: $color-red;
