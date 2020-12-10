@@ -1,3 +1,7 @@
+
+.menuResponsive{
+    @include max-width;
+}
 .header-menu{
     display: flex;
     justify-content: center;
@@ -29,4 +33,49 @@
     background-size: 100%;
     background-position: center -750px;
     background-repeat: no-repeat;
+}
+
+.menuResponsive{
+    .menuResponsive-img{
+        display: none;
+    }
+    .menuResponsive-menu{
+        display: none;
+    }
+}
+
+
+
+// RESPONSIVE
+@media screen and (max-width:1060px){
+    .header-menu{
+        justify-content: space-between;
+        .header-menu-item:not(.menu-item-logo){
+            display: none;
+        }
+    }
+
+    .menuResponsive{
+        .menuResponsive-img{
+            display: block;
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (max-width:420px){
+    .header-menu{
+        justify-content: space-between;
+        .header-menu-item:not(.menu-item-logo){
+            display: none;
+        }
+        img{
+            width: 100px;
+        }
+    }
+
+    .menuResponsive{
+
+    }
+
 }

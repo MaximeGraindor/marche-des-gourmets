@@ -145,19 +145,19 @@
             <form class="be-form" action="#" method="post">
                 <div class="form-firstname">
                     <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname">
+                    <input type="text" name="firstname" id="firstname" placeholder="Jean">
                 </div>
                 <div class="form-name">
                     <label for="name">Nom</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" placeholder="Jean">
                 </div>
                 <div class="form-email">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" placeholder="example@gmail.com">
                 </div>
                 <div class="form-telephone">
                     <label for="telephone">Téléphone</label>
-                    <input type="text" name="telephone" id="telephone">
+                    <input type="text" name="telephone" id="telephone" placeholder="0476285960">
                 </div>
                 <div class="form-country">
                     <label for="country">Pays</label>

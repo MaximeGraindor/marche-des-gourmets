@@ -19,7 +19,7 @@
                     Exposants
                 </a>
             </li>
-            <li class="header-menu-item">
+            <li class="header-menu-item menu-item-logo">
                 <img src="{{ asset(asset('/storage/assets/logoMdg.png')) }}" alt="Logo du Marché des Gourmets">
             </li>
             <li class="header-menu-item">
@@ -38,6 +38,43 @@
                 </a>
             </li>
         </ul>
+        <div class="menuResponsive">
+            <div class="menuResponsive-img">
+                <img src="{{ asset('/storage/assets/menu.svg') }}" alt="Menu">
+            </div>
+            <ul class="menuResponsive-menu">
+                <li class="menuResponsive-item">
+                    <a href="/" class="menuResponsive-link {{request()->route()->named('home') ? ' active' : ''}}">
+                        Accueil
+                    </a>
+                </li>
+                <li class="menuResponsive-item">
+                    <a href="/qui-sommes-nous" class="menuResponsive-link {{request()->route()->named('about') ? ' active' : ''}}">
+                        Qui sommes-nous ?
+                    </a>
+                </li>
+                <li class="menuResponsive-item">
+                    <a href="/exposants" class="menuResponsive-link {{request()->route()->named('exhibitors') ? ' active' : ''}}">
+                        Exposants
+                    </a>
+                </li>
+                <li class="menuResponsive-item">
+                    <a href="/informations-pratiques" class="menuResponsive-link {{request()->route()->named('informations') ? ' active' : ''}}">
+                        Informations pratiques
+                    </a>
+                </li>
+                <li class="menuResponsive-item">
+                    <a href="/contact" class="menuResponsive-link {{request()->route()->named('contact') ? ' active' : ''}}">
+                        Contact
+                    </a>
+                </li>
+                <li class="menuResponsive-item">
+                    <a href="/billeterie" class="menuResponsive-link {{request()->route()->named('ticketing') ? ' active' : ''}}">
+                        Billeterie
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <div class="header-background"></div>
 </header>

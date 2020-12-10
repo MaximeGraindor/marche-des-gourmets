@@ -157,6 +157,11 @@ body {
   font-weight: bold;
 }
 
+.menuResponsive {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
 .header-menu {
   display: flex;
   justify-content: center;
@@ -187,6 +192,43 @@ body {
   background-size: 100%;
   background-position: center -750px;
   background-repeat: no-repeat;
+}
+
+.menuResponsive .menuResponsive-img {
+  display: none;
+}
+
+.menuResponsive .menuResponsive-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1060px) {
+  .header-menu {
+    justify-content: space-between;
+  }
+
+  .header-menu .header-menu-item:not(.menu-item-logo) {
+    display: none;
+  }
+
+  .menuResponsive .menuResponsive-img {
+    display: block;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header-menu {
+    justify-content: space-between;
+  }
+
+  .header-menu .header-menu-item:not(.menu-item-logo) {
+    display: none;
+  }
+
+  .header-menu img {
+    width: 100px;
+  }
 }
 
 .home-partenaires {
@@ -525,9 +567,8 @@ body {
 }
 
 .r-actions-wrapper .r-actions-item:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
-  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: scale(1.1);
+  transition: 0.5s linear;
 }
 
 .r-actions-wrapper .r-actions-item img {
@@ -651,7 +692,7 @@ body {
 .be-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem 7rem;
+  grid-gap: 2rem 7rem;
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
 }
 
