@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <title>@yield('title') - Marché des Gourmets</title>
 
+        <meta name="description" content="Le Marché des Gourmets est un événement annuel organisé par le Rotary Club de Flémalle sur le prestigieux site de l'abbaye de la Paix-Dieu afin d'obtenir des fonds pour aider les plus démunis." >
+
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         @livewireStyles
-
         <script src="{{ asset('js/app.js') }}" defer></script>
-
         <link rel="icon" type="image/png" href="/favicon.png">
 
         {{-- Social Meta --}}
