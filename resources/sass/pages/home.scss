@@ -41,7 +41,7 @@
     align-items: center;
     display: block;
     position: relative;
-    padding: 5.5rem;
+    padding: 5.5rem 0;
     &::after {
         content: "";
         background-image: url('/storage/img/background-countdown.jpg');
@@ -62,12 +62,13 @@
     .home-countdown-text{
         text-align: center;
         font-size: 3rem;
-        text-style: italic;
+        font-style: italic;
         margin-bottom: 2.5rem;
+        margin-top: 2rem;
     }
 
     .countdown-wrapper{
-        font-size: 2.5rem;
+        font-size: 4.5rem;
         display: flex;
         justify-content: center;
         gap: 2rem;
@@ -75,7 +76,11 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            background-color:red
+            font-weight: bold;
+
+            span+span{
+                font-size: 1.5rem;
+            }
         }
     }
 }
@@ -83,25 +88,72 @@
 
 .home-infos{
     @include max-width;
+    margin-top: -35px;
     position: relative;
     font-family: $font-content;
     display: flex;
     justify-content: center;
     flex: 0 0 33%;
     gap: 3.5rem;
-    top: -100px;
+    bottom: -80px;
 
     .infos-item{
         background-color: $color-red;
+        font-size: 1.5rem;
         color: white;
-        padding: 5rem;
+        padding: 3rem;
+        text-align: center;
+        flex: 0 0 300px;
+        border-radius: 10px;
+        //box-shadow: 1px 6px 26px 1px rgba(0,0,0,0.55);
+    }
+
+    .item-date{
+
+        span:before {
+            content:"";
+            display:block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            background-image: url("/storage/assets/calendar.svg");
+        }
+    }
+    .item-price{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span:before {
+            content:"";
+            display:block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            background-image: url("/storage/assets/euro.svg");
+        }
+    }
+    .item-adress{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span:before {
+            content:"";
+            display:block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+            background-image: url("/storage/assets/location.svg");
+        }
     }
 }
 
 
 .home-album{
     @include max-width;
-    padding: 2.5rem;
+    padding: 6.5rem;
     .album-title{
         font-family: $font-heading;
         font-size: 2.5rem;
@@ -120,6 +172,9 @@
             width: 300px;
             height: 300px;
             object-fit: cover;
+        }
+        span{
+            font-family: $font-content;
         }
     }
 }

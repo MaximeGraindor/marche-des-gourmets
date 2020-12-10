@@ -10,6 +10,18 @@
             <a href="/billeterie" class="home-intro-link">Acheter un ticket !</a>
         </div>
 
+        <div class="home-infos">
+            <div class="infos-item item-date">
+                <span>27 et 28 mars</span>
+            </div>
+            <div class="infos-item item-price">
+                <span>5€ l'entrée</span>
+            </div>
+            <div class="infos-item item-adress">
+                <span>Chateau du Val Saint Lambert</span>
+            </div>
+        </div>
+
         <div class="home-countdown">
             <div class="countdown-content">
                 <p class="home-countdown-text">
@@ -30,7 +42,7 @@
                             50
                         </span>
                         <span>
-                            jours
+                            heures
                         </span>
                     </div>
                     <span>:</span>
@@ -39,7 +51,7 @@
                             50
                         </span>
                         <span>
-                            jours
+                            minutes
                         </span>
                     </div>
                     <span>:</span>
@@ -48,24 +60,14 @@
                             50
                         </span>
                         <span>
-                            jours
+                            secondes
                         </span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="home-infos">
-            <div class="infos-item">
-                <span>27 et 28 mars</span>
-            </div>
-            <div class="infos-item">
-                <span>5€ l'entrée</span>
-            </div>
-            <div class="infos-item">
-                <span>Chateau du Val Saint Lambert</span>
-            </div>
-        </div>
+
 
         <section class="home-album">
             <h2 class="album-title">
