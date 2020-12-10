@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('title', 'Contact')
 @section('content')
     <h1 class="hidden">
         Contact - Marché des Gourmets

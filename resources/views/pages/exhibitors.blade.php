@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('title', 'Exposants')
 @section('content')
     <x-header/>
 
