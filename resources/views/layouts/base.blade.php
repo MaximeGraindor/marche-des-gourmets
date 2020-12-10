@@ -10,6 +10,7 @@
 
         <script src="{{ asset('js/app.js') }}" defer></script>
 
+        <link rel="icon" type="image/png" href="/favicon.png">
     </head>
 
     <body>
