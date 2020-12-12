@@ -842,6 +842,11 @@ body {
   text-align: center;
 }
 
+.supp-item:hover {
+  transform: scale(1.1);
+  transition: 0.5s linear;
+}
+
 .supp-item .supp-item-photo {
   border-radius: 50%;
   width: 250px;
@@ -858,6 +863,8 @@ body {
 
 .supp-item .supp-item-desc {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .contact {
