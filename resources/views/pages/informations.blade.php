@@ -26,14 +26,14 @@
                 </div>
             </div>
             <div class="informations-right">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d632.3499707179124!2d5.577436629248875!3d50.65683554893072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0fa7116a4a7e3%3A0x29bf376d97e5baf2!2sZzam.be%20%3A%20Agence%20Web%20%C3%A0%20Li%C3%A8ge%20%2F%20Cr%C3%A9ation%20de%20site%20internet%20Joomla!5e0!3m2!1sfr!2sbe!4v1607435781557!5m2!1sfr!2sbe"
-                    width="600"
-                    height="450"
-                    allowfullscreen=""
-                    aria-hidden="false"
-                    tabindex="0">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.8079428517435!2d5.480598916459187!3d50.59352292949534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0f928ef867f13%3A0x9224d8cdcbf5d4c5!2sCristal%20Discovery%20Mus%C3%A9e%20Val%20Saint%20Lambert!5e0!3m2!1sfr!2sbe!4v1607805103109!5m2!1sfr!2sbe"
+                width="600"
+                height="450"
+                frameborder="0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0">
+            </iframe>
             </div>
         </section>
 
