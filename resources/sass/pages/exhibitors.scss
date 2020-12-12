@@ -10,6 +10,7 @@
 .exhibitors-top{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
     .top-title{
         font-family: $font-heading;
         font-size: 2.5rem;
@@ -28,6 +29,18 @@
     }
 }
 
+.filter-input-wrapper{
+    position: relative;
+    input{
+        padding-right: 3rem;
+    }
+    .icon-search{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
 .exhibitors-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -43,6 +56,9 @@
     flex-direction: column;
     color: white;
     border-radius: 5px;
+    &:hover{
+        background-color:  #361515;
+    }
     span:not(:last-child){
         margin-bottom: 10px;
     }
@@ -145,17 +161,21 @@
 
 }
 
+
 .form-submit{
-    display: block;
-    width: 150px;
-    padding: 0.9rem;
-    background-color: $color-cta;
-    border: 1px solid $color-red;
-    cursor: pointer;
-    &:hover{
-        background-color: $color-red;
-        border-color: $color-cta;
+    grid-column: 2/3;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: flex-end;
+    input[type="submit"]{
+        padding: 0.8rem 4rem;
+        background-color: $color-red-light;
         color: white;
+        &:hover{
+            background-color: $color-red;
+            border-color: $color-cta;
+            color: white;
+        }
     }
 }
 

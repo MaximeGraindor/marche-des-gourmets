@@ -18,3 +18,10 @@ body{
 .bold{
     font-weight: bold;
 }
+
+.icon-search{
+    display: block;
+    background-image: url('/storage/assets/search.svg');
+    width: 25px;
+    height: 25px;
+}

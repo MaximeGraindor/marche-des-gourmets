@@ -157,6 +157,13 @@ body {
   font-weight: bold;
 }
 
+.icon-search {
+  display: block;
+  background-image: url("/storage/assets/search.svg");
+  width: 25px;
+  height: 25px;
+}
+
 .menuResponsive {
   max-width: 1340px;
   margin: 0 auto;
@@ -598,6 +605,7 @@ body {
 .exhibitors-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .exhibitors-top .top-title {
@@ -619,6 +627,20 @@ body {
   padding: 0.5rem 0.9rem;
 }
 
+.filter-input-wrapper {
+  position: relative;
+}
+
+.filter-input-wrapper input {
+  padding-right: 3rem;
+}
+
+.filter-input-wrapper .icon-search {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
 .exhibitors-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -634,6 +656,10 @@ body {
   flex-direction: column;
   color: white;
   border-radius: 5px;
+}
+
+.exhibitors-item:hover {
+  background-color: #361515;
 }
 
 .exhibitors-item span:not(:last-child) {
@@ -736,15 +762,19 @@ body {
 }
 
 .form-submit {
-  display: block;
-  width: 150px;
-  padding: 0.9rem;
-  background-color: #FDEEDB;
-  border: 1px solid #562121;
-  cursor: pointer;
+  grid-column: 2/3;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-end;
 }
 
-.form-submit:hover {
+.form-submit input[type=submit] {
+  padding: 0.8rem 4rem;
+  background-color: #703838;
+  color: white;
+}
+
+.form-submit input[type=submit]:hover {
   background-color: #562121;
   border-color: #FDEEDB;
   color: white;

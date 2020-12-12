@@ -33,7 +33,10 @@
                     </div>
                     <div>
                         <label for="search" class="hidden">Pays</label>
-                        <input type="text" name="search" id="search">
+                        <div class="filter-input-wrapper">
+                            <input type="text" name="search" id="search" placeholder="Rechercher">
+                            <span class="icon-search"></span>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -185,7 +188,9 @@
                     <label for="informations">Informations supplémentaire</label>
                     <textarea type="text" name="informations" id="informations"> </textarea>
                 </div>
-                <input type="submit" value="Postuler" class="form-submit">
+                <div class="form-submit">
+                    <input type="submit" value="Postuler">
+                </div>
             </form>
         </section>
 
