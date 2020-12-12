@@ -900,10 +900,16 @@ body {
 
 .contact-left-list dt {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
 
 .contact-left-list dt:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+}
+
+.contact-left-list dt span {
+  display: block;
+  margin-bottom: 7px;
 }
 
 .contact-left-list .list-email::before {
@@ -1002,7 +1008,13 @@ body {
   text-decoration: none;
 }
 
-.missingInfo-wrapper .missingInfo-item img {
+.missingInfo-wrapper .missingInfo-item:hover {
+  transform: scale(1.1);
+  transition: 0.5s linear;
+}
+
+.missingInfo-wrapper .missingInfo-item img,
+.missingInfo-wrapper .missingInfo-item iframe {
   width: 300px;
   height: 300px;
   -o-object-fit: cover;

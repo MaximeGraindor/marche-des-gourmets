@@ -143,7 +143,7 @@
             </div>
         </section>
 
-        <section class="become-exhibitor">
+        <section class="become-exhibitor" id="become-exhibitor">
             <h2 class="be-title">Postuler pour devenir exposant</h2>
             <form class="be-form" action="#" method="post">
                 <div class="form-firstname">
