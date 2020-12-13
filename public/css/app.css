@@ -822,6 +822,16 @@ body {
   margin-bottom: 35px;
 }
 
+.left-list dt span {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.left-list dt a {
+  margin-top: 20px;
+  color: white;
+}
+
 .informations-supp .supp-title {
   font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
@@ -994,7 +1004,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 10rem;
 }
 
 .missingInfo-wrapper .missingInfo-span {

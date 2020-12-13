@@ -21,7 +21,12 @@
                         <dd>prix ?</dd>
                         <dt>Entrée : 5€ (gratuit pour les enfant de -12)</dt>
                         <dd>Adresse ?</dd>
-                        <dt>Chateau du Val Saint Lambert Esplanade du Val, 4100 Seraing</dt>
+                        <dt>
+                            <span>Chateau du Val Saint Lambert</span>
+                            <span>Esplanade du Val,</span>
+                            <span>4100 Seraing</span>
+                            <a href="https://www.cstc.be/homepage/download.cfm?lang=fr&dtype=agenda&doc=Roadshow_Plan_Liege.pdf" target="_blank">Voir le plan d'accès</a>
+                        </dt>
                     </dl>
                 </div>
             </div>

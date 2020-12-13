@@ -38,6 +38,14 @@
         &:not(:last-child){
             margin-bottom: 35px;
         }
+        span{
+            display: block;
+            margin-bottom: 7px;
+        }
+        a{
+            margin-top: 20px;
+            color: white;
+        }
     }
 }
 
