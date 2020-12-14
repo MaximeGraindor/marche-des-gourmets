@@ -1099,3 +1099,31 @@ body {
   font-size: 1.2rem;
 }
 
+.billeterie {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 7rem;
+}
+
+.billeterie .billeterie-title {
+  font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.billeterie-alert {
+  padding: 2rem;
+  background-color: #562121;
+  color: white;
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  /* &:before{
+      content: '';
+      background-image: url('/storage/assets/search.svg');
+      display: inline;
+      width: 20px;
+      height: 20px;
+  } */
+}
+
