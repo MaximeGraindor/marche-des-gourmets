@@ -14,9 +14,15 @@
     }
 }
 
+.informations-left{
+    flex: 0 0 40%;
+}
+
 .informations-right{
+    flex: 0 0 50%;
     iframe{
         border: 2px solid $color-red;
+        height: 100%;
     }
 }
 

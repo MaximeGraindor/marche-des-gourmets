@@ -849,8 +849,17 @@ body {
   margin-bottom: 7rem;
 }
 
+.informations-left {
+  flex: 0 0 40%;
+}
+
+.informations-right {
+  flex: 0 0 50%;
+}
+
 .informations-right iframe {
   border: 2px solid #562121;
+  height: 100%;
 }
 
 .left-wrapper {
