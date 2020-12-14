@@ -1,7 +1,4 @@
 
-.menuResponsive{
-    @include max-width;
-}
 .header-menu{
     display: flex;
     justify-content: center;
@@ -30,7 +27,6 @@
     width: 100%;
     height: 400px;
     background-image: url('/storage/img/background-header.jpg');
-    background-size: 100%;
     background-position: center -750px;
     background-repeat: no-repeat;
 }
@@ -44,9 +40,17 @@
     }
 }
 
+.menuResponsive-on{
+    display: block !important;
+}
 
 
-// RESPONSIVE
+// ----------- RESPONSIVE -----------
+@media screen and (min-width: 1980px){
+    .header-background{
+        background-size: 100%;
+    }
+}
 @media screen and (max-width:1060px){
     .header-menu{
         justify-content: space-between;
@@ -56,11 +60,51 @@
     }
 
     .menuResponsive{
+        position: relative;
+        .menuResponsive-menu{
+            background-color: $color-red;
+            padding: 2rem;
+            position: absolute;
+            right: 0;
+            width: 200px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
         .menuResponsive-img{
             display: block;
-            width: 50px;
+            img{
+                display: block;
+                width: 40px;
+                cursor: pointer;
+            }
+        }
+        .menuResponsive-item:not(:last-child){
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            &:hover{
+                border-bottom: 1px solid white;
+            }
+        }
+        a.menuResponsive-link {
+            color: white;
+            font-family: $font-content;
+            display: block;
+            text-decoration: none;
         }
     }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 3rem;
+    }
+
+    .header-background{
+        height: 300px;
+    }
+
 }
 
 @media screen and (max-width:420px){
@@ -72,10 +116,6 @@
         img{
             width: 100px;
         }
-    }
-
-    .menuResponsive{
-
     }
 
 }

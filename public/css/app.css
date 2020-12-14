@@ -164,11 +164,6 @@ body {
   height: 25px;
 }
 
-.menuResponsive {
-  max-width: 1340px;
-  margin: 0 auto;
-}
-
 .header-menu {
   display: flex;
   justify-content: center;
@@ -196,7 +191,6 @@ body {
   width: 100%;
   height: 400px;
   background-image: url("/storage/img/background-header.jpg");
-  background-size: 100%;
   background-position: center -750px;
   background-repeat: no-repeat;
 }
@@ -209,6 +203,16 @@ body {
   display: none;
 }
 
+.menuResponsive-on {
+  display: block !important;
+}
+
+@media screen and (min-width: 1980px) {
+  .header-background {
+    background-size: 100%;
+  }
+}
+
 @media screen and (max-width: 1060px) {
   .header-menu {
     justify-content: space-between;
@@ -218,9 +222,56 @@ body {
     display: none;
   }
 
+  .menuResponsive {
+    position: relative;
+  }
+
+  .menuResponsive .menuResponsive-menu {
+    background-color: #562121;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
   .menuResponsive .menuResponsive-img {
     display: block;
-    width: 50px;
+  }
+
+  .menuResponsive .menuResponsive-img img {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .menuResponsive .menuResponsive-item:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+  }
+
+  .menuResponsive .menuResponsive-item:not(:last-child):hover {
+    border-bottom: 1px solid white;
+  }
+
+  .menuResponsive a.menuResponsive-link {
+    color: white;
+    font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+    display: block;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 3rem;
+  }
+
+  .header-background {
+    height: 300px;
   }
 }
 
