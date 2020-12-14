@@ -243,12 +243,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 20rem;
   padding: 3rem;
 }
 
 .home-partenaires img {
-  width: 20%;
+  width: 15%;
   height: auto;
 }
 
@@ -875,6 +875,13 @@ body {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4rem;
+}
+
+.supp-item .supp-item-link {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: black;
 }
 
 .contact {
