@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('title', 'Qui sommes-nous ?')
 @section('content')
-    <h1 class="hidden">
+    <h1 class="hidden"  role="heading" aria-level="1">
         Qui sommes-nous ? - Marché des Gourmets
     </h1>
     <x-header/>
@@ -11,7 +11,7 @@
                 <img src="{{ asset(asset('/storage/img/about1.jpeg')) }}" alt="">
             </div>
             <div class="mdg-right">
-                <h2 class="mdg-title">
+                <h2 class="mdg-title" role="heading" aria-level="2">
                     Le marché des Gourmets
                 </h2>
                 <div>
@@ -35,7 +35,7 @@
                 <img src="{{ asset(asset('/storage/img/about2.jpeg')) }}" alt="">
             </div>
             <div class="rf-right">
-                <h2 class="rf-title">
+                <h2 class="rf-title" role="heading" aria-level="2">
                     Le club Rotary de Flémalle
                 </h2>
                 <div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <section class="r-actions">
-                <h3 class="hidden r-actions-title">
+                <h3 class="hidden r-actions-title"  role="heading" aria-level="3">
                     Actions sur Rotary
                 </h3>
                 <div class="r-actions-wrapper">

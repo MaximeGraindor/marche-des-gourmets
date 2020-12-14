@@ -9,7 +9,7 @@
     <main class="informations">
         <section class="informations-wrapper">
             <div class="informations-left">
-                <h2 class="informations-title">
+                <h2 class="informations-title" role="heading" aria-level="2">
                     Informations pratiques
                 </h2>
                 <div class="left-wrapper">
@@ -43,7 +43,7 @@
         </section>
 
         <section class="informations-supp">
-            <h2 class="supp-title">
+            <h2 class="supp-title" role="heading" aria-level="2">
                 Informations supplémentaire
             </h2>
             <div class="supp-wrapper">

@@ -1,13 +1,13 @@
 @extends('layouts.base')
 @section('title', 'Contact')
 @section('content')
-    <h1 class="hidden">
+    <h1 class="hidden" role="heading" aria-level="1">
         Contact - Marché des Gourmets
     </h1>
     <x-header/>
 
     <main class="contact">
-        <h2 class="contact-title">
+        <h2 class="contact-title" role="heading" aria-level="2">
             Contactez-nous
         </h2>
         <div class="contact-wrapper">
@@ -53,7 +53,7 @@
         </div>
 
         <section class="missingInfo">
-            <h2 class="missingInfo-title">
+            <h2 class="missingInfo-title" role="heading" aria-level="2">
                 Vous avez peut-être manqué
             </h2>
             <div class="missingInfo-wrapper">

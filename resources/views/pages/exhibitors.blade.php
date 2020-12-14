@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('title', 'Exposants')
 @section('content')
-    <h1 class="hidden">
+    <h1 class="hidden"  role="heading" aria-level="1">
         Exposants - Marché des Gourmets
     </h1>
     <x-header/>
@@ -9,7 +9,7 @@
     <main class="exhibitors">
         <section class="exhibitors-list">
             <div class="exhibitors-top">
-                <h2 class="top-title">
+                <h2 class="top-title"  role="heading" aria-level="2">
                     Les exposants
                 </h2>
                 <form action="post" class="top-filter">
@@ -144,7 +144,7 @@
         </section>
 
         <section class="become-exhibitor" id="become-exhibitor">
-            <h2 class="be-title">Postuler pour devenir exposant</h2>
+            <h2 class="be-title" role="heading" aria-level="2">Postuler pour devenir exposant</h2>
             <form class="be-form" action="#" method="post">
                 <div class="form-firstname">
                     <label for="firstname">Prénom</label>

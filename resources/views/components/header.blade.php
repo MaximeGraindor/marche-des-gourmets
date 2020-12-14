@@ -1,6 +1,6 @@
 <header class="header">
     <nav>
-        <h2 class="hidden">
+        <h2 class="hidden" role="heading" aria-level="2">
             Menu de naviguation
         </h2>
         <ul class="header-menu">
