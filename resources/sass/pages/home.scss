@@ -45,7 +45,6 @@
     &::after {
         content: "";
         background-image: url('/storage/img/background-countdown.jpg');
-        background-size: 100%;
         background-position: center -750px;
         background-repeat: no-repeat;
         opacity: 0.7;
@@ -71,6 +70,7 @@
         font-size: 4.5rem;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 2rem;
         .countdown-item{
             display: flex;
@@ -88,12 +88,12 @@
 
 .home-infos{
     @include max-width;
+    font-family: $font-content;
     margin-top: -35px;
     position: relative;
-    font-family: $font-content;
     display: flex;
     justify-content: center;
-    flex: 0 0 33%;
+    flex-wrap: wrap;
     gap: 3.5rem;
     bottom: -80px;
 
@@ -162,9 +162,12 @@
 
 .album-wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     .album-item{
-        background-color: red;
+        display: flex;
+        flex-direction: column;
         width: 300px;
         height: 300px;
         img{
@@ -176,4 +179,57 @@
             font-family: $font-content;
         }
     }
+}
+
+
+// ---------- RESPONSIVE ----------
+@media screen and (min-width: 1980px){
+    .home-countdown{
+        &:after{
+            background-size: 100%;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1185px){
+    .home-album{
+        .album-title{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .home-intro{
+        width: auto;
+    }
+
+    .home-infos .infos-item {
+        font-size: 1.3rem;
+        flex: 0 0 132px;
+    }
+
+}
+
+@media screen and (max-width: 870px){
+    .home-countdown .countdown-wrapper {
+        font-size: 3.5rem;
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    .home-countdown .countdown-wrapper {
+        font-size: 3.5rem;
+        gap: 1rem;
+    }
+
+    .album-wrapper{
+        .album-item{
+            margin-bottom: 20px;
+        }
+    }
+
 }
