@@ -1,12 +1,16 @@
 .home-partenaires{
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20rem;
-    padding: 3rem;
+    .home-partenaires-wrapper{
+        @include max-width;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem;
+        flex-wrap: wrap;
+    }
+
     img{
-        width: 15%;
+        width: 300px;
         height: auto;
     }
 }
@@ -32,10 +36,20 @@
             display: flex;
             gap: 2rem;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .footer-menu-link{
             color: white;
             text-decoration: none;
+        }
+    }
+}
+
+// ---------- RESPONSIVE ----------
+@media screen and (max-width:740px){
+    .footer-top{
+        img{
+            width: 60%;
         }
     }
 }

@@ -291,15 +291,20 @@ body {
 
 .home-partenaires {
   background-color: white;
+}
+
+.home-partenaires .home-partenaires-wrapper {
+  max-width: 1340px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 20rem;
   padding: 3rem;
+  flex-wrap: wrap;
 }
 
 .home-partenaires img {
-  width: 15%;
+  width: 300px;
   height: auto;
 }
 
@@ -328,11 +333,18 @@ body {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer .footer-bottom .footer-menu-link {
   color: white;
   text-decoration: none;
+}
+
+@media screen and (max-width: 740px) {
+  .footer-top img {
+    width: 60%;
+  }
 }
 
 .home-intro {

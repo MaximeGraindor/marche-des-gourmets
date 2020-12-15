@@ -1,7 +1,9 @@
 <section class="home-partenaires">
-    <h2 class="hidden partenaires-title" role="heading" aria-level="2">Nos partenaires</h2>
-    <img src="{{ asset('/storage/assets/logoProvinceDeLiege.png') }}" alt="">
-    <img src="{{ asset('/storage/assets/logoClub.png') }}" alt="">
+    <div class="home-partenaires-wrapper">
+        <h2 class="hidden partenaires-title" role="heading" aria-level="2">Nos partenaires</h2>
+        <img src="{{ asset('/storage/assets/logoProvinceDeLiege.png') }}" alt="">
+        <img src="{{ asset('/storage/assets/logoClub.png') }}" alt="">
+    </div>
 </section>
 <footer class="footer">
     <div class="footer-top">
