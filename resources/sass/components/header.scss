@@ -21,6 +21,15 @@
         color: black;
         text-decoration: none;
     }
+    .menu-ticketing{
+        padding: 0.8rem 0.9rem;
+        background-color: $color-red;
+        color: white;
+        border-radius: 7px;
+        &:hover{
+            background-color: $color-red-dark;
+        }
+    }
 }
 
 .header-background{

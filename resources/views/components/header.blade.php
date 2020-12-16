@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li class="header-menu-item">
-                <a href="/billeterie" class="header-menu-link {{request()->route()->named('ticketing') ? ' active' : ''}}">
+                <a href="/billeterie" class="header-menu-link {{request()->route()->named('ticketing') ? ' active' : ''}} menu-ticketing">
                     Billeterie
                 </a>
             </li>

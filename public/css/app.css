@@ -187,6 +187,17 @@ body {
   text-decoration: none;
 }
 
+.header-menu .menu-ticketing {
+  padding: 0.8rem 0.9rem;
+  background-color: #562121;
+  color: white;
+  border-radius: 7px;
+}
+
+.header-menu .menu-ticketing:hover {
+  background-color: #411A1A;
+}
+
 .header-background {
   width: 100%;
   height: 400px;
@@ -513,7 +524,7 @@ body {
 
 .album-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
 }
