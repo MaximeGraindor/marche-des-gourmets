@@ -14,10 +14,10 @@
             <div class="contact-left">
                 <dl class="contact-left-list">
                     <dd class="list-email">Email</dd>
-                    <dt>info@marchedesgourmets.be</dt>
+                    <dt>{{ Page::get('email') }}</dt>
 
                     <dd class="list-telephone">Téléphone</dd>
-                    <dt>00 32 (0) 475 311 105</dt>
+                    <dt>{{ Page::get('Télephone') }}</dt>
 
                     <dd class="list-courrier">Courrier</dd>
                     <dt>
