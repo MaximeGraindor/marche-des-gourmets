@@ -26,8 +26,19 @@
         background-color: $color-red;
         color: white;
         border-radius: 7px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
         &:hover{
             background-color: $color-red-dark;
+        }
+        &:before{
+            content:'';
+            display: inline-block;
+            background-image: url('/storage/assets/ticket-white.svg');
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
         }
     }
 }

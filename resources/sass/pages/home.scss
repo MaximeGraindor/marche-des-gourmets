@@ -19,15 +19,29 @@
         border: 1px solid $color-red;
         padding: 0.9rem;
         border-radius: 9px;
-        font-size: 1.2rem;
+        font-size: 1.563rem;
         margin-bottom: 2rem;
         display: block;
-        width: 200px;
+        width: 250px;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover{
             background-color: $color-red;
             border-color: $color-cta;
             color: white;
+            &:before{
+                background-image: url('/storage/assets/ticket-white.svg');
+            }
+        }
+        &:before{
+            content:'';
+            display: inline-block;
+            background-image: url('/storage/assets/ticket.svg');
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
         }
     }
 }
