@@ -32,6 +32,12 @@ class Keyword extends Resource
         'id',
     ];
 
+    public static $group = 'Les exposants';
+    public static function label()
+    {
+        return 'Catégorie de produit';
+    }
+
     /**
      * Get the fields displayed by the resource.
      *

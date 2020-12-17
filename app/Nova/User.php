@@ -32,6 +32,12 @@ class User extends Resource
     public static $search = [
         'id', 'name', 'email',
     ];
+    /**
+     * Indicates if the resource should be displayed in the sidebar.
+     *
+     * @var bool
+     */
+    public static $displayInNavigation = false;
 
     /**
      * Get the fields displayed by the resource.
