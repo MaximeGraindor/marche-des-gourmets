@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\About;
-use App\Http\Controllers\Contact;
-use App\Http\Controllers\Informations;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InformationsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +18,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
-Route::get('/qui-sommes-nous', [About::class, 'show'])
+Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->template(\App\Nova\Templates\About::class)
     ->name('about');
 
 Route::view('/exposants', 'pages.exhibitors')->name('exhibitors');
 
-Route::get('/informations-pratiques', [Informations::class, 'show'])
+Route::get('/informations-pratiques', [InformationsController::class, 'show'])
     ->template(\App\Nova\Templates\Informations::class)
     ->name('informations');
 
-Route::get('/contact', [Contact::class, 'show'])
+Route::get('/contact', [ContactController::class, 'show'])
     ->template(\App\Nova\Templates\Contact::class)
     ->name('contact');
 

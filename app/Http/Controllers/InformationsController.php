@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Whitecube\NovaPage\Pages\Manager;
 
-class Informations extends Controller
+class InformationsController extends Controller
 {
     public function show(Request $request, Manager $page)
     {
