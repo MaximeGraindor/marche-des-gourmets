@@ -15,16 +15,15 @@
                 <div class="left-wrapper">
                     <dl class="left-list">
                         <dd>Quand ?</dd>
-                        <dt>Le 27 et 28 mars</dt>
+                        <dt>{{ Page::get('when') }}</dt>
                         <dd>Où ?</dd>
-                        <dt>Salle des moines Val Saint-Lambert</dt>
+                        <dt>{{ Page::get('place') }}</dt>
                         <dd>prix ?</dd>
-                        <dt>Entrée : 5€ (gratuit pour les enfant de -12)</dt>
+                        <dt>{{ Page::get('price') }}</dt>
                         <dd>Adresse ?</dd>
                         <dt>
-                            <span>Chateau du Val Saint Lambert</span>
-                            <span>Esplanade du Val,</span>
-                            <span>4100 Seraing</span>
+                            <span>{{ Page::get('adresse') }}</span>
+                            <span>{{ Page::get('postal_code') }} {{ Page::get('city') }}</span>
                             <a href="https://www.cstc.be/homepage/download.cfm?lang=fr&dtype=agenda&doc=Roadshow_Plan_Liege.pdf" target="_blank">Voir le plan d'accès</a>
                         </dt>
                     </dl>
