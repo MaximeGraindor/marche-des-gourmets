@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Keyword;
 use Illuminate\Database\Seeder;
 
 class KeywordSeeder extends Seeder
@@ -13,6 +14,20 @@ class KeywordSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Keyword::create([
+            'name' => 'Bio'
+        ]);
+
+        Keyword::create([
+            'name' => 'épices'
+        ]);
+
+        Keyword::create([
+            'name' => 'Alcool'
+        ]);
+
+        Keyword::create([
+            'name' => 'Vin'
+        ]);
     }
 }

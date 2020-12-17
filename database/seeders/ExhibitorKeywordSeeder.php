@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\ExhibitorKeyword;
 
 class ExhibitorKeywordSeeder extends Seeder
 {
@@ -13,6 +14,15 @@ class ExhibitorKeywordSeeder extends Seeder
      */
     public function run()
     {
-        //
+        ExhibitorKeyword::create([
+            'exhibitor_id' => 1,
+            'keyword_id' => 1,
+        ]);
+
+        ExhibitorKeyword::create([
+            'exhibitor_id' => 1,
+            'keyword_id' => 2,
+        ]);
+
     }
 }

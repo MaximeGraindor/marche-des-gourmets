@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ExhibitorKeyword extends Model
 {
     use HasFactory;
+
+    protected $table = 'exhibitor_keywords';
+
 }

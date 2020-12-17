@@ -5,17 +5,16 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Exhibitor extends Resource
+class Keyword extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Exhibitor::class;
+    public static $model = \App\Models\Keyword::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -43,15 +42,7 @@ class Exhibitor extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Prénom', 'firstname'),
             Text::make('Nom', 'name'),
-            Text::make('Email', 'email'),
-            Text::make('Telephone', 'telephone'),
-            Text::make('Pays', 'country'),
-            Text::make('Code Postal', 'postal_code'),
-            Text::make('Site web', 'website'),
-
-            BelongsToMany::make('keywords')
         ];
     }
 
