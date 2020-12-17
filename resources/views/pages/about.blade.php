@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'Qui sommes-nous ?')
+@section('title', Page::get('title'))
 @section('content')
     <h1 class="hidden"  role="heading" aria-level="1">
         Qui sommes-nous ? - Marché des Gourmets
@@ -12,7 +12,7 @@
             </div>
             <div class="mdg-right">
                 <h2 class="mdg-title" role="heading" aria-level="2">
-                    Le marché des Gourmets
+                    {{ Page::get('mdgTitle') }}
                 </h2>
                 <div>
                     <p>
@@ -36,7 +36,7 @@
             </div>
             <div class="rf-right">
                 <h2 class="rf-title" role="heading" aria-level="2">
-                    Le club Rotary de Flémalle
+                    {{ Page::get('rfTitle') }}
                 </h2>
                 <div>
                     <p>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="r-right">
                     <h2 class="r-title">
-                        Le marché des Gourmets
+                        {{ Page::get('rotaryTitle') }}
                     </h2>
                     <div>
                         <p>

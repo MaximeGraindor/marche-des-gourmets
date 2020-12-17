@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', 'Contact')
+@section('title', Page::get('title'))
 @section('content')
     <h1 class="hidden" role="heading" aria-level="1">
         Contact - Marché des Gourmets
@@ -17,7 +17,7 @@
                     <dt>{{ Page::get('email') }}</dt>
 
                     <dd class="list-telephone">Téléphone</dd>
-                    <dt>{{ Page::get('Télephone') }}</dt>
+                    <dt>{{ Page::get('telephone') }}</dt>
 
                     <dd class="list-courrier">Courrier</dd>
                     <dt>

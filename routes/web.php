@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\About;
+use App\Http\Controllers\Contact;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'home')->name('home');
-Route::view('/qui-sommes-nous', 'pages.about')->name('about');
+
+Route::get('/qui-sommes-nous', [About::class, 'show'])
+    ->template(\App\Nova\Templates\About::class)
+    ->name('about');
+
 Route::view('/exposants', 'pages.exhibitors')->name('exhibitors');
 Route::view('/informations-pratiques', 'pages.informations')->name('informations');
-Route::view('/contact', 'pages.contact')->template(\App\Nova\Templates\Contact::class)->name('contact');
+
+Route::get('/contact', [Contact::class, 'show'])
+    ->template(\App\Nova\Templates\Contact::class)
+    ->name('contact');
+
 Route::view('/billeterie', 'pages.ticketing')->name('ticketing');
