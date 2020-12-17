@@ -21,10 +21,9 @@ class CreateExhibitorsTable extends Migration
             $table->string('email');
             $table->string('telephone');
             $table->string('country');
-            $table->string('postalCode');
+            $table->string('postal_code');
             $table->string('location');
             $table->string('website');
-            $table->string('keyword');
             $table->text('informations');
 
             $table->boolean('agree');
