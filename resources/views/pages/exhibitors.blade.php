@@ -140,17 +140,15 @@
                         <span>Gastronomie</span>
                     </div>
                 </div>
-
-                <div class="exhibitors-pagination">
-                    <a href="#" class="pagination-left"></a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#" class="pagination-right"></a>
-                </div>
-
+            </div>
+            <div class="exhibitors-pagination">
+                <a href="#" class="pagination-left"></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="pagination-right"></a>
             </div>
         </section>
 

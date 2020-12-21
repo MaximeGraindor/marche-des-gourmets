@@ -42,8 +42,8 @@
 }
 
 .exhibitors-wrapper{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
 }
 
@@ -56,6 +56,7 @@
     flex-direction: column;
     color: white;
     border-radius: 5px;
+    flex: 1 1 27.25%;
     &:hover{
         background-color:  #361515;
     }
@@ -114,6 +115,7 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
+    margin-top: 5rem;
     a{
         font-family: $font-content;
         font-size: 1.25rem;
@@ -163,7 +165,8 @@
             font-size: 1.25rem;
             border: 1px solid rgba(86, 33, 33, 0.4);
             box-shadow: 2px 2px 18px -11px rgba(0,0,0,0.3);
-
+            width: 100%;
+            box-sizing: border-box;
             resize: none;
             &:focus{
                 background-color: $color-cta;
@@ -203,6 +206,46 @@
             border-color: $color-cta;
             color: white;
         }
+    }
+}
+
+// ---------- RESPONSIVE ----------
+@media screen and (max-width: 890px){
+    .exhibitors-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    .exhibitors-top {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .be-form {
+        grid-gap: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .top-filter {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+@media screen and (max-width: 770px){
+    .be-form {
+        display: flex;
+        flex-direction: column;
+        }
+}
+
+@media screen and (max-width: 700px){
+    .exhibitors {
+        padding: 2rem;
     }
 }
 
