@@ -102,3 +102,49 @@
     }
 
 }
+
+// ----------- RESPONSIVE ----------
+@media screen and (max-width:1390px){
+    .about-mdg .mdg-left img, .about-rf .rf-left img, .about-r .r-left img {
+        width: 450px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .about p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:1050px){
+    .about-mdg, .about-rf, .r-top {
+        display: block;
+    }
+
+    .about p {
+        font-size: 1.3rem;
+    }
+
+    .about-mdg .mdg-left img, .about-rf .rf-left img, .about-r .r-left img {
+        width: 100%;
+        height: 100%;
+    }
+    .about-mdg .mdg-left, .r-top .r-left {
+        padding-right: 0rem;
+    }
+    .about-rf .rf-left{
+        padding-left: 0rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .about {
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .about p {
+        font-size: 1.1rem;
+    }
+}
