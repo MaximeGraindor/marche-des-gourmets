@@ -94,6 +94,8 @@
             border: 1px solid rgba(86, 33, 33, 0.4);
             box-shadow: 2px 2px 18px -11px rgba(0,0,0,0.3);
             resize: none;
+            width: 100%;
+            box-sizing: border-box;
             &:focus{
                 background-color: $color-cta;
 
@@ -150,5 +152,37 @@
         }
     }
 }
+
+// ---------- RESPONSIVE ----------
+@media screen and (max-width:1150px){
+    .contact-wrapper{
+        flex-direction: column;
+    }
+    .contact-left{
+        margin-bottom: 50px;
+    }
+    .contact-right {
+        margin-left: 0px;
+    }
+
+    .missingInfo-wrapper{
+        justify-content: space-around;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 930px){
+    .missingInfo-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contact{
+        padding: 2rem;
+    }
+}
+
+
 
 
