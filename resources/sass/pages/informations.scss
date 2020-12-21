@@ -23,6 +23,7 @@
     iframe{
         border: 2px solid $color-red;
         height: 100%;
+        width: 100%;
     }
 }
 
@@ -107,6 +108,18 @@
 }
 
 // ---------- RESPONSIVE ----------
+@media screen and (max-width: 900px){
+    .informations .informations-wrapper {
+        flex-direction: column;
+    }
+    .informations-left{
+        margin-bottom: 50px;
+    }
+    .informations-right iframe {
+        height: -webkit-fill-available;
+    }
+}
+
 @media screen and (max-width: 748px){
     .supp-item {
         flex: auto;
@@ -116,5 +129,14 @@
         gap: 1.3rem;
         text-align: center;
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .informations{
+        padding: 2rem;
+    }
+    .informations-right iframe {
+        height: 500px;
     }
 }
