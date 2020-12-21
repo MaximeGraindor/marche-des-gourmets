@@ -71,9 +71,10 @@
         background-size: 100%;
     }
 }
-@media screen and (max-width:1060px){
+@media screen and (max-width:1140px){
     .header-menu{
         justify-content: space-between;
+        padding-left: 0;
         .header-menu-item:not(.menu-item-logo){
             display: none;
         }
