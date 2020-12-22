@@ -70,28 +70,28 @@
                 </h3>
                 <div class="r-actions-wrapper">
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-peace.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-peace.jpg') }}" alt="Photo de constuire la paix">
                         <span>Construire la paix</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-desease.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-desease.jpg') }}" alt="Photo de combattre les maladies">
                         <span>Combattre les maladies</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-hygiene.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-hygiene.jpg') }}" alt="Photo de apporter l'eau potable, l'assainissement et l'hygiène">
                         <span>apporter l’eau potable,
                             l’assainissement et l’hygiène</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-motherAndChildren.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-motherAndChildren.jpg') }}" alt="Photode soigner les mères et leurs enfants">
                         <span>soigner les mères et leurs enfants</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-classroom.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-classroom.jpg') }}" alt="Photo de soutenir l'éducation">
                         <span>soutenir l’éducation</span>
                     </div>
                     <div class="r-actions-item">
-                        <img src="{{ asset('storage/img/actions-localEconomy.jpg') }}" alt="Photo">
+                        <img src="{{ asset('storage/img/actions-localEconomy.jpg') }}" alt="Photo de développer les économies locales">
                         <span>développer les économies locales</span>
                     </div>
                 </div>

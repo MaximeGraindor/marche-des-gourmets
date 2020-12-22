@@ -1,8 +1,8 @@
 <section class="home-partenaires">
     <div class="home-partenaires-wrapper">
         <h2 class="hidden partenaires-title" role="heading" aria-level="2">Nos partenaires</h2>
-        <img src="{{ asset('/storage/assets/logoProvinceDeLiege.png') }}" alt="">
-        <img src="{{ asset('/storage/assets/logoClub.png') }}" alt="">
+        <img src="{{ asset('/storage/assets/logoProvinceDeLiege.png') }}" alt="Logo de la Province de Liège">
+        <img src="{{ asset('/storage/assets/logoClub.png') }}" alt="Logo du club du Rotary de Flémalle">
     </div>
 </section>
 <footer class="footer">

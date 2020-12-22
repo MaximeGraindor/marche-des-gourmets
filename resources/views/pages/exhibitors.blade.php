@@ -12,7 +12,7 @@
                 <h2 class="top-title"  role="heading" aria-level="2">
                     Les exposants
                 </h2>
-                <form action="post" class="top-filter">
+                <form action="post" class="top-filter" method="#">
                     <div>
                         <label for="country" class="hidden">Pays</label>
                         <select name="country" id="country">

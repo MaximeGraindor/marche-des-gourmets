@@ -1,6 +1,9 @@
 @extends('layouts.base')
 @section('title', 'Accueil')
 @section('content')
+    <h1 class="hidden" role="heading" aria-level="1">
+        Accueil - Marché des Gourmets
+    </h1>
     <x-header/>
     <main class="home">
         <div class="home-intro">
