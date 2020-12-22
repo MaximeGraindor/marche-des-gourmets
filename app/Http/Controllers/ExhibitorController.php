@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exhibitor;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreExhibitorRequest;
 
 class ExhibitorController extends Controller
 {
@@ -15,7 +16,6 @@ class ExhibitorController extends Controller
     public function index()
     {
         $allExhibitors = Exhibitor::with('keywords')->get();
-        //return $allExhibitors;
         return view('pages.exhibitors', compact('allExhibitors'));
     }
 
@@ -26,7 +26,7 @@ class ExhibitorController extends Controller
      */
     public function create()
     {
-        //
+        return 'test';
     }
 
     /**
@@ -37,7 +37,7 @@ class ExhibitorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return 'test';
     }
 
     /**

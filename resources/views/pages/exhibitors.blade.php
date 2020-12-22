@@ -68,7 +68,8 @@
 
         <section class="become-exhibitor" id="become-exhibitor">
             <h2 class="be-title" role="heading" aria-level="2">Postuler pour devenir exposant</h2>
-            <form class="be-form" action="#" method="post">
+            <form class="be-form" action="/exposants" method="post">
+                @csrf
                 <div class="form-firstname-name">
                     <div>
                         <label for="firstname">Prénom</label>
@@ -116,43 +117,43 @@
                         </div>
                         <div class="checkboxes">
                             <label for="bio">
-                                <input type="checkbox" id="bio" />
+                                <input type="checkbox" id="bio" name="bio" />
                                 Bio
                             </label>
                             <label for="vin">
-                                <input type="checkbox" id="vin" />
+                                <input type="checkbox" id="vin" name="vin" />
                                 Vin
                             </label>
                             <label for="Alcool">
-                                <input type="checkbox" id="Alcool" />
+                                <input type="checkbox" id="Alcool" name="Alcool" />
                                 Alcool
                             </label>
                             <label for="patisserie">
-                                <input type="checkbox" id="patisserie" />
+                                <input type="checkbox" id="patisserie" name="patisserie" />
                                 Patisserie
                             </label>
                             <label for="chocolaterie">
-                                <input type="checkbox" id="chocolaterie" />
+                                <input type="checkbox" id="chocolaterie" name="chocolaterie" />
                                 Chocolaterie
                             </label>
                             <label for="saucissons">
-                                <input type="checkbox" id="saucissons" />
+                                <input type="checkbox" id="saucissons" name="saucissons" />
                                 Saucissons
                             </label>
                             <label for="fromages">
-                                <input type="checkbox" id="fromages" />
+                                <input type="checkbox" id="fromages" name="fromages" />
                                 Fromages
                             </label>
                             <label for="huiles">
-                                <input type="checkbox" id="huiles" />
+                                <input type="checkbox" id="huiles" name="huiles" />
                                 Huiles
                             </label>
                             <label for="epices">
-                                <input type="checkbox" id="epices" />
+                                <input type="checkbox" id="epices" name="epices" />
                                 Épices
                             </label>
                             <label for="pains">
-                                <input type="checkbox" id="pains" />
+                                <input type="checkbox" id="pains" name="pains" />
                                 Pains
                             </label>
                         </div>

@@ -24,6 +24,7 @@ Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->name('about');
 
 Route::get('/exposants', [ExhibitorController::class, 'index'])->name('exhibitors');
+Route::post('/exposants', [ExhibitorController::class, 'store']);
 
 Route::get('/informations-pratiques', [InformationsController::class, 'show'])
     ->template(\App\Nova\Templates\Informations::class)
