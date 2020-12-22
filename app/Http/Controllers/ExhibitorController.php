@@ -14,7 +14,9 @@ class ExhibitorController extends Controller
      */
     public function index()
     {
-        //
+        $allExhibitors = Exhibitor::with('keywords')->get();
+        //return $allExhibitors;
+        return view('pages.exhibitors', compact('allExhibitors'));
     }
 
     /**

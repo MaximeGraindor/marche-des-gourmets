@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ExhibitorController;
 use App\Http\Controllers\InformationsController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,7 @@ Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->template(\App\Nova\Templates\About::class)
     ->name('about');
 
-Route::view('/exposants', 'pages.exhibitors')->name('exhibitors');
+Route::get('/exposants', [ExhibitorController::class, 'index'])->name('exhibitors');
 
 Route::get('/informations-pratiques', [InformationsController::class, 'show'])
     ->template(\App\Nova\Templates\Informations::class)
