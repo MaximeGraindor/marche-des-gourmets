@@ -19,7 +19,6 @@ class CreateSeasonsTable extends Migration
             $table->datetime('end_date');
             $table->float('price');
             $table->string('adress');
-            $table->string('coutry');
             $table->string('city');
             $table->string('postal_code');
             $table->string('coutry');

@@ -18,13 +18,14 @@ class CreateExhibitorsTable extends Migration
 
             $table->string('firstname');
             $table->string('name');
+            $table->string('company_name')->nullable();
             $table->string('email');
             $table->string('telephone');
             $table->string('country');
             $table->string('postal_code');
             $table->string('location');
-            $table->string('website');
-            $table->text('informations');
+            $table->string('website')->nullable();
+            $table->text('informations')->nullable();
 
             $table->boolean('agree');
             $table->timestamps();

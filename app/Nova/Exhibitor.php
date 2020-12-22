@@ -38,7 +38,7 @@ class Exhibitor extends Resource
     public static $group = 'Les exposants';
     public static function label()
     {
-        return 'Tous les exposants';
+        return 'Les exposants';
     }
 
     /**
@@ -50,16 +50,41 @@ class Exhibitor extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Prénom', 'firstname'),
-            Text::make('Nom', 'name'),
-            Text::make('Email', 'email'),
-            Text::make('Telephone', 'telephone'),
-            Text::make('Pays', 'country'),
-            Text::make('Code Postal', 'postal_code'),
-            Text::make('Site web', 'website'),
-            Textarea::make('Informations supplémentaires', 'supply_info'),
-            Boolean::make('Validé', 'Validated'),
+            ID::make(__('ID'), 'id')
+                ->sortable(),
+
+            Text::make('Prénom', 'firstname')
+                ->rules('required'),
+
+            Text::make('Nom', 'name')
+                ->rules('required'),
+
+            Text::make('Nom de la société', 'company_name')
+                ->help('Facultatif'),
+
+            Text::make('Email', 'email')
+                ->rules('required'),
+
+            Text::make('Telephone', 'telephone')
+                ->rules('required'),
+
+            Text::make('Pays', 'country')
+                ->rules('required'),
+
+            Text::make('Code Postal', 'postal_code')
+                ->rules('required'),
+
+            Text::make('Localité', 'location')
+                ->rules('required'),
+
+            Text::make('Site web', 'website')
+                ->help('Facultatif'),
+
+            Textarea::make('Informations supplémentaires', 'informations')
+                ->help('Facultatif'),
+
+            Boolean::make('Validé', 'agree')
+                ->rules('required'),
 
             BelongsToMany::make('keywords')
         ];

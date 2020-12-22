@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use App\Models\Exhibitor;
 use Illuminate\Database\Seeder;
 
@@ -17,6 +18,7 @@ class ExhibitorSeeder extends Seeder
         Exhibitor::create([
             'firstname' => 'Maxime',
             'name' => 'Maxime',
+            'company_name' => 'MaximeGraindor',
             'email' => 'maxime.graindor@hotmail.com',
             'telephone' => '0476285960',
             'country' => 'Belgique',
@@ -25,6 +27,9 @@ class ExhibitorSeeder extends Seeder
             'website' => 'maximegraindor.be',
             'informations' => 'Hellow world! Ceci est un test :/',
             'agree' => 1,
+
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
     }
 }
