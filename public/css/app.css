@@ -966,8 +966,9 @@ body {
   font-size: 1.25rem;
 }
 
-.be-form div input,
-.be-form div textarea {
+.be-form div input[type=text],
+.be-form div textarea,
+.be-form div select {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
   padding: 0.8rem 0.9rem;
   font-size: 1.25rem;
@@ -978,8 +979,9 @@ body {
   resize: none;
 }
 
-.be-form div input:focus,
-.be-form div textarea:focus {
+.be-form div input[type=text]:focus,
+.be-form div textarea:focus,
+.be-form div select:focus {
   background-color: #FDEEDB;
 }
 
@@ -988,6 +990,33 @@ body {
   display: flex;
   flex-direction: row;
   gap: 0.9rem;
+}
+
+.be-form .selectbox {
+  position: relative;
+}
+
+.be-form .selectbox .overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.be-form .checkboxes {
+  display: none;
+  border: 1px solid rgba(86, 33, 33, 0.4);
+}
+
+.be-form .checkboxes label {
+  display: block;
+  padding: 0.8rem 0.9rem;
+}
+
+.be-form .checkboxes label:hover {
+  background-color: #703838;
+  color: white;
 }
 
 .form-informations {
@@ -1006,17 +1035,24 @@ body {
 }
 
 .form-submit input[type=submit] {
-  padding: 0.8rem 4rem;
+  padding: 1rem 4rem;
   background-color: #703838;
+  border: 1px solid rgba(86, 33, 33, 0.4);
   color: white;
   font-weight: bold;
   width: 200px;
+  font-size: 1.15rem;
+  cursor: pointer;
 }
 
 .form-submit input[type=submit]:hover {
   background-color: #562121;
   border-color: #FDEEDB;
   color: white;
+}
+
+.checkboxesEl-on {
+  display: block !important;
 }
 
 @media screen and (max-width: 890px) {

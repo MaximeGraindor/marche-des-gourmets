@@ -193,7 +193,56 @@
                 </div>
                 <div class="form-categoryProduct">
                     <label for="categoryProduct">catégorie de produit</label>
-                    <input type="text" name="categoryProduct" id="categoryProduct">
+                    <div class="multiselect-wrapper">
+                        <div class="selectbox">
+                            <select name="categoryProduct" id="categoryProduct">
+                                <option value="">Sélectionnez vos catégories de produits</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div class="checkboxes">
+                            <label for="bio">
+                                <input type="checkbox" id="bio" />
+                                Bio
+                            </label>
+                            <label for="vin">
+                                <input type="checkbox" id="vin" />
+                                Vin
+                            </label>
+                            <label for="Alcool">
+                                <input type="checkbox" id="Alcool" />
+                                Alcool
+                            </label>
+                            <label for="patisserie">
+                                <input type="checkbox" id="patisserie" />
+                                Patisserie
+                            </label>
+                            <label for="chocolaterie">
+                                <input type="checkbox" id="chocolaterie" />
+                                Chocolaterie
+                            </label>
+                            <label for="saucissons">
+                                <input type="checkbox" id="saucissons" />
+                                Saucissons
+                            </label>
+                            <label for="fromages">
+                                <input type="checkbox" id="fromages" />
+                                Fromages
+                            </label>
+                            <label for="huiles">
+                                <input type="checkbox" id="huiles" />
+                                Huiles
+                            </label>
+                            <label for="epices">
+                                <input type="checkbox" id="epices" />
+                                Épices
+                            </label>
+                            <label for="pains">
+                                <input type="checkbox" id="pains" />
+                                Pains
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-website">
                     <label for="website">Site internet</label>
@@ -208,7 +257,6 @@
                 </div>
             </form>
         </section>
-
     </main>
 
     <x-footer/>

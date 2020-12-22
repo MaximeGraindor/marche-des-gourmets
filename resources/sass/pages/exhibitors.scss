@@ -160,7 +160,7 @@
             margin-bottom: 0.5rem;
             font-size: 1.25rem;
         }
-        input, textarea{
+        input[type="text"], textarea, select{
             font-family: $font-content;
             padding: 0.8rem 0.9rem;
             font-size: 1.25rem;
@@ -181,6 +181,34 @@
         flex-direction: row;
         gap: 0.9rem;
     }
+
+
+    .selectbox{
+        position: relative;
+        .overSelect{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+
+    }
+    .checkboxes{
+        display: none;
+        border: 1px solid rgba(86, 33, 33, 0.4);
+        label{
+            display: block;
+            padding: 0.8rem 0.9rem;
+            &:hover{
+                background-color: $color-red-light;
+                color: white;
+            }
+        }
+    }
+
+
 }
 
 .form-informations{
@@ -198,17 +226,24 @@
     box-sizing: border-box;
     align-items: flex-end;
     input[type="submit"]{
-        padding: 0.8rem 4rem;
+        padding: 1rem 4rem;
         background-color: $color-red-light;
+        border: 1px solid rgba(86, 33, 33, 0.4);
         color: white;
         font-weight: bold;
         width: 200px;
+        font-size: 1.15rem;
+        cursor: pointer;
         &:hover{
             background-color: $color-red;
             border-color: $color-cta;
             color: white;
         }
     }
+}
+
+.checkboxesEl-on{
+    display: block !important;
 }
 
 // ---------- RESPONSIVE ----------
