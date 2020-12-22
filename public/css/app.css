@@ -958,6 +958,7 @@ body {
 .be-form div {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .be-form div label {
@@ -982,7 +983,8 @@ body {
   background-color: #FDEEDB;
 }
 
-.be-form .form-postal-location {
+.be-form .form-postal-location,
+.be-form .form-firstname-name {
   display: flex;
   flex-direction: row;
   gap: 0.9rem;
@@ -1008,6 +1010,7 @@ body {
   background-color: #703838;
   color: white;
   font-weight: bold;
+  width: 200px;
 }
 
 .form-submit input[type=submit]:hover {

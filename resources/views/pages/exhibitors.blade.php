@@ -155,13 +155,19 @@
         <section class="become-exhibitor" id="become-exhibitor">
             <h2 class="be-title" role="heading" aria-level="2">Postuler pour devenir exposant</h2>
             <form class="be-form" action="#" method="post">
-                <div class="form-firstname">
-                    <label for="firstname">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" placeholder="Jean">
+                <div class="form-firstname-name">
+                    <div>
+                        <label for="firstname">Prénom</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </div>
+                    <div>
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name">
+                    </div>
                 </div>
-                <div class="form-name">
-                    <label for="name">Nom</label>
-                    <input type="text" name="name" id="name" placeholder="Jean">
+                <div class="form-companyName">
+                    <label for="companyName">Nom de la société</label>
+                    <input type="text" name="companyName" id="companyName" placeholder="Jean">
                 </div>
                 <div class="form-email">
                     <label for="email">Email</label>
@@ -191,7 +197,7 @@
                 </div>
                 <div class="form-website">
                     <label for="website">Site internet</label>
-                    <input type="text" name="website" id="website">
+                    <input type="text" name="website" id="website" placeholder="www.example.com">
                 </div>
                 <div class="form-informations">
                     <label for="informations">Informations supplémentaire</label>

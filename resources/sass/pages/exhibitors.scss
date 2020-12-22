@@ -155,6 +155,7 @@
     div{
         display:flex;
         flex-direction: column;
+        flex: 1;
         label{
             margin-bottom: 0.5rem;
             font-size: 1.25rem;
@@ -175,7 +176,7 @@
         }
     }
 
-    .form-postal-location{
+    .form-postal-location, .form-firstname-name{
         display: flex;
         flex-direction: row;
         gap: 0.9rem;
@@ -201,6 +202,7 @@
         background-color: $color-red-light;
         color: white;
         font-weight: bold;
+        width: 200px;
         &:hover{
             background-color: $color-red;
             border-color: $color-cta;
