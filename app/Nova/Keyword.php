@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Keyword extends Resource
@@ -21,7 +22,7 @@ class Keyword extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -29,7 +30,7 @@ class Keyword extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
 
     public static $group = 'Les exposants';
@@ -47,8 +48,12 @@ class Keyword extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
+            ID::make(__('ID'), 'id')
+                ->sortable(),
+
             Text::make('Nom', 'name'),
+
+            BelongsToMany::make('exhibitors')
         ];
     }
 
