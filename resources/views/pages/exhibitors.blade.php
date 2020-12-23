@@ -73,14 +73,14 @@
                 <div class="form-firstname-name">
                     <div>
                         <label for="firstname">Prénom*</label>
-                        <input type="text" name="firstname" id="firstname" class="{{ $errors->has('firstname') ? 'error-input' : ''}}">
+                        <input type="text" name="firstname" id="firstname" class="{{ $errors->has('firstname') ? 'error-input' : ''}}" value="{{ old('firstname') }}">
                         @error('firstname')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div>
                         <label for="name">Nom*</label>
-                        <input type="text" name="name" id="name" class="{{ $errors->has('name') ? 'error-input' : ''}}">
+                        <input type="text" name="name" id="name" class="{{ $errors->has('name') ? 'error-input' : ''}}" value="{{ old('name') }}">
                         @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -88,25 +88,25 @@
                 </div>
                 <div class="form-companyName">
                     <label for="companyName">Nom de la société</label>
-                    <input type="text" name="companyName" id="companyName" placeholder="Jean">
+                    <input type="text" name="company_name" id="companyName" placeholder="Jean" value="{{ old('company_name') }}">
                 </div>
                 <div class="form-email">
                     <label for="email">Email*</label>
-                    <input type="email" name="email" id="email" placeholder="example@gmail.com" class="{{ $errors->has('email') ? 'error-input' : ''}}">
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" class="{{ $errors->has('email') ? 'error-input' : ''}}" value="{{ old('email') }}">
                     @error('email')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-telephone">
                     <label for="telephone">Téléphone*</label>
-                    <input type="tel" name="telephone" id="telephone" placeholder="0476285960" class="{{ $errors->has('telephone') ? 'error-input' : ''}}">
+                    <input type="tel" name="telephone" id="telephone" placeholder="0476285960" class="{{ $errors->has('telephone') ? 'error-input' : ''}}" value="{{ old('firstname') }}">
                     @error('telephone')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-country">
                     <label for="country">Pays*</label>
-                    <input type="text" name="country" id="country" class="{{ $errors->has('country') ? 'error-input' : ''}}">
+                    <input type="text" name="country" id="country" class="{{ $errors->has('country') ? 'error-input' : ''}}" value="{{ old('firstname') }}">
                     @error('country')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -114,14 +114,14 @@
                 <div class="form-postal-location">
                     <div>
                         <label for="postal_code">Code postal*</label>
-                        <input type="text" name="postal_code" id="postal_code" class="{{ $errors->has('postal_code') ? 'error-input' : ''}}">
+                        <input type="text" name="postal_code" id="postal_code" class="{{ $errors->has('postal_code') ? 'error-input' : ''}}" value="{{ old('postal_code') }}">
                         @error('postal_code')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div>
                         <label for="location">Localité*</label>
-                        <input type="text" name="location" id="location" class="{{ $errors->has('location') ? 'error-input' : ''}}">
+                        <input type="text" name="location" id="location" class="{{ $errors->has('location') ? 'error-input' : ''}}" value="{{ old('location') }}">
                         @error('location')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -137,56 +137,25 @@
                             <div class="overSelect"></div>
                         </div>
                         <div class="checkboxes">
-                            <label for="bio">
-                                <input type="checkbox" id="bio" name="bio" />
-                                Bio
-                            </label>
-                            <label for="vin">
-                                <input type="checkbox" id="vin" name="vin" />
-                                Vin
-                            </label>
-                            <label for="Alcool">
-                                <input type="checkbox" id="Alcool" name="Alcool" />
-                                Alcool
-                            </label>
-                            <label for="patisserie">
-                                <input type="checkbox" id="patisserie" name="patisserie" />
-                                Patisserie
-                            </label>
-                            <label for="chocolaterie">
-                                <input type="checkbox" id="chocolaterie" name="chocolaterie" />
-                                Chocolaterie
-                            </label>
-                            <label for="saucissons">
-                                <input type="checkbox" id="saucissons" name="saucissons" />
-                                Saucissons
-                            </label>
-                            <label for="fromages">
-                                <input type="checkbox" id="fromages" name="fromages" />
-                                Fromages
-                            </label>
-                            <label for="huiles">
-                                <input type="checkbox" id="huiles" name="huiles" />
-                                Huiles
-                            </label>
-                            <label for="epices">
-                                <input type="checkbox" id="epices" name="epices" />
-                                Épices
-                            </label>
-                            <label for="pains">
-                                <input type="checkbox" id="pains" name="pains" />
-                                Pains
-                            </label>
+                            @foreach ($allKeywords as $keyword)
+                                <label for="{{ $keyword->name }}">
+                                    <input type="checkbox" id="{{ $keyword->name }}" value="{{ $keyword->name }}" name="keywords[]" />
+                                    {{ $keyword->name }}
+                                </label>
+                            @endforeach
                         </div>
+                        @error('keywords')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-website">
                     <label for="website">Site internet</label>
-                    <input type="url" name="website" id="website" placeholder="www.example.com">
+                    <input type="url" name="website" id="website" placeholder="www.example.com" value="{{ old('website') }}">
                 </div>
                 <div class="form-informations">
                     <label for="informations">Informations supplémentaire</label>
-                    <textarea type="text" name="informations" id="informations"> </textarea>
+                    <textarea type="text" name="informations" id="informations" value="{{ old('informations') }}"> </textarea>
                 </div>
                 <div class="form-submit">
                     <input type="submit" value="Postuler">

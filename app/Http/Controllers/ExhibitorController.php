@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Keyword;
 use App\Models\Exhibitor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreExhibitorRequest;
 
 class ExhibitorController extends Controller
@@ -18,7 +20,10 @@ class ExhibitorController extends Controller
         $allExhibitors = Exhibitor::with('keywords')
             ->where('agree', true)
             ->get();
-        return view('pages.exhibitors', compact('allExhibitors'));
+
+        $allKeywords = Keyword::all();
+
+        return view('pages.exhibitors', compact('allExhibitors', 'allKeywords'));
     }
 
     /**
@@ -42,14 +47,23 @@ class ExhibitorController extends Controller
         $validated = $request->validate([
             'firstname' => 'required',
             'name' => 'required',
+            'company_name' => 'nullable',
             'email' => 'required',
             'telephone' => 'required',
             'country' => 'required',
-            'postal_code' => 'required',
+            'postal_code' => 'required|integer',
             'location' => 'required',
+            'informations' => 'nullable',
+            'keywords' => 'required',
         ]);
 
-        Exhibitor::create($validated);
+        $exhibitor = Exhibitor::create($validated);
+
+        foreach ($request->keywords as $keyword) {
+            $keywordId = Keyword::all()->where('name', $keyword)->first()->id;
+            $exhibitor->keywords()->attach($keywordId);
+        };
+
 
         return redirect('/exposants#become-exhibitor');
     }
