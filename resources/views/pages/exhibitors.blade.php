@@ -34,7 +34,7 @@
                     <div>
                         <label for="search" class="hidden">Pays</label>
                         <div class="filter-input-wrapper">
-                            <input type="text" name="search" id="search" placeholder="Rechercher">
+                            <input type="search" name="search" id="search" placeholder="Rechercher">
                             <span class="icon-search"></span>
                         </div>
                     </div>
@@ -92,14 +92,14 @@
                 </div>
                 <div class="form-email">
                     <label for="email">Email*</label>
-                    <input type="text" name="email" id="email" placeholder="example@gmail.com" class="{{ $errors->has('email') ? 'error-input' : ''}}">
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" class="{{ $errors->has('email') ? 'error-input' : ''}}">
                     @error('email')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-telephone">
                     <label for="telephone">Téléphone*</label>
-                    <input type="text" name="telephone" id="telephone" placeholder="0476285960" class="{{ $errors->has('telephone') ? 'error-input' : ''}}">
+                    <input type="tel" name="telephone" id="telephone" placeholder="0476285960" class="{{ $errors->has('telephone') ? 'error-input' : ''}}">
                     @error('telephone')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -182,7 +182,7 @@
                 </div>
                 <div class="form-website">
                     <label for="website">Site internet</label>
-                    <input type="text" name="website" id="website" placeholder="www.example.com">
+                    <input type="url" name="website" id="website" placeholder="www.example.com">
                 </div>
                 <div class="form-informations">
                     <label for="informations">Informations supplémentaire</label>

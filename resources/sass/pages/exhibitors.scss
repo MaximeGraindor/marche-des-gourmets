@@ -160,7 +160,7 @@
             margin-bottom: 0.5rem;
             font-size: 1.25rem;
         }
-        input[type="text"], textarea, select{
+        input[type="text"], input[type="email"], input[type="tel"], input[type="url"], textarea, select{
             font-family: $font-content;
             padding: 0.8rem 0.9rem;
             font-size: 1.25rem;

@@ -977,6 +977,9 @@ body {
 }
 
 .be-form div input[type=text],
+.be-form div input[type=email],
+.be-form div input[type=tel],
+.be-form div input[type=url],
 .be-form div textarea,
 .be-form div select {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
@@ -990,6 +993,9 @@ body {
 }
 
 .be-form div input[type=text]:focus,
+.be-form div input[type=email]:focus,
+.be-form div input[type=tel]:focus,
+.be-form div input[type=url]:focus,
 .be-form div textarea:focus,
 .be-form div select:focus {
   background-color: #FDEEDB;
