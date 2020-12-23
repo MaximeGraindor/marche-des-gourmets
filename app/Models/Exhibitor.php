@@ -9,6 +9,19 @@ class Exhibitor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'firstname',
+        'name',
+        'company_name',
+        'email',
+        'telephone',
+        'country',
+        'postal_code',
+        'location',
+        'website',
+
+    ];
+
     protected $table = 'exhibitors';
 
     public function keywords()

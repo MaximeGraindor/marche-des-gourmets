@@ -15,7 +15,9 @@ class ExhibitorController extends Controller
      */
     public function index()
     {
-        $allExhibitors = Exhibitor::with('keywords')->get();
+        $allExhibitors = Exhibitor::with('keywords')
+            ->where('agree', true)
+            ->get();
         return view('pages.exhibitors', compact('allExhibitors'));
     }
 
@@ -37,7 +39,19 @@ class ExhibitorController extends Controller
      */
     public function store(Request $request)
     {
-        return 'test';
+        $validated = $request->validate([
+            'firstname' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'telephone' => 'required',
+            'country' => 'required',
+            'postal_code' => 'required',
+            'location' => 'required',
+        ]);
+
+        Exhibitor::create($validated);
+
+        return redirect('/exposants#become-exhibitor');
     }
 
     /**

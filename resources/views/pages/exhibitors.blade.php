@@ -72,12 +72,18 @@
                 @csrf
                 <div class="form-firstname-name">
                     <div>
-                        <label for="firstname">Prénom</label>
-                        <input type="text" name="firstname" id="firstname">
+                        <label for="firstname">Prénom*</label>
+                        <input type="text" name="firstname" id="firstname" class="{{ $errors->has('firstname') ? 'error-input' : ''}}">
+                        @error('firstname')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div>
-                        <label for="name">Nom</label>
-                        <input type="text" name="name" id="name">
+                        <label for="name">Nom*</label>
+                        <input type="text" name="name" id="name" class="{{ $errors->has('name') ? 'error-input' : ''}}">
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-companyName">
@@ -85,29 +91,44 @@
                     <input type="text" name="companyName" id="companyName" placeholder="Jean">
                 </div>
                 <div class="form-email">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="example@gmail.com">
+                    <label for="email">Email*</label>
+                    <input type="text" name="email" id="email" placeholder="example@gmail.com" class="{{ $errors->has('email') ? 'error-input' : ''}}">
+                    @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-telephone">
-                    <label for="telephone">Téléphone</label>
-                    <input type="text" name="telephone" id="telephone" placeholder="0476285960">
+                    <label for="telephone">Téléphone*</label>
+                    <input type="text" name="telephone" id="telephone" placeholder="0476285960" class="{{ $errors->has('telephone') ? 'error-input' : ''}}">
+                    @error('telephone')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-country">
-                    <label for="country">Pays</label>
-                    <input type="text" name="country" id="country">
+                    <label for="country">Pays*</label>
+                    <input type="text" name="country" id="country" class="{{ $errors->has('country') ? 'error-input' : ''}}">
+                    @error('country')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="form-postal-location">
                     <div>
-                        <label for="postal">Code postal</label>
-                        <input type="text" name="postal" id="postal">
+                        <label for="postal_code">Code postal*</label>
+                        <input type="text" name="postal_code" id="postal_code" class="{{ $errors->has('postal_code') ? 'error-input' : ''}}">
+                        @error('postal_code')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div>
-                        <label for="location">Localité</label>
-                        <input type="text" name="location" id="location">
+                        <label for="location">Localité*</label>
+                        <input type="text" name="location" id="location" class="{{ $errors->has('location') ? 'error-input' : ''}}">
+                        @error('location')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form-categoryProduct">
-                    <label for="categoryProduct">catégorie de produit</label>
+                    <label for="categoryProduct">catégorie de produit*</label>
                     <div class="multiselect-wrapper">
                         <div class="selectbox">
                             <select name="categoryProduct" id="categoryProduct">

@@ -25,3 +25,13 @@ body{
     width: 25px;
     height: 25px;
 }
+
+.alert-danger{
+    margin-top: 5px;
+    font-weight: bold;
+    color: darkred;
+}
+
+.error-input{
+    border: 2px solid darkred !important;
+}

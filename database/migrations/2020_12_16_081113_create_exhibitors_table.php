@@ -22,12 +22,12 @@ class CreateExhibitorsTable extends Migration
             $table->string('email');
             $table->string('telephone');
             $table->string('country');
-            $table->string('postal_code');
+            $table->integer('postal_code');
             $table->string('location');
             $table->string('website')->nullable();
             $table->text('informations')->nullable();
 
-            $table->boolean('agree');
+            $table->boolean('agree')->default(false);
             $table->timestamps();
         });
     }
