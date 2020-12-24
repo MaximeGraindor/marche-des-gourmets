@@ -1,4 +1,4 @@
-/* const menuImgEl = document.querySelector('.menuResponsive-img')
+const menuImgEl = document.querySelector('.menuResponsive-img')
 const menuElt = document.getElementById('categoryProduct')
 
 menuImgEl.addEventListener('click', () => {
@@ -14,9 +14,6 @@ const checkboxesEl = document.querySelector('.checkboxes')
 selectbox.addEventListener('click', () => {
     checkboxesEl.classList.toggle('checkboxesEl-on')
 })
- */
 
-// ----------------------------------------------------------------
 
-// A reference to Stripe.js initialized with your real test publishable API key.
 

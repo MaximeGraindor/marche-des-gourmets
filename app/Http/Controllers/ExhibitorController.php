@@ -6,6 +6,8 @@ use App\Models\Keyword;
 use App\Models\Exhibitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ExhibitorApplyNotification;
 use App\Http\Requests\StoreExhibitorRequest;
 
 class ExhibitorController extends Controller
@@ -63,6 +65,8 @@ class ExhibitorController extends Controller
             $keywordId = Keyword::all()->where('name', $keyword)->first()->id;
             $exhibitor->keywords()->attach($keywordId);
         };
+
+        Mail::to('maxime.graindor@hotmail.com')->send(new ExhibitorApplyNotification);
 
 
         return redirect('/exposants#become-exhibitor');

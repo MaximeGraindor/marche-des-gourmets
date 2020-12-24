@@ -1486,7 +1486,12 @@ body {
   } */
 }
 
-form {
+.ticketing {
+  /* Buttons and links */
+  /* spinner/processing state, errors */
+}
+
+.ticketing form {
   width: 30vw;
   min-width: 500px;
   align-self: center;
@@ -1495,7 +1500,7 @@ form {
   padding: 40px;
 }
 
-input {
+.ticketing input {
   border-radius: 6px;
   margin-bottom: 6px;
   padding: 12px;
@@ -1506,22 +1511,22 @@ input {
   background: white;
 }
 
-.result-message {
+.ticketing .result-message {
   line-height: 22px;
   font-size: 16px;
 }
 
-.result-message a {
+.ticketing .result-message a {
   color: #596fd6;
   font-weight: 600;
   text-decoration: none;
 }
 
-.hidden {
+.ticketing .hidden {
   display: none;
 }
 
-#card-error {
+.ticketing #card-error {
   color: #697386;
   text-align: left;
   font-size: 13px;
@@ -1529,7 +1534,7 @@ input {
   margin-top: 12px;
 }
 
-#card-element {
+.ticketing #card-element {
   border-radius: 4px 4px 0 0;
   padding: 12px;
   border: 1px solid rgba(50, 50, 93, 0.1);
@@ -1538,13 +1543,11 @@ input {
   background: white;
 }
 
-#payment-request-button {
+.ticketing #payment-request-button {
   margin-bottom: 32px;
 }
 
-/* Buttons and links */
-
-button {
+.ticketing button {
   background: #5469d4;
   color: #ffffff;
   font-family: Arial, sans-serif;
@@ -1560,24 +1563,22 @@ button {
   width: 100%;
 }
 
-button:hover {
+.ticketing button:hover {
   filter: contrast(115%);
 }
 
-button:disabled {
+.ticketing button:disabled {
   opacity: 0.5;
   cursor: default;
 }
 
-/* spinner/processing state, errors */
-
-.spinner,
-.spinner:before,
-.spinner:after {
+.ticketing .spinner,
+.ticketing .spinner:before,
+.ticketing .spinner:after {
   border-radius: 50%;
 }
 
-.spinner {
+.ticketing .spinner {
   color: #ffffff;
   font-size: 22px;
   text-indent: -99999px;
@@ -1589,13 +1590,13 @@ button:disabled {
   transform: translateZ(0);
 }
 
-.spinner:before,
-.spinner:after {
+.ticketing .spinner:before,
+.ticketing .spinner:after {
   position: absolute;
   content: "";
 }
 
-.spinner:before {
+.ticketing .spinner:before {
   width: 10.4px;
   height: 20.4px;
   background: #5469d4;
@@ -1607,7 +1608,7 @@ button:disabled {
   animation: loading 2s infinite ease 1.5s;
 }
 
-.spinner:after {
+.ticketing .spinner:after {
   width: 10.4px;
   height: 10.2px;
   background: #5469d4;
@@ -1640,7 +1641,7 @@ button:disabled {
 }
 
 @media only screen and (max-width: 600px) {
-  form {
+  .ticketing form {
     width: 80vw;
   }
 }
