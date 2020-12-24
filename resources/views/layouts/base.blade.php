@@ -9,8 +9,10 @@
 
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
         @livewireStyles
-        <script src="{{ asset('/js/app.js') }}" defer></script>
         <link rel="icon" type="image/png" href="/favicon.png">
+
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
 
         {{-- Social Meta --}}
         <meta property="og:type" content="website">
@@ -25,7 +27,7 @@
 
     <body>
         @yield('content')
-
+        <script src="{{ asset('/js/app.js') }}" defer></script>
         @livewireScripts
     </body>
 </html>

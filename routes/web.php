@@ -1,10 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ExhibitorController;
 use App\Http\Controllers\InformationsController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,4 @@ Route::get('/contact', [ContactController::class, 'show'])
     ->template(\App\Nova\Templates\Contact::class)
     ->name('contact');
 
-Route::view('/billeterie', 'pages.ticketing')->name('ticketing');
+Route::get('/billeterie', [CheckoutController::class, 'index'])->name('ticketing');
