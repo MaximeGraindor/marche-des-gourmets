@@ -18,7 +18,7 @@ class CheckoutController extends Controller
     {
         // Set your secret key. Remember to switch to your live secret key in production!
         // See your keys here: https://dashboard.stripe.com/account/apikeys
-        \Stripe\Stripe::setApiKey(env('STRIPE_KEY'));
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
 
         $intent = \Stripe\PaymentIntent::create([
             'amount' => 1099,

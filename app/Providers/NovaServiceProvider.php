@@ -79,6 +79,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             \Whitecube\NovaPage\NovaPageTool::make(),
+            new \Tightenco\NovaStripe\NovaStripe,
         ];
     }
 

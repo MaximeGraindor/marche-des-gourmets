@@ -58,14 +58,13 @@
         var form = document.getElementById('payment-form');
 
         form.addEventListener('submit', function(ev) {
-            console.log('ben alors gros');
         ev.preventDefault();
         stripe.confirmCardPayment("{{ $clientSecret }}", {
             payment_method: {
-            card: card,
-            billing_details: {
-                name: 'Jenny Rosen'
-            }
+                card: card,
+                billing_details: {
+                    name: 'Jenny Rosen'
+                }
             }
         }).then(function(result) {
             if (result.error) {
