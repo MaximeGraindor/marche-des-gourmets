@@ -66,7 +66,7 @@ class ExhibitorController extends Controller
             $exhibitor->keywords()->attach($keywordId);
         };
 
-        Mail::to('maxime.graindor@hotmail.com')->send(new ExhibitorApplyNotification);
+        Mail::to('maxime.graindor@hotmail.com')->send(new ExhibitorApplyNotification($validated));
 
 
         return redirect('/exposants#become-exhibitor');
