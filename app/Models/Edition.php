@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Edition extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'start_date' => 'date',
+        'end_date' => 'date'
+    ];
 }

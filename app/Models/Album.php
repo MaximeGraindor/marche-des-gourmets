@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Album extends Model
 {
     use HasFactory;
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+
+    public function edition()
+    {
+        return $this->belongsTo(Edition::class);
+    }
 }
