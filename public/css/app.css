@@ -1379,6 +1379,14 @@ body {
   grid-column: 1/3;
 }
 
+.form-message {
+  grid-column: 1/3;
+}
+
+.form-message textarea {
+  height: 200px;
+}
+
 .missingInfo .missingInfo-title {
   font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;

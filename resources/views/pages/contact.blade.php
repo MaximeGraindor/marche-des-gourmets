@@ -29,21 +29,34 @@
             </div>
             <div class="contact-right">
                 <form action="#" method="post" class="contact-form">
+                    @csrf
                     <div class="form-name">
                         <label for="name">Nom</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" class="{{ $errors->has('name') ? 'error-input' : ''}}" value="{{ old('name') }}">
+                        @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-email">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email" class="{{ $errors->has('email') ? 'error-input' : ''}}" value="{{ old('email') }}">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-subject">
                         <label for="subject">Sujet</label>
-                        <input type="text" name="subject" id="subject">
+                        <input type="text" name="subject" id="subject" class="{{ $errors->has('subject') ? 'error-input' : ''}}" value="{{ old('subject') }}">
+                        @error('subject')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
-                    <div class="form-informations">
-                        <label for="informations">Informations supplémentaire</label>
-                        <textarea type="text" name="informations" id="informations"> </textarea>
+                    <div class="form-message">
+                        <label for="message">Message</label>
+                        <textarea type="text" name="message" id="message" class="{{ $errors->has('message') ? 'error-input' : ''}}" value="{{ old('message') }}"> </textarea>
+                        @error('message')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-submit">
                         <input type="submit" value="Envoyer">

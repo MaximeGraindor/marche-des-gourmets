@@ -105,6 +105,15 @@
     .form-subject{
         grid-column: 1/3;
     }
+
+}
+
+.form-message{
+    grid-column: 1/3;
+    textarea{
+        height: 200px
+    }
+
 }
 
 
