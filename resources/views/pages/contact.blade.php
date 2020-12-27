@@ -28,6 +28,13 @@
                 </dl>
             </div>
             <div class="contact-right">
+
+                @if (Session::get('success'))
+                <p class="success">
+                    {{ Session::get('success') }}
+                </p>
+                @endif
+
                 <form action="#" method="post" class="contact-form">
                     @csrf
                     <div class="form-name">

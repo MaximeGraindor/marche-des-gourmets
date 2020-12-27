@@ -68,6 +68,11 @@
 
         <section class="become-exhibitor" id="become-exhibitor">
             <h2 class="be-title" role="heading" aria-level="2">Postuler pour devenir exposant</h2>
+            @if (Session::get('success'))
+                <p class="success">
+                    {{ Session::get('success') }}
+                </p>
+                @endif
             <form class="be-form" action="/exposants" method="post">
                 @csrf
                 <div class="form-firstname-name">

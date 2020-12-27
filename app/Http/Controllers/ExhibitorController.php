@@ -69,7 +69,7 @@ class ExhibitorController extends Controller
         Mail::to('maxime.graindor@hotmail.com')->send(new ExhibitorApplyNotification($validated));
 
 
-        return redirect('/exposants#become-exhibitor');
+        return redirect()->back()->with('success', 'Votre candidature s\'est bien envoyé!');
     }
 
     /**

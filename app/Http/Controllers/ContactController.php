@@ -35,7 +35,7 @@ class ContactController extends Controller
 
         Mail::to('maxime.graindor@hotmail.com')->send(new ContactNotification($validated));
 
-        return redirect('/contact');
+        return redirect()->back()->with('success', 'Votre message s\'est bien envoyé!');
     }
 
 
