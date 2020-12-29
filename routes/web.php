@@ -1,10 +1,12 @@
 <?php
 
+use App\Nova\Templates\Home;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ExhibitorController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationsController;
 
 /*
@@ -18,7 +20,9 @@ use App\Http\Controllers\InformationsController;
 |
 */
 
-Route::view('/', 'home')->name('home');
+Route::get('/', [HomeController::class, 'show'])
+    ->template(\App\Nova\Templates\Home::class)
+    ->name('home');
 
 Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->template(\App\Nova\Templates\About::class)
