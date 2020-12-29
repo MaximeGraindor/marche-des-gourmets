@@ -7,10 +7,10 @@
     <x-header/>
     <main class="home">
         <div class="home-intro">
-            <p class="home-intro-text">
-                La <span class="bold">20e édition des Marché des Gourmets</span> est un événement annuel organisé par le Rotary Club de Flémalle sur le prestigieux site de l'abbaye de la Paix-Dieu afin d'obtenir des fonds pour aider les plus démunis.
-            </p>
+            {!!Page::get('introduction')!!}
             <a href="/billeterie" class="home-intro-link">Acheter un ticket !</a>
+
+
         </div>
 
         <div class="home-infos">

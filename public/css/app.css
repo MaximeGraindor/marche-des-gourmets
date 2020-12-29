@@ -399,10 +399,14 @@ body {
   padding: 3.5rem;
 }
 
-.home-intro .home-intro-text {
+.home-intro div {
   margin-bottom: 2rem;
   font-size: 1.8rem;
   line-height: 2.5rem;
+}
+
+.home-intro div strong {
+  font-weight: bold;
 }
 
 .home-intro .home-intro-link {
