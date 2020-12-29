@@ -14,7 +14,7 @@
                 <h2 class="mdg-title" role="heading" aria-level="2">
                     {{ Page::get('mdgTitle') }}
                 </h2>
-                <div>
+{{--                 <div>
                     <p>
                         <span class="bold">Le Marché des Gourmets</span> est un événement annuel organisé par le Rotary Club de Flémalle sur le prestigieux site de l'abbaye de la Paix-Dieu afin d'obtenir des fonds pour aider les plus démunis.
                     </p>
@@ -27,7 +27,8 @@
                     <p>
                         Depuis lors, la fréquentation n'a cessé d'augmenter pour atteindre <span class="bold">4000 visiteurs</span> et plusieurs pays et régions se sont succédés comme Invité d'honneur : l'Irlande, le Portugal, l'Italie, Les Pays-Bas, l'Espagne, l'Alsace, le terroir de Wallonie qui est revenu pour notre 10ème édition, le tour des terroirs de France, la Communauté Germanophone de Belgique, la Province de Liège dans le cadre du « Circuit Court », la Grèce.
                     </p>
-                </div>
+                </div> --}}
+                {!! Page::get('mdgText') !!}
             </div>
         </section>
         <section class="about-rf">
@@ -38,14 +39,15 @@
                 <h2 class="rf-title" role="heading" aria-level="2">
                     {{ Page::get('rfTitle') }}
                 </h2>
-                <div>
+                {{-- <div>
                     <p>
                         Le Rotary Club de Flémalle, composé de <span class="bold">36 membres</span>, fait partie du réseau des <span class="bold">34.164 clubs</span> du Rotary International, fort de <span class="bold">1.223.083 membres</span> répartis dans le monde entier. Conscient des difficultés présentes dans notre société, il a inscrit dans ses objectifs l’aide en faveur de la jeunesse et des plus démunis.
                     </p>
                     <p>
                         Le Rotary Club de Flémalle est animé à 100% par des <span class="bold">bénévoles</span> qui préparent des activités destinées à récolter des fonds pour les œuvres soutenues par le club. Les bénéfices ainsi dégagés sont INTÉGRALEMENT distribués aux associations que nous aidons. Ce soutien peut prendre la forme d’une aide financière ou de dons matériels. Une étude préalable est toujours réalisée.
                     </p>
-                </div>
+                </div> --}}
+                {!! Page::get('rfText') !!}
             </div>
         </section>
         <section class="about-r">
@@ -57,11 +59,12 @@
                     <h2 class="r-title">
                         {{ Page::get('rotaryTitle') }}
                     </h2>
-                    <div>
+                    {{-- <div>
                         <p>
                             Le Rotary est un réseau mondial de <span class="bold">1,2 million de décideurs solidaires</span> qui voient un monde où les gens se rassemblent et passent à l’action pour apporter un changement durable – dans le monde, dans leur communauté et en eux-mêmes. Apporter des solutions aux problèmes les plus pressants nécessite un véritable engagement et une vision. Depuis <span class="bold">plus de 110 ans</span>, les membres du Rotary utilisent leur passion, leur dynamisme et leur intelligence pour passer à l’action. Qu’il s’agisse d’alphabétisation, de paix, d’eau ou de santé, nous <span class="bold">travaillons avec détermination</span> pour améliorer les conditions de vie dans le monde et nous honorons nos engagements. Ce qu'ils font :
                         </p>
-                    </div>
+                    </div> --}}
+                    {!! Page::get('rotaryText') !!}
                 </div>
             </div>
             <section class="r-actions">

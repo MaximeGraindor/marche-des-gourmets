@@ -37,6 +37,8 @@ class Edition extends Resource
         'id',
     ];
 
+    public static $group = 'Marché des Gourmets';
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -54,7 +56,7 @@ class Edition extends Resource
             Date::make('Date de début', 'start_date')->format('DD MMM YYYY'),
             Date::make('Date de fin', 'end_date')->format('DD MMM YYYY'),
 
-            Country::make('Pays', 'country'),
+            Text::make('Pays', 'country'),
             Text::make('Adresse', 'adress')->help('Chateau du Val Saint Lambert Esplanade du Val, 4100 Seraing'),
 
             Number::make('Prix d\'entré', 'price'),

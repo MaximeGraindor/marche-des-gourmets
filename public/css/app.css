@@ -647,14 +647,18 @@ body {
   padding: 7rem;
 }
 
-.about p {
+.about div {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
-  line-height: 1.7rem;
+  line-height: 1.9rem;
 }
 
-.about p:not(:last-child) {
+.about div:not(:last-child) {
   margin-bottom: 2rem;
+}
+
+.about div strong {
+  font-weight: bold;
 }
 
 .about section:not(:last-child) {

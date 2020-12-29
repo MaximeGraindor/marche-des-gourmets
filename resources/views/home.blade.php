@@ -15,13 +15,13 @@
 
         <div class="home-infos">
             <div class="infos-item item-date">
-                <span>27 et 28 mars</span>
+                <span>Du {{ ($currentEdition->start_date)->format('d') }} au {{ ($currentEdition->end_date)->format('d') }} {{ ($currentEdition->start_date)->format('F') }}</span>
             </div>
             <div class="infos-item item-price">
-                <span>5€ l'entrée</span>
+                <span>{{ $currentEdition->price }}€ l'entrée</span>
             </div>
             <div class="infos-item item-adress">
-                <span>Chateau du Val Saint Lambert</span>
+                <span>{{ $currentEdition->adress }}</span>
             </div>
         </div>
 
