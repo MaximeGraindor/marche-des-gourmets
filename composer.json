@@ -21,7 +21,8 @@
         "spatie/laravel-medialibrary": "^9.4",
         "stripe/stripe-php": "^7.67",
         "tightenco/nova-stripe": "^0.2.4",
-        "whitecube/nova-page": "^0.2.5"
+        "whitecube/nova-page": "^0.2.5",
+        "theme/mdg-theme": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -34,6 +35,10 @@
         {
             "type": "path",
             "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/MdgTheme"
         }
     ],
     "config": {
