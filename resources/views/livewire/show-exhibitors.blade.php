@@ -25,7 +25,7 @@
             <div>
                 <label for="search" class="hidden">Nom</label>
                 <div class="filter-input-wrapper">
-                    <input type="search" name="name" id="search" placeholder="Rechercher">
+                    <input type="search" name="name" id="search" placeholder="Rechercher" wire:model="name">
                     <span class="icon-search"></span>
                 </div>
             </div>
