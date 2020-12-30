@@ -7,55 +7,7 @@
     <x-header/>
 
     <main class="exhibitors">
-        <section class="exhibitors-list">
-            <div class="exhibitors-top">
-                <h2 class="top-title"  role="heading" aria-level="2">
-                    Les exposants
-                </h2>
-                <form action="post" class="top-filter" method="#">
-                    <div>
-                        <label for="country" class="hidden">Pays</label>
-                        <select name="country" id="country">
-                            <option value="belgique">Belgique</option>
-                            <option value="espagne">Espagne</option>
-                            <option value="allemagne">Allemagne</option>
-                            <option value="pays-bas">Pays-Bas</option>
-                            <option value="luxemboug">Luxembourg</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="productCategory" class="hidden">Pays</label>
-                        <select name="productCategory" id="productCategory">
-                            <option value="alcool/vin">Alcool/vin</option>
-                            <option value="bioo">Bio</option>
-                            <option value="gastronomie">gastronomie</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="search" class="hidden">Pays</label>
-                        <div class="filter-input-wrapper">
-                            <input type="search" name="search" id="search" placeholder="Rechercher">
-                            <span class="icon-search"></span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <livewire:show-exhibitors />
-
-            <div class="exhibitors-pagination">
-                <a href="#" class="pagination-left"></a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#" class="pagination-right"></a>
-            </div>
-
-
-
-        </section>
+        <livewire:show-exhibitors />
 
         <section class="become-exhibitor" id="become-exhibitor">
             <h2 class="be-title" role="heading" aria-level="2">Postuler pour devenir exposant</h2>

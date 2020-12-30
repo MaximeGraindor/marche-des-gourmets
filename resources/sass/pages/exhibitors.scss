@@ -27,6 +27,15 @@
         border: 2px solid $color-red;
         padding: 0.5rem 0.9rem;
     }
+    input[type="submit"]{
+        padding: 0.5rem 2rem;
+        background-color: $color-red;
+        cursor: pointer;
+        color: white;
+        &:hover{
+            background-color: $color-red-dark;
+        }
+    }
 }
 
 .filter-input-wrapper{

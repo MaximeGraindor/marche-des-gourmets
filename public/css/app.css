@@ -857,6 +857,17 @@ body {
   padding: 0.5rem 0.9rem;
 }
 
+.top-filter input[type=submit] {
+  padding: 0.5rem 2rem;
+  background-color: #562121;
+  cursor: pointer;
+  color: white;
+}
+
+.top-filter input[type=submit]:hover {
+  background-color: #411A1A;
+}
+
 .filter-input-wrapper {
   position: relative;
 }
