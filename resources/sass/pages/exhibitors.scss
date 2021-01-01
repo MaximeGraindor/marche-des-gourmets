@@ -125,25 +125,36 @@
     justify-content: center;
     gap: 3rem;
     margin-top: 5rem;
-    a{
+    a, span{
         font-family: $font-content;
         font-size: 1.25rem;
-        font-weight: bold;
         color: black;
         text-decoration: none;
     }
-    .pagination-left{
-        background-image: url('/storage/assets/next.svg');
-        width: 20px;
-        height: 20px;
-        display: block;
-        transform: rotate(185deg);
+    a:hover:not(.pagination-next):not(.pagination-previous){
+        background-color: $color-red;
+        color: white;
+        padding: 0.5rem;
     }
-    .pagination-right{
+    .pagination-previous{
         background-image: url('/storage/assets/next.svg');
         width: 20px;
         height: 20px;
         display: block;
+        transform: rotate(180deg);
+    }
+    .pagination-next{
+        background-image: url('/storage/assets/next.svg');
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+    .active{
+        span{
+            color: $color-red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
     }
 }
 
