@@ -125,7 +125,10 @@
     }
 
     .item-date{
-
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.9rem;
         span:before {
             content:"";
             display:block;
@@ -140,6 +143,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        line-height: 1.9rem;
         span:before {
             content:"";
             display:block;
@@ -154,6 +158,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        line-height: 1.9rem;
         span:before {
             content:"";
             display:block;

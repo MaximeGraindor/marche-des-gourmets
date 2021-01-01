@@ -526,6 +526,13 @@ body {
   border-radius: 10px;
 }
 
+.home-infos .item-date {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.9rem;
+}
+
 .home-infos .item-date span:before {
   content: "";
   display: block;
@@ -540,6 +547,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  line-height: 1.9rem;
 }
 
 .home-infos .item-price span:before {
@@ -556,6 +564,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  line-height: 1.9rem;
 }
 
 .home-infos .item-adress span:before {

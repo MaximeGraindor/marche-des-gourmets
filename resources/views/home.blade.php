@@ -15,7 +15,7 @@
 
         <div class="home-infos">
             <div class="infos-item item-date">
-                <span>Du {{ ($currentEdition->start_date)->format('d') }} au {{ ($currentEdition->end_date)->format('d') }} {{ ($currentEdition->start_date)->format('F') }}</span>
+                <span>{{ $editionDate }}</span>
             </div>
             <div class="infos-item item-price">
                 <span>{{ $currentEdition->price }}€ l'entrée</span>
