@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Files;
@@ -45,10 +46,9 @@ class Photo extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Files::make('Single file', 'one_file'),
-            Files::make('Multiple files', 'multiple_files'),
+            File::make('test photo', 'Path')->disk('public'),
 
-            BelongsTo::make('album')
+            BelongsTo::make('album'),
 
         ];
     }

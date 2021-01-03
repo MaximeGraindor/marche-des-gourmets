@@ -1,12 +1,15 @@
 <?php
 
 use App\Nova\Templates\Home;
+use App\Nova\Templates\About;
+use App\Nova\Templates\Informations;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ExhibitorController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationsController;
 
 /*
@@ -23,6 +26,8 @@ use App\Http\Controllers\InformationsController;
 Route::get('/', [HomeController::class, 'show'])
     ->template(\App\Nova\Templates\Home::class)
     ->name('home');
+
+Route::get('/{album}', [AlbumController::class, 'show'])->name('album.show');
 
 Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->template(\App\Nova\Templates\About::class)

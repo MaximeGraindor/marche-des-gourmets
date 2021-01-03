@@ -11,6 +11,10 @@ class Photo extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
+    protected $fillable = [
+        'path'
+    ];
+
     public function album()
     {
         return $this->belongsTo(Album::class);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
 use App\Models\Edition;
 use Illuminate\Http\Request;
 use Whitecube\NovaPage\Pages\Manager;
@@ -15,8 +16,11 @@ class HomeController extends Controller
         $month = ['Janvier', 'Février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
         $currentEdition = Edition::all()->first();
 
+        $albums = Album::with('photos')->get();
+        //return $albums;
+
         $editionDate = 'du ' . ($currentEdition->start_date)->format('j') . ' au ' . ($currentEdition->end_date)->format('j') . ' ' . $month[(($currentEdition->end_date)->format('n')) - 1];
 
-        return view('home', compact('currentEdition', 'editionDate'));
+        return view('home', compact('currentEdition', 'editionDate', 'albums'));
     }
 }

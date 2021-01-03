@@ -77,22 +77,18 @@
                 Anciennes éditions
             </h2>
             <div class="album-wrapper">
-                <div class="album-item">
-                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
-                    <span>Titre de l'édition</span>
-                </div>
-                <div class="album-item">
-                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
-                    <span>Titre de l'édition</span>
-                </div>
-                <div class="album-item">
-                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
-                    <span>Titre de l'édition</span>
-                </div>
-                <div class="album-item">
-                    <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
-                    <span>Titre de l'édition</span>
-                </div>
+                @foreach ($albums as $album)
+                    <div class="album-item">
+                        <a href="" class="album-link">
+                            @foreach ($album->photos as $photo)
+                                <img src="{{asset('storage/'.$photo->path)}}" alt="Photo aléatoire de l'album">
+                            @endforeach
+                            <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
+                            <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
+                            <span>{{ $album->name }}</span>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </section>
 
