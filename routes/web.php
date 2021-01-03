@@ -27,7 +27,7 @@ Route::get('/', [HomeController::class, 'show'])
     ->template(\App\Nova\Templates\Home::class)
     ->name('home');
 
-Route::get('/{album}', [AlbumController::class, 'show'])->name('album.show');
+
 
 Route::get('/qui-sommes-nous', [AboutController::class, 'show'])
     ->template(\App\Nova\Templates\About::class)
@@ -48,3 +48,5 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 
 Route::get('/billeterie', [CheckoutController::class, 'index'])->name('ticketing');
+
+Route::get('/{album}', [AlbumController::class, 'show'])->name('album.show');

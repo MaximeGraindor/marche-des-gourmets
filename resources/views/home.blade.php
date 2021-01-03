@@ -79,11 +79,7 @@
             <div class="album-wrapper">
                 @foreach ($albums as $album)
                     <div class="album-item">
-                        <a href="" class="album-link">
-                            @foreach ($album->photos as $photo)
-                                <img src="{{asset('storage/'.$photo->path)}}" alt="Photo aléatoire de l'album">
-                            @endforeach
-                            <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
+                        <a href="/{{ $album->id}}" class="album-link">
                             <img src="{{ asset('/storage/img/actions-classroom.jpg') }}" alt="Photo aléatoire de l'album">
                             <span>{{ $album->name }}</span>
                         </a>

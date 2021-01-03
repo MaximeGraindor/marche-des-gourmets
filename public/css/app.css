@@ -603,15 +603,21 @@ body {
   height: 300px;
 }
 
+.album-wrapper .album-item a {
+  text-decoration: none;
+}
+
 .album-wrapper .album-item img {
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 3px solid rgba(86, 33, 33, 0.4);
 }
 
 .album-wrapper .album-item span {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 1980px) {
@@ -1707,5 +1713,40 @@ body {
   .ticketing form {
     width: 80vw;
   }
+}
+
+.album {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  width: 50%;
+  padding: 3.5rem;
+}
+
+.fil-ariane {
+  margin-bottom: 50px;
+}
+
+.fil-ariane a:after {
+  content: "";
+  display: inline-block;
+  background-image: url("/storage/assets/next.svg");
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 10px;
+  vertical-align: middle;
+}
+
+.album-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album-wrapper .photo-wrapper {
+  flex: 1 1 25%;
+}
+
+.album-wrapper .photo-wrapper img {
+  width: 100%;
+  border: 3px solid rgba(86, 33, 33, 0.4);
 }
 

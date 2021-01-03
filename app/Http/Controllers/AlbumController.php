@@ -46,8 +46,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        $album = Album::with('photos')->get();
-        return $album;
+        $album->load('photos');
         return view('pages.album', compact('album'));
     }
 

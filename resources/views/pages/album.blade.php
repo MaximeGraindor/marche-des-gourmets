@@ -15,9 +15,10 @@
         <div class="album-wrapper">
             @foreach ($album->photos as $photo)
                 <div class="photo-wrapper">
-                    <img src="{{ asset('/' .  $photo->path) }}" alt="">
+                    <img src="{{ asset('storage/'.$photo->path) }}" alt="">
                 </div>
             @endforeach
         </div>
     </main>
+    <x-footer/>
 @endsection
