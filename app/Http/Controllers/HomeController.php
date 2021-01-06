@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $page->loadForRoute($request->route());
         $month = ['Janvier', 'Février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
-        $currentEdition = Edition::all()->first();
+        $currentEdition = Edition::all()->last();
 
         $albums = Album::with('photos')->get();
         //return $albums;

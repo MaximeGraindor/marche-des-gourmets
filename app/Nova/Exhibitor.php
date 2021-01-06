@@ -125,7 +125,9 @@ class Exhibitor extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new filters\ExhibitorAgree,
+        ];
     }
 
     /**
