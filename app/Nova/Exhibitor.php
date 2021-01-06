@@ -24,7 +24,9 @@ class Exhibitor extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public function title(){
+        return $this->firstname . $this->name . ($this->company_name ? ' - ' . $this->company_name : '');
+    }
 
     /**
      * The columns that should be searched.
@@ -32,7 +34,7 @@ class Exhibitor extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'firstname', 'name', 'company_name', 'email',
     ];
 
     public static $group = 'Les exposants';

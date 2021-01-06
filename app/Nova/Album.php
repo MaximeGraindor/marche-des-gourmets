@@ -32,7 +32,7 @@ class Album extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'numero'
+        'id',
     ];
 
     /**
