@@ -591,7 +591,6 @@ body {
 
 .album-wrapper {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -1718,7 +1717,8 @@ body {
 .album {
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
   margin: 0 auto;
-  width: 50%;
+  max-width: 1340px;
+  margin: 0 auto;
   padding: 3.5rem;
 }
 
@@ -1748,5 +1748,17 @@ body {
 .album-wrapper .photo-wrapper img {
   width: 100%;
   border: 3px solid rgba(86, 33, 33, 0.4);
+}
+
+@media screen and (max-width: 900px) {
+  .album-wrapper .photo-wrapper {
+    flex: 1 1 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .album-wrapper .photo-wrapper {
+    flex: 1 1 100%;
+  }
 }
 

@@ -4,6 +4,7 @@
             Les exposants
         </h2>
         <form action="post" class="top-filter" method="#">
+            @csrf
             <div>
                 <label for="country" class="hidden">Pays</label>
                 <select name="country" id="country" wire:model="country">

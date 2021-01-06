@@ -49,4 +49,4 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/billeterie', [CheckoutController::class, 'index'])->name('ticketing');
 
-Route::get('/{album}', [AlbumController::class, 'show'])->name('album.show');
+Route::get('/album/{album}', [AlbumController::class, 'show'])->name('album.show');
