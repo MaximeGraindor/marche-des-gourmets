@@ -50,13 +50,13 @@
                     <img src="{{ asset('/storage/img/supp-restaurant.jpg') }}" alt="Photo supp" class="supp-item-photo">
                     <span class="supp-item-title">Restaurant</span>
                     <p class="supp-item-desc">Venez déguster les plats réalisés par les exposants </p>
-                    <a href="#" class="supp-item-link">Voir la carte</a>
+                    <a href="{{ asset('/storage/' . $currentEdition->restaurant_path) }}" target="_blank" class="supp-item-link">Voir la carte</a>
                 </div>
                 <div class="supp-item">
                     <img src="{{ asset('/storage/img/supp-bar.jpg') }}" alt="Photo supp" class="supp-item-photo">
                     <span class="supp-item-title">Bar</span>
                     <p class="supp-item-desc">Venez vous désaltérer le temps d'une pause.</p>
-                    <a href="#" class="supp-item-link">Voir la carte</a>
+                    <a href="{{ asset('/storage/' . $currentEdition->bar_path) }}" target="_blank" class="supp-item-link">Voir la carte</a>
                 </div>
                 <div class="supp-item">
                     <img src="{{ asset('/storage/img/supp-payment.jpg') }}" alt="Photo supp" class="supp-item-photo">

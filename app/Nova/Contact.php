@@ -4,23 +4,17 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Date;
-use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Country;
-use Laravel\Nova\Fields\Currency;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Edition extends Resource
+class Contact extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Edition::class;
+    public static $model = \App\Models\Contact::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -38,8 +32,6 @@ class Edition extends Resource
         'id',
     ];
 
-    public static $group = 'Marché des Gourmets';
-
     /**
      * Get the fields displayed by the resource.
      *
@@ -49,22 +41,12 @@ class Edition extends Resource
     public function fields(Request $request)
     {
         return [
-
             ID::make(__('ID'), 'id')->sortable(),
 
-            Number::make('Numéro de l\'édition', 'numero'),
-
-            Date::make('Date de début', 'start_date')->format('DD MMM YYYY'),
-            Date::make('Date de fin', 'end_date')->format('DD MMM YYYY'),
-
-            Text::make('Pays', 'country'),
-            Text::make('Adresse', 'adress')->help('Chateau du Val Saint Lambert Esplanade du Val, 4100 Seraing'),
-
-            File::make('Carte du restaurant', 'restaurant_path'),
-            File::make('Carte du bar', 'bar_path'),
-
-            Number::make('Prix d\'entré', 'price'),
-
+            Text::make('name'),
+            Text::make('email'),
+            Text::make('subject'),
+            Text::make('message'),
         ];
     }
 
@@ -110,5 +92,20 @@ class Edition extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public static function authorizedToCreate(Request $request)
+    {
+        return false;
+    }
+
+    public function authorizedToDelete(Request $request)
+    {
+        return false;
+    }
+
+    public function authorizedToUpdate(Request $request)
+    {
+        return false;
     }
 }

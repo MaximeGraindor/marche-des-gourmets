@@ -21,6 +21,8 @@ class CreateEditionsTable extends Migration
             $table->string('country');
             $table->string('adress');
             $table->float('price');
+            $table->string('restaurant_path');
+            $table->string('bar_path');
             $table->timestamps();
         });
     }
