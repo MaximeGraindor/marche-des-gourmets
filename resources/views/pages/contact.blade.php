@@ -2,7 +2,7 @@
 @section('title', Page::get('title'))
 @section('content')
     <h1 class="hidden" role="heading" aria-level="1">
-        Contact - Marché des Gourmets
+        {{Page::get('title')}} - Marché des Gourmets
     </h1>
     <x-header/>
 

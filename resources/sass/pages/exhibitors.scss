@@ -85,7 +85,7 @@
             display: inline-block;
             background-image: url('/storage/assets/rightArrow.svg');
             background-repeat: no-repeat;
-            vertical-align: unset;
+            vertical-align: bottom;
             margin-right: 10px;
 
         }
@@ -98,7 +98,33 @@
             display: inline-block;
             background-image: url('/storage/assets/location.svg');
             background-repeat: no-repeat;
-            vertical-align: unset;
+            vertical-align: bottom;
+            margin-right: 10px;
+
+        }
+    }
+    .item-email{
+        &::before{
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background-image: url('/storage/assets/email.svg');
+            background-repeat: no-repeat;
+            vertical-align: bottom;
+            margin-right: 10px;
+
+        }
+    }
+    .item-website{
+        &::before{
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background-image: url('/storage/assets/globe.svg');
+            background-repeat: no-repeat;
+            vertical-align: bottom;
             margin-right: 10px;
 
         }

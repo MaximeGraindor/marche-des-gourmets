@@ -3,8 +3,7 @@
         <h2 class="top-title"  role="heading" aria-level="2">
             Les exposants
         </h2>
-        <form action="post" class="top-filter" method="#">
-            @csrf
+        <form action="get" class="top-filter" method="#">
             <div>
                 <label for="country" class="hidden">Pays</label>
                 <select name="country" id="country" wire:model="country">
@@ -44,6 +43,8 @@
                 <span class="item-title">{{ $exhibitor->company_name ? $exhibitor->company_name : $exhibitor->firstname . ' ' . $exhibitor->name }}</span>
                 <span class="item-placement">Emplacement 15</span>
                 <span class="item-country">{{ $exhibitor->country }}, {{ $exhibitor->location }}</span>
+                <span class="item-email">{{ $exhibitor->email }}</span>
+                <span class="item-website">{{ $exhibitor->website }}</span>
                 <div class="item-keywords">
                     @foreach($exhibitor->keywords as $keyword)
                         <span>{{ $keyword->name }}</span>
