@@ -17,6 +17,58 @@
             </p>
         </div>
 
+        <form action="#" method="post" class="checkout-wrap">
+            <div class="form-name">
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name" placeholder="Dumont">
+            </div>
+            <div class="form-firstname">
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Jean">
+            </div>
+            <div class="form-email">
+                <label for="email">Email</label>
+                <input type="mail" name="email" id="email" placeholder="jean.dumont@gmail.com">
+            </div>
+            <div class="form-country">
+                <label for="country">Pays</label>
+                <input type="text" name="country" id="country" placeholder="Belgique">
+            </div>
+            <div class="form-location">
+                <label for="location">Localité</label>
+                <input type="text" name="location" id="location" placeholder="Liège">
+            </div>
+            <div class="form-postal">
+                <label for="postal">Code postal</label>
+                <input type="text" name="postal" id="postal" placeholder="4000">
+            </div>
+            <div class="form-cardCode">
+                <label for="cardCode">carte bancaire</label>
+                <input type="text" name="cardCode" id="cardCode" placeholder="4242 4242 4242 4242">
+            </div>
+            <div class="form-cardExpi">
+                <label for="cardExpi">Date d'expiration</label>
+                <input type="text" name="cardExpi" id="cardExpi" placeholder="04/25">
+            </div>
+            <div class="form-cardCVV">
+                <label for="cardCVV">CVV</label>
+                <input type="text" name="cardCVV" id="cardCVV" placeholder="333">
+            </div>
+            <div class="form-ticket">
+                <label for="ticket">Ticket</label>
+                <select name="ticket" id="ticket">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-submit">
+                <input type="submit" name="submit" id="submit" placeholder="333">
+            </div>
+        </form>
+
         <form id="payment-form" action="#">
             <div id="card-element">
               <!-- Elements will create input elements here -->

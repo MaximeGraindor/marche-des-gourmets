@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('title', Page::get('title'))
+@section('title', 'Qui sommes-nous ?')
 @section('content')
     <h1 class="hidden"  role="heading" aria-level="1">
         Qui sommes-nous ? - Marché des Gourmets

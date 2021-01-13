@@ -1,8 +1,8 @@
 @extends('layouts.base')
-@section('title', Page::get('title'))
+@section('title', 'contact')
 @section('content')
     <h1 class="hidden" role="heading" aria-level="1">
-        {{Page::get('title')}} - Marché des Gourmets
+        contact - Marché des Gourmets
     </h1>
     <x-header/>
 

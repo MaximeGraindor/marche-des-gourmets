@@ -6,6 +6,7 @@ use App\Models\Checkout;
 use Stripe\PaymentIntent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Whitecube\NovaPage\Pages\Manager;
 
 class CheckoutController extends Controller
 {
@@ -14,8 +15,11 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, Manager $page)
     {
+
+        $page->loadForRoute($request->route());
+
         // Set your secret key. Remember to switch to your live secret key in production!
         // See your keys here: https://dashboard.stripe.com/account/apikeys
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));

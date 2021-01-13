@@ -47,6 +47,8 @@ Route::get('/contact', [ContactController::class, 'show'])
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 
-Route::get('/billeterie', [CheckoutController::class, 'index'])->name('ticketing');
+Route::get('/billeterie', [CheckoutController::class, 'index'])
+    ->template(\App\Nova\Templates\Ticketing::class)
+    ->name('ticketing');
 
 Route::get('/album/{album}', [AlbumController::class, 'show'])->name('album.show');

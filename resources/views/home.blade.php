@@ -73,9 +73,11 @@
 
 
         <section class="home-album">
-            <h2 class="album-title">
-                Anciennes éditions
-            </h2>
+            <div>
+                <h2 class="album-title">
+                    Anciennes éditions
+                </h2>
+            </div>
             <div class="album-wrapper">
                 @foreach ($albums as $album)
                     <div class="album-item">
