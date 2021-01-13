@@ -28,12 +28,12 @@
         <div class="home-countdown">
             <div class="countdown-content">
                 <p class="home-countdown-text">
-                    Rendez-vous en mars !
+                    Rendez-vous en {{ $monthEdition }} !
                 </p>
                 <div class="countdown-wrapper">
                     <div class="countdown-item">
-                        <span>
-                            50
+                        <span id="day">
+                            00
                         </span>
                         <span>
                             jours
@@ -41,8 +41,8 @@
                     </div>
                     <span>:</span>
                     <div class="countdown-item">
-                        <span>
-                            50
+                        <span id="hour">
+                            00
                         </span>
                         <span>
                             heures
@@ -50,8 +50,8 @@
                     </div>
                     <span>:</span>
                     <div class="countdown-item">
-                        <span>
-                            50
+                        <span id="minute">
+                            00
                         </span>
                         <span>
                             minutes
@@ -59,8 +59,8 @@
                     </div>
                     <span>:</span>
                     <div class="countdown-item">
-                        <span>
-                            50
+                        <span id="second">
+                            00
                         </span>
                         <span>
                             secondes
@@ -90,4 +90,24 @@
 
     </main>
     <x-footer/>
+
+    <script>
+
+        setInterval(()=>{
+            let editionDate = {{ strtotime($currentEdition->start_date) }} * 1000
+            let now = {{ time() }} * 1000
+
+            let distance = editionDate - now
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('day').innerHTML = days
+            document.getElementById('hour').innerHTML = hours
+            document.getElementById('minute').innerHTML = minutes
+            document.getElementById('second').innerHTML = seconds
+        }, 1000);
+    </script>
 @endsection
