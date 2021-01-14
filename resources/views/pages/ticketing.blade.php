@@ -18,37 +18,27 @@
         </div>
 
         <form action="#" method="post" class="checkout-wrap">
-            <div class="form-name">
-                <label for="name">Nom</label>
-                <input type="text" name="name" id="name" placeholder="Dumont">
-            </div>
-            <div class="form-firstname">
-                <label for="firstname">Prénom</label>
-                <input type="text" name="firstname" id="firstname" placeholder="Jean">
-            </div>
+
             <div class="form-email">
                 <label for="email">Email</label>
                 <input type="mail" name="email" id="email" placeholder="jean.dumont@gmail.com">
             </div>
-            <div class="form-country">
-                <label for="country">Pays</label>
-                <input type="text" name="country" id="country" placeholder="Belgique">
+
+            <div class="form-name">
+                <label for="name">Nom de la carte</label>
+                <input type="text" name="name" id="name" placeholder="Maxime Dumont">
             </div>
-            <div class="form-location">
-                <label for="location">Localité</label>
-                <input type="text" name="location" id="location" placeholder="Liège">
-            </div>
-            <div class="form-postal">
-                <label for="postal">Code postal</label>
-                <input type="text" name="postal" id="postal" placeholder="4000">
-            </div>
+
             <div class="form-cardCode">
                 <label for="cardCode">carte bancaire</label>
                 <input type="text" name="cardCode" id="cardCode" placeholder="4242 4242 4242 4242">
             </div>
             <div class="form-cardExpi">
                 <label for="cardExpi">Date d'expiration</label>
-                <input type="text" name="cardExpi" id="cardExpi" placeholder="04/25">
+                <div>
+                    <input type="text" name="cardExpiMonth" id="cardExpi" placeholder="MM">
+                    <input type="text" name="cardExpiYear" id="cardExpi" placeholder="YY">
+                </div>
             </div>
             <div class="form-cardCVV">
                 <label for="cardCVV">CVV</label>
@@ -63,6 +53,11 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
+            </div>
+            <div class="form-amount">
+                <p>
+                	Total:&nbsp;<span class="amount">5</span>€
+                </p>
             </div>
             <div class="form-submit">
                 <input type="submit" name="submit" id="submit" placeholder="333">
