@@ -1,5 +1,6 @@
 const menuImgEl = document.querySelector('.menuResponsive-img')
-const menuElt = document.getElementById('categoryProduct')
+const menuElt = document.querySelector('.menuResponsive-menu')
+console.log(menuElt);
 
 menuImgEl.addEventListener('click', () => {
     menuElt.classList.toggle('menuResponsive-on')
