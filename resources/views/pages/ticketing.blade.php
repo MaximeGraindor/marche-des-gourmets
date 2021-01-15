@@ -17,7 +17,7 @@
             </p>
         </div>
 
-        <form action="#" method="post" class="checkout-wrap">
+        {{-- <form action="#" method="post" class="checkout-wrap" id="checkout-form">
 
             <div class="form-email">
                 <label for="email">Email</label>
@@ -62,7 +62,7 @@
             <div class="form-submit">
                 <input type="submit" name="submit" id="submit" placeholder="333">
             </div>
-        </form>
+        </form> --}}
 
         <form id="payment-form" action="#">
             <div id="card-element">
@@ -75,6 +75,11 @@
             <button id="submit">Pay</button>
         </form>
 
+        <p class="hidden result-message">
+            Payment succeeded, see the result in your
+            <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+        </p>
+
     </main>
 
     <x-footer/>
@@ -84,10 +89,10 @@
         var elements = stripe.elements();
 
         var style = {
-        base: {
-            color: "#32325d",
-            padding: "20rem"
-        }
+            base: {
+                color: "#32325d",
+                padding: "20rem"
+            }
         };
 
         var card = elements.create("card", { style: style });
@@ -114,20 +119,18 @@
                 }
             }
         }).then(function(result) {
-            if (result.error) {
-            // Show error to your customer (e.g., insufficient funds)
-            console.log(result.error.message);
-            } else {
-            // The payment has been processed!
-            if (result.paymentIntent.status === 'succeeded') {
-                // Show a success message to your customer
-                // There's a risk of the customer closing the window before callback
-                // execution. Set up a webhook or plugin to listen for the
-                // payment_intent.succeeded event that handles any business critical
-                // post-payment actions.
-            }
-            }
-        });
+                if (result.error) {
+                // Show error to your customer (e.g., insufficient funds)
+                console.log(result.error.message);
+                } else {
+                // The payment has been processed!
+                    if (result.paymentIntent.status === 'succeeded') {
+                        console.log('Paiement réussi!');
+                        document.querySelector('.result-message').classlist.remove('hidden')
+                        document.querySelector('.button').disabled = true
+                    }
+                }
+            });
         });
     </script>
 @endsection
