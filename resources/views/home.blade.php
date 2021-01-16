@@ -94,7 +94,6 @@
     <x-footer/>
 
     <script>
-
         setInterval(()=>{
             let editionDate = {{ strtotime($currentEdition->start_date) }} * 1000
             let now = {{ time() }} * 1000

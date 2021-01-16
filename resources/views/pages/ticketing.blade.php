@@ -17,36 +17,23 @@
             </p>
         </div>
 
-        {{-- <form action="#" method="post" class="checkout-wrap" id="checkout-form">
-
-            <div class="form-email">
+        <form id="payment-form" action="/checkout" method="post">
+            @csrf
+            <div class="checkout-firstname">
+                <label for="firstname">Prénom sur la carte</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <div class="checkout-name">
+                <label for="name">Nom sur la carte</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="checkout-email">
                 <label for="email">Email</label>
-                <input type="mail" name="email" id="email" placeholder="jean.dumont@gmail.com">
+                <input type="email" name="email" id="email">
             </div>
-
-            <div class="form-name">
-                <label for="name">Nom de la carte</label>
-                <input type="text" name="name" id="name" placeholder="Maxime Dumont">
-            </div>
-
-            <div class="form-cardCode">
-                <label for="cardCode">carte bancaire</label>
-                <input type="text" name="cardCode" id="cardCode" placeholder="4242 4242 4242 4242">
-            </div>
-            <div class="form-cardExpi">
-                <label for="cardExpi">Date d'expiration</label>
-                <div>
-                    <input type="text" name="cardExpiMonth" id="cardExpi" placeholder="MM">
-                    <input type="text" name="cardExpiYear" id="cardExpi" placeholder="YY">
-                </div>
-            </div>
-            <div class="form-cardCVV">
-                <label for="cardCVV">CVV</label>
-                <input type="text" name="cardCVV" id="cardCVV" placeholder="333">
-            </div>
-            <div class="form-ticket">
-                <label for="ticket">Ticket</label>
-                <select name="ticket" id="ticket">
+            <div class="checkout-ticket">
+                <label for="ticket">Nombre de ticket</label>
+                <select type="text" name="ticket" id="ticket">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -54,31 +41,26 @@
                     <option value="5">5</option>
                 </select>
             </div>
-            <div class="form-amount">
-                <p>
-                	Total:&nbsp;<span class="amount">5</span>€
-                </p>
-            </div>
-            <div class="form-submit">
-                <input type="submit" name="submit" id="submit" placeholder="333">
-            </div>
-        </form> --}}
 
-        <form id="payment-form" action="#">
             <div id="card-element">
               <!-- Elements will create input elements here -->
             </div>
 
-            <!-- We'll put the error messages in this element -->
-            <div id="card-errors" role="alert"></div>
+            <div class="checkout-amount">
+                <p>
+                    Total:&nbsp;<span id="amount">5</span>€
+                </p>
+                <input type="hidden" name="amount" value="0" id="amountInputHidden">
+            </div>
 
             <button id="submit">Pay</button>
+            <p class="hidden result-message">
+                Payment succeeded, see the result in your
+                <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+            </p>
         </form>
 
-        <p class="hidden result-message">
-            Payment succeeded, see the result in your
-            <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
-        </p>
+
 
     </main>
 
@@ -110,12 +92,11 @@
         var form = document.getElementById('payment-form');
 
         form.addEventListener('submit', function(ev) {
-        ev.preventDefault();
         stripe.confirmCardPayment("{{ $clientSecret }}", {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name: 'Jenny Rosen'
+                    name: '{{ $request->firstname . ' ' . $request->name }}'
                 }
             }
         }).then(function(result) {

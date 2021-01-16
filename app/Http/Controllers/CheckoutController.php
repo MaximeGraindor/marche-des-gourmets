@@ -6,7 +6,9 @@ use App\Models\Checkout;
 use Stripe\PaymentIntent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Whitecube\NovaPage\Pages\Manager;
+use App\Mail\CheckoutApplyNotification;
 
 class CheckoutController extends Controller
 {
@@ -17,23 +19,24 @@ class CheckoutController extends Controller
      */
     public function index(Request $request, Manager $page)
     {
-
         $page->loadForRoute($request->route());
+    }
 
-        // Set your secret key. Remember to switch to your live secret key in production!
-        // See your keys here: https://dashboard.stripe.com/account/apikeys
+    public function checkout(Request $request)
+    {
+
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
 
         $intent = \Stripe\PaymentIntent::create([
-            'amount' => 1099,
+            'amount' => ($request->amount) * 100,
             'currency' => 'eur',
-            // Verify your integration in this guide by including this parameter
-            'metadata' => ['integration_check' => 'accept_a_payment'],
         ]);
 
         $clientSecret = Arr::get($intent, 'client_secret');
 
-        return view('pages.ticketing', compact('clientSecret'));
+        Mail::to('maxime.graindor@hotmail.com')->send(new CheckoutApplyNotification($request));
+
+        return view('pages.ticketing', compact('clientSecret', 'request'));
     }
 
     /**

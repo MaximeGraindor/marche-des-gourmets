@@ -51,4 +51,6 @@ Route::get('/billeterie', [CheckoutController::class, 'index'])
     ->template(\App\Nova\Templates\Ticketing::class)
     ->name('ticketing');
 
+Route::post('checkout', [CheckoutController::class, 'checkout']);
+
 Route::get('/album/{album}', [AlbumController::class, 'show'])->name('album.show');
