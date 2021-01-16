@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use stdClass;
 use App\Models\Checkout;
 use Stripe\PaymentIntent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Whitecube\NovaPage\Pages\Manager;
 use App\Mail\CheckoutApplyNotification;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -19,7 +20,10 @@ class CheckoutController extends Controller
      */
     public function index(Request $request, Manager $page)
     {
+        $clientSecret = '';
         $page->loadForRoute($request->route());
+
+        return view('pages.ticketing', compact('clientSecret', 'request'));
     }
 
     public function checkout(Request $request)
@@ -37,6 +41,7 @@ class CheckoutController extends Controller
         Mail::to('maxime.graindor@hotmail.com')->send(new CheckoutApplyNotification($request));
 
         return view('pages.ticketing', compact('clientSecret', 'request'));
+
     }
 
     /**
@@ -46,10 +51,10 @@ class CheckoutController extends Controller
      */
     public function create()
     {
-        //
+        return 'test';
     }
 
-    /**
+     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
