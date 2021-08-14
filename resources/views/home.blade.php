@@ -91,23 +91,4 @@
 
     </main>
     <x-footer/>
-
-    <script>
-        /* setInterval(()=>{
-            let editionDate = {{ strtotime($currentEdition->start_date) }} * 1000
-            let now = {{ time() }} * 1000
-
-            let distance = editionDate - now
-
-            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('day').innerHTML = days
-            document.getElementById('hour').innerHTML = hours
-            document.getElementById('minute').innerHTML = minutes
-            document.getElementById('second').innerHTML = seconds
-        }, 1000); */
-    </script>
 @endsection

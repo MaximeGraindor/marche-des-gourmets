@@ -1,5 +1,5 @@
 const countdown = {
-    timestamp : document.getElementById('date-timestamp').textContent,
+    timestampElt : document.getElementById('date-timestamp'),
     spanDaysElt : document.getElementById('day'),
     spanHoursElt : document.getElementById('hour'),
     spanMinutesElt : document.getElementById('minute'),
@@ -11,18 +11,21 @@ const countdown = {
     },
 
     setNewCountdown(){
-        let currentTimestamp = Date.now()
-        let timeBetweenDate = this.timestamp - currentTimestamp
+        if(this.timestampElt){
+            let currentTimestamp = Date.now()
+            let timeBetweenDate = this.timestampElt.textContent - currentTimestamp
 
-        let days = Math.floor(timeBetweenDate / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((timeBetweenDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((timeBetweenDate % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((timeBetweenDate % (1000 * 60)) / 1000);
+            let days = Math.floor(timeBetweenDate / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeBetweenDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeBetweenDate % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeBetweenDate % (1000 * 60)) / 1000);
 
-        this.spanDaysElt.innerText = days
-        this.spanHoursElt.innerText = hours
-        this.spanMinutesElt.innerText = minutes
-        this.spanSecondsElt.innerText = seconds
+            if(this.spanDaysElt.innerText) this.spanDaysElt.innerText = days
+            if(this.spanHoursElt.innerText) this.spanHoursElt.innerText = hours
+            if(this.spanMinutesElt.innerText) this.spanMinutesElt.innerText = minutes
+            if(this.spanSecondsElt.innerText) this.spanSecondsElt.innerText = seconds
+        }
+
     },
 
     refreshcountdown(){

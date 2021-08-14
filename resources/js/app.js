@@ -1,6 +1,8 @@
 import countdown from './partials/countdown'
+import selectCheckbox from './partials/selectCheckbox'
 
 countdown.init()
+selectCheckbox.init()
 
 
 /* const menuImgEl = document.querySelector('.menuResponsive-img')
@@ -30,13 +32,7 @@ function updateAmount(){
 updateAmount()
 
 //----------------------------------------------------------------
-
-const selectbox = document.querySelector('.selectbox')
-const checkboxesEl = document.querySelector('.checkboxes')
-
-selectbox.addEventListener('click', () => {
-    checkboxesEl.classList.toggle('checkboxesEl-on')
-}) */
+*/
 
 
 
