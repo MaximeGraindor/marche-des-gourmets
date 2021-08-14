@@ -17,9 +17,10 @@
             <div>
                 <label for="productCategory" class="hidden">Pays</label>
                 <select name="productCategory" id="productCategory" wire:model="productCategory">
-                    <option value="alcool/vin">Alcool/vin</option>
-                    <option value="bioo">Bio</option>
-                    <option value="gastronomie">gastronomie</option>
+                    @foreach ($keywords as $keyword)
+                        <option value="{{$keyword->name}}">{{$keyword->name}}</option>
+                    @endforeach
+
                 </select>
             </div>
             <div>
