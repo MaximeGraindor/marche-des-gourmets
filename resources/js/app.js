@@ -1,8 +1,10 @@
 import countdown from './partials/countdown'
 import selectCheckbox from './partials/selectCheckbox'
+import responsiveMenu from './partials/responsiveMenu'
 
 countdown.init()
 selectCheckbox.init()
+responsiveMenu.init()
 
 
 /* const menuImgEl = document.querySelector('.menuResponsive-img')
