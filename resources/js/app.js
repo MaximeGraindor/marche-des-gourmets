@@ -1,4 +1,9 @@
-const menuImgEl = document.querySelector('.menuResponsive-img')
+import countdown from './partials/countdown'
+
+countdown.init()
+
+
+/* const menuImgEl = document.querySelector('.menuResponsive-img')
 const menuElt = document.querySelector('.menuResponsive-menu')
 
 menuImgEl.addEventListener('click', () => {
@@ -31,7 +36,7 @@ const checkboxesEl = document.querySelector('.checkboxes')
 
 selectbox.addEventListener('click', () => {
     checkboxesEl.classList.toggle('checkboxesEl-on')
-})
+}) */
 
 
 

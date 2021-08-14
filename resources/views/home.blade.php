@@ -30,6 +30,7 @@
                 <p class="home-countdown-text">
                     Rendez-vous en {{ $monthEdition }} !
                 </p>
+                <span class="hidden" id="date-timestamp">{{strtotime($currentEdition->start_date) * 1000}}</span>
                 <div class="countdown-wrapper">
                     <div class="countdown-item">
                         <span id="day">
@@ -70,8 +71,6 @@
             </div>
         </div>
 
-
-
         <section class="home-album">
             <div>
                 <h2 class="album-title">
@@ -94,7 +93,7 @@
     <x-footer/>
 
     <script>
-        setInterval(()=>{
+        /* setInterval(()=>{
             let editionDate = {{ strtotime($currentEdition->start_date) }} * 1000
             let now = {{ time() }} * 1000
 
@@ -109,6 +108,6 @@
             document.getElementById('hour').innerHTML = hours
             document.getElementById('minute').innerHTML = minutes
             document.getElementById('second').innerHTML = seconds
-        }, 1000);
+        }, 1000); */
     </script>
 @endsection
