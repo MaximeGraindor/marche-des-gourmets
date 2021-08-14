@@ -7,18 +7,9 @@ selectCheckbox.init()
 responsiveMenu.init()
 
 
-/* const menuImgEl = document.querySelector('.menuResponsive-img')
-const menuElt = document.querySelector('.menuResponsive-menu')
-
-menuImgEl.addEventListener('click', () => {
-    menuElt.classList.toggle('menuResponsive-on')
-})
+/*
 
 const selectElt = document.getElementById('ticket')
-
-
-
-
 
 const fixPrice = 5
 const amountElt = document.getElementById('amount')

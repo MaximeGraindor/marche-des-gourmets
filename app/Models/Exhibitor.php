@@ -19,6 +19,7 @@ class Exhibitor extends Model
         'postal_code',
         'location',
         'website',
+        'informations'
 
     ];
 

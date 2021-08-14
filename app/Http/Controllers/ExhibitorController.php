@@ -55,9 +55,10 @@ class ExhibitorController extends Controller
             'country' => 'required',
             'postal_code' => 'required|integer',
             'location' => 'required',
-            'informations' => 'nullable',
             'keywords' => 'required',
+            'informations' => 'nullable',
         ]);
+
 
         $exhibitor = Exhibitor::create($validated);
 
