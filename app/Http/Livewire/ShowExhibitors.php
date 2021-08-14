@@ -34,6 +34,7 @@ class ShowExhibitors extends Component
 
     public function render()
     {
+        $countries = Exhibitor::groupBy('country')->pluck('country');
         $keywords = Keyword::all();
         $allExhibitors = Exhibitor::query()
             ->with('keywords')
@@ -50,7 +51,8 @@ class ShowExhibitors extends Component
 
         return view('livewire.show-exhibitors', [
             'allExhibitors' => $allExhibitors,
-            'keywords' => $keywords
+            'keywords' => $keywords,
+            'countries' => $countries
         ]);
     }
 }

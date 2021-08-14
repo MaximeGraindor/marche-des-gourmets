@@ -7,6 +7,9 @@
             <div>
                 <label for="country" class="hidden">Pays</label>
                 <select name="country" id="country" wire:model="country">
+                    @foreach ($countries as $country)
+                        <option value="{{$country}}">{{$country}}</option>
+                    @endforeach
                     <option value="belgique">Belgique</option>
                     <option value="espagne">Espagne</option>
                     <option value="allemagne">Allemagne</option>
