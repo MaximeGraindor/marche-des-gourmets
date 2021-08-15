@@ -46,7 +46,29 @@ class Photo extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            File::make('test photo', 'Path')->disk('public'),
+            File::make('test photo', 'path')->disk('public'),
+
+            Images::make('Images', 'my_multi_collection') // second parameter is the media collection name
+            ->conversionOnPreview('medium-size') // conversion used to display the "original" image
+            ->conversionOnDetailView('thumb') // conversion used on the model's view
+            ->conversionOnIndexView('thumb') // conversion used to display the image on the model's index page
+            ->conversionOnForm('thumb') // conversion used to display the image on the model's form
+            ->fullSize() // full size column
+            //->rules('required', 'size:3') // validation rules for the collection of images
+            // validation rules for the collection of images
+            ->singleImageRules('dimensions:min_width=100'),
+
+
+            Images::make('Main image', 'main') // second parameter is the media collection name
+            ->conversionOnIndexView('thumb'), // conversion used to display the image
+            //->rules('required'), // validation ruless
+
+            File::make('Attachment')
+            ->store(function (Request $request, $model) {
+                return [
+                    'path' => $request->attachment->store('/'),
+                ];
+            }),
 
             BelongsTo::make('album'),
 

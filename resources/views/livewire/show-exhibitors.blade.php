@@ -7,19 +7,16 @@
             <div>
                 <label for="country" class="hidden">Pays</label>
                 <select name="country" id="country" wire:model="country">
+                    <option value="">Pays</option>
                     @foreach ($countries as $country)
                         <option value="{{$country}}">{{$country}}</option>
                     @endforeach
-                    <option value="belgique">Belgique</option>
-                    <option value="espagne">Espagne</option>
-                    <option value="allemagne">Allemagne</option>
-                    <option value="pays-bas">Pays-Bas</option>
-                    <option value="luxemboug">Luxembourg</option>
                 </select>
             </div>
             <div>
                 <label for="productCategory" class="hidden">Pays</label>
                 <select name="productCategory" id="productCategory" wire:model="productCategory">
+                    <option value="">catégorie de produit</option>
                     @foreach ($keywords as $keyword)
                         <option value="{{$keyword->name}}">{{$keyword->name}}</option>
                     @endforeach

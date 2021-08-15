@@ -7,7 +7,7 @@ selectCheckbox.init()
 responsiveMenu.init()
 
 
-/*
+
 
 const selectElt = document.getElementById('ticket')
 
@@ -17,7 +17,6 @@ const amountInputHidden = document.getElementById('amountInputHidden')
 
 function updateAmount(){
     window.requestAnimationFrame(updateAmount)
-    console.log(selectElt.value);
     amountElt.innerText = fixPrice * selectElt.value
     amountInputHidden.value = fixPrice * selectElt.value
 }
@@ -25,7 +24,7 @@ function updateAmount(){
 updateAmount()
 
 //----------------------------------------------------------------
-*/
+
 
 
 
