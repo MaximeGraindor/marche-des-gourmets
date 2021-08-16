@@ -83,7 +83,7 @@
             width: 15px;
             height: 15px;
             display: inline-block;
-            background-image: url('/storage/assets/rightArrow.svg');
+            background-image: url('../../img/rightArrow.svg');
             background-repeat: no-repeat;
             vertical-align: bottom;
             margin-right: 10px;
@@ -96,7 +96,7 @@
             width: 15px;
             height: 15px;
             display: inline-block;
-            background-image: url('/storage/assets/location.svg');
+            background-image: url('../../img/location.svg');
             background-repeat: no-repeat;
             vertical-align: bottom;
             margin-right: 10px;
@@ -122,7 +122,7 @@
             width: 15px;
             height: 15px;
             display: inline-block;
-            background-image: url('/storage/assets/globe.svg');
+            background-image: url('../../img/globe.svg');
             background-repeat: no-repeat;
             vertical-align: bottom;
             margin-right: 10px;
@@ -163,14 +163,14 @@
         padding: 0.5rem;
     }
     .pagination-previous{
-        background-image: url('/storage/assets/next.svg');
+        background-image: url('../../img/next.svg');
         width: 20px;
         height: 20px;
         display: block;
         transform: rotate(180deg);
     }
     .pagination-next{
-        background-image: url('/storage/assets/next.svg');
+        background-image: url('../../img/next.svg');
         width: 20px;
         height: 20px;
         display: block;

@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="header-menu-item menu-item-logo">
-                <a href="/"><img src="{{ asset(asset('/storage/assets/logoMdg.svg')) }}" alt="Logo du Marché des Gourmets"></a>
+                <a href="/"><img src='./img/logoMdg.svg' alt="Logo du Marché des Gourmets"></a>
             </li>
             <li class="header-menu-item">
                 <a href="/informations-pratiques" class="header-menu-link {{request()->route()->named('informations') ? ' active' : ''}}">
@@ -40,7 +40,7 @@
         </ul>
         <div class="menuResponsive">
             <div class="menuResponsive-img">
-                <img src="{{ asset('/storage/assets/menu.svg') }}" alt="Menu">
+                <img src="./img/menu.svg" alt="Menu responsive">
             </div>
             <ul class="menuResponsive-menu">
                 <li class="menuResponsive-item">

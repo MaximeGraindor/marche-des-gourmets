@@ -159,7 +159,7 @@ body {
 
 .icon-search {
   display: block;
-  background-image: url("/storage/assets/search.svg");
+  background-image: url(/images/search.svg?ecef733a33ceec8dc32d29510998afe9);
   width: 25px;
   height: 25px;
 }
@@ -224,7 +224,7 @@ body {
 .header-menu .menu-ticketing:before {
   content: "";
   display: inline-block;
-  background-image: url("/storage/assets/ticket-white.svg");
+  background-image: url(/images/ticket-white.svg?250b376b6808ec58d50f4bebc6f84c5f);
   width: 25px;
   height: 25px;
   margin-right: 10px;
@@ -438,13 +438,13 @@ body {
 }
 
 .home-intro .home-intro-link:hover:before {
-  background-image: url("/storage/assets/ticket-white.svg");
+  background-image: url(/images/ticket-white.svg?250b376b6808ec58d50f4bebc6f84c5f);
 }
 
 .home-intro .home-intro-link:before {
   content: "";
   display: inline-block;
-  background-image: url("/storage/assets/ticket.svg");
+  background-image: url(/images/ticket.svg?5fe3a9dc98307524f180d761075da5d8);
   width: 25px;
   height: 25px;
   margin-right: 15px;
@@ -540,7 +540,7 @@ body {
   height: 50px;
   margin: 0 auto;
   margin-bottom: 35px;
-  background-image: url("/storage/assets/calendar.svg");
+  background-image: url(/images/calendar.svg?f3f4b1abc5ac7bc7008ca8d70ea7b4b6);
 }
 
 .home-infos .item-price {
@@ -557,7 +557,7 @@ body {
   height: 50px;
   margin: 0 auto;
   margin-bottom: 35px;
-  background-image: url("/storage/assets/euro.svg");
+  background-image: url(/images/euro.svg?1d6fb5b5e6e92bf7abde72d03d521952);
 }
 
 .home-infos .item-adress {
@@ -574,7 +574,7 @@ body {
   height: 50px;
   margin: 0 auto;
   margin-bottom: 35px;
-  background-image: url("/storage/assets/location.svg");
+  background-image: url(/images/location.svg?87fd57e2998d10e488d54f117f33bdab);
 }
 
 .home-album {
@@ -937,7 +937,7 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background-image: url("/storage/assets/rightArrow.svg");
+  background-image: url(/images/rightArrow.svg?9c59e9215341f894833f1b9f04072d9b);
   background-repeat: no-repeat;
   vertical-align: bottom;
   margin-right: 10px;
@@ -948,7 +948,7 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background-image: url("/storage/assets/location.svg");
+  background-image: url(/images/location.svg?87fd57e2998d10e488d54f117f33bdab);
   background-repeat: no-repeat;
   vertical-align: bottom;
   margin-right: 10px;
@@ -970,7 +970,7 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background-image: url("/storage/assets/globe.svg");
+  background-image: url(/images/globe.svg?5d9eacc3e4393d492d802146c5e77556);
   background-repeat: no-repeat;
   vertical-align: bottom;
   margin-right: 10px;
@@ -1014,7 +1014,7 @@ body {
 }
 
 .exhibitors-pagination .pagination-previous {
-  background-image: url("/storage/assets/next.svg");
+  background-image: url(/images/next.svg?bdfc0fe52bc6fb6fa7e42c2736de50ac);
   width: 20px;
   height: 20px;
   display: block;
@@ -1022,7 +1022,7 @@ body {
 }
 
 .exhibitors-pagination .pagination-next {
-  background-image: url("/storage/assets/next.svg");
+  background-image: url(/images/next.svg?bdfc0fe52bc6fb6fa7e42c2736de50ac);
   width: 20px;
   height: 20px;
   display: block;
@@ -1393,7 +1393,7 @@ body {
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-image: url("/storage/assets/email.svg");
+  background-image: url(/images/email.svg?0b9e2db436d604082deab1cad4fe8c11);
   vertical-align: text-top;
   margin-right: 10px;
 }
@@ -1403,7 +1403,7 @@ body {
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-image: url("/storage/assets/phone.svg");
+  background-image: url(/images/phone.svg?a33d9d208911df528539985df99580b9);
   vertical-align: text-top;
   margin-right: 10px;
 }
@@ -1413,7 +1413,7 @@ body {
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-image: url("/storage/assets/letter.svg");
+  background-image: url(/images/letter.svg?1431a0e024745ac01d811fb8370ba5bd);
   vertical-align: text-top;
   margin-right: 10px;
 }
@@ -1568,13 +1568,6 @@ body {
   line-height: 1.5rem;
   font-size: 1.1rem;
   margin-bottom: 50px;
-  /* &:before{
-      content: '';
-      background-image: url('/storage/assets/search.svg');
-      display: inline;
-      width: 20px;
-      height: 20px;
-  } */
 }
 
 .checkout-wrap {
@@ -1835,7 +1828,7 @@ body {
 .fil-ariane a:after {
   content: "";
   display: inline-block;
-  background-image: url("/storage/assets/next.svg");
+  background-image: url(/images/next.svg?bdfc0fe52bc6fb6fa7e42c2736de50ac);
   width: 15px;
   height: 15px;
   margin: 0 5px 0 10px;
