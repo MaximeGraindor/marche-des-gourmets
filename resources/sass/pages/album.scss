@@ -19,31 +19,17 @@
 }
 
 .album-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
     .photo-wrapper{
         flex: 1 1 25%;
         img{
             width: 100%;
             border: 3px solid rgba(86, 33, 33, 0.4);
+            height: 200px;
+            object-fit: cover;
         }
     }
 }
 
-@media screen and (max-width:900px){
-    .album-wrapper{
-        .photo-wrapper{
-            flex: 1 1 45%;
-
-        }
-    }
-}
-
-@media screen and (max-width:600px){
-    .album-wrapper{
-        .photo-wrapper{
-            flex: 1 1 100%;
-
-        }
-    }
-}

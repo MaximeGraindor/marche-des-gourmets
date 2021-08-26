@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="header-menu-item menu-item-logo">
-                <a href="/"><img src='./img/logoMdg.svg' alt="Logo du Marché des Gourmets"></a>
+                <a href="/"><img src='/img/logoMdg.svg' alt="Logo du Marché des Gourmets"></a>
             </li>
             <li class="header-menu-item">
                 <a href="/informations-pratiques" class="header-menu-link {{request()->route()->named('informations') ? ' active' : ''}}">

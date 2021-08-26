@@ -51,9 +51,9 @@
 }
 
 .exhibitors-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 2rem;
 }
 
 .exhibitors-item{
@@ -65,7 +65,6 @@
     flex-direction: column;
     color: white;
     border-radius: 5px;
-    flex: 1 1 27.25%;
     &:hover{
         background-color:  #361515;
     }

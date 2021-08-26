@@ -5,6 +5,8 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\File;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Files;
@@ -46,8 +48,6 @@ class Photo extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            File::make('test photo', 'path')->disk('public'),
-
             Images::make('Images', 'my_multi_collection') // second parameter is the media collection name
             ->conversionOnPreview('medium-size') // conversion used to display the "original" image
             ->conversionOnDetailView('thumb') // conversion used on the model's view
@@ -58,17 +58,9 @@ class Photo extends Resource
             // validation rules for the collection of images
             ->singleImageRules('dimensions:min_width=100'),
 
+            Image::make('Photo',' Path')->disk('public'),
 
-            Images::make('Main image', 'main') // second parameter is the media collection name
-            ->conversionOnIndexView('thumb'), // conversion used to display the image
-            //->rules('required'), // validation ruless
-
-            File::make('Attachment')
-            ->store(function (Request $request, $model) {
-                return [
-                    'path' => $request->attachment->store('/'),
-                ];
-            }),
+            File::make('test photo', 'Path'),
 
             BelongsTo::make('album'),
 

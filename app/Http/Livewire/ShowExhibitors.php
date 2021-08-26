@@ -43,8 +43,10 @@ class ShowExhibitors extends Component
                 $query->where('name', 'LIKE', '%'.$this->productCategory.'%');
 
             })
-            ->where('exhibitors.name', 'LIKE', '%'.$this->name.'%')
-            ->where('exhibitors.country', 'LIKE', '%'.$this->country.'%')
+            ->where('name', 'LIKE', '%'.$this->name.'%')
+            ->where('company_name', 'LIKE', '%'.$this->name.'%')
+            ->where('country', 'LIKE', '%'.$this->country.'%')
+            ->where('agree', 1)
             ->paginate(9);
 
             //dd($allExhibitors);

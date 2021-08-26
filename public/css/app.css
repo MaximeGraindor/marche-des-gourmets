@@ -902,9 +902,9 @@ body {
 }
 
 .exhibitors-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 2rem;
 }
 
 .exhibitors-item {
@@ -916,7 +916,6 @@ body {
   flex-direction: column;
   color: white;
   border-radius: 5px;
-  flex: 1 1 27.25%;
 }
 
 .exhibitors-item:hover {
@@ -1836,8 +1835,9 @@ body {
 }
 
 .album-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
 .album-wrapper .photo-wrapper {
@@ -1847,17 +1847,8 @@ body {
 .album-wrapper .photo-wrapper img {
   width: 100%;
   border: 3px solid rgba(86, 33, 33, 0.4);
-}
-
-@media screen and (max-width: 900px) {
-  .album-wrapper .photo-wrapper {
-    flex: 1 1 45%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .album-wrapper .photo-wrapper {
-    flex: 1 1 100%;
-  }
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
