@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-email">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" class="{{ $errors->has('email') ? 'error-input' : ''}}" value="{{ old('email') }}">
+                        <input type="email" name="email" id="email" class="{{ $errors->has('email') ? 'error-input' : ''}}" value="{{ old('email') }}">
                         @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror

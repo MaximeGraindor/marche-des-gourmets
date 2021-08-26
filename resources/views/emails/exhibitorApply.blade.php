@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>
-        Hello world!
+        Nouvelle candidature d'exposant!
     </h1>
     <ul>
         <li>Prénom : {{ $data['firstname'] }}</li>

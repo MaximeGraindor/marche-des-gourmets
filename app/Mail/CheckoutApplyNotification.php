@@ -30,6 +30,7 @@ class CheckoutApplyNotification extends Mailable
     {
         return $this->from('marchedesgourmets@gmail.com')
                     ->view('emails.checkout')
+                    ->subject('Achat Marché des Gourmets')
                     ->with('data', $this->data);
     }
 }

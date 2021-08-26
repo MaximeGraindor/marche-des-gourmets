@@ -30,6 +30,7 @@ class ContactNotification extends Mailable
     {
         return $this->from($this->data['email'])
                     ->view('emails.contact')
+                    ->subject('Vous avez un nouveau message')
                     ->with('data', $this->data);
     }
 }
