@@ -21,16 +21,5 @@ class Photo extends Model implements HasMedia
         return $this->belongsTo(Album::class);
     }
 
-    public function registerMediaConversions(Media $media = null) : void
-    {
-        $this->addMediaConversion('thumb')
-            ->width(130)
-            ->height(130);
-    }
 
-    public function registerMediaCollections() : void
-    {
-        $this->addMediaCollection('main')->singleFile();
-        $this->addMediaCollection('my_multi_collection');
-    }
 }

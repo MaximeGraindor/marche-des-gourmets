@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Fields\BelongsTo;
+use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Files;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
@@ -48,19 +49,7 @@ class Photo extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            Images::make('Images', 'my_multi_collection') // second parameter is the media collection name
-            ->conversionOnPreview('medium-size') // conversion used to display the "original" image
-            ->conversionOnDetailView('thumb') // conversion used on the model's view
-            ->conversionOnIndexView('thumb') // conversion used to display the image on the model's index page
-            ->conversionOnForm('thumb') // conversion used to display the image on the model's form
-            ->fullSize() // full size column
-            //->rules('required', 'size:3') // validation rules for the collection of images
-            // validation rules for the collection of images
-            ->singleImageRules('dimensions:min_width=100'),
-
-            Image::make('Photo',' Path')->disk('public'),
-
-            File::make('test photo', 'Path'),
+            MediaLibrary::make('Image', 'path'),
 
             BelongsTo::make('album'),
 

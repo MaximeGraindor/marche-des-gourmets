@@ -15,12 +15,12 @@ class HomeController extends Controller
         $page->loadForRoute($request->route());
         $month = ['Janvier', 'Février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
         $currentEdition = Edition::all()->last();
-        $monthEdition = $month[(($currentEdition->end_date)->format('n')) - 1];
+        $monthEdition = $currentEdition ? $month[(($currentEdition->end_date)->format('n')) - 1] : null;
 
         $albums = Album::with('photos')->get();
         //return $albums;
 
-        $editionDate = 'du ' . ($currentEdition->start_date)->format('j') . ' au ' . ($currentEdition->end_date)->format('j') . ' ' . $month[(($currentEdition->end_date)->format('n')) - 1];
+        $editionDate = $currentEdition ? 'du ' . ($currentEdition->start_date)->format('j') . ' au ' . ($currentEdition->end_date)->format('j') . ' ' . $month[(($currentEdition->end_date)->format('n')) - 1] : null;
 
         return view('home', compact('currentEdition', 'editionDate', 'monthEdition', 'albums'));
     }

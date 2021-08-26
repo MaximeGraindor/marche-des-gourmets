@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5a2d89cb20bb5df791d8740e9dc51a7",
+    "content-hash": "25f5ae09627d841b1b45d0182e78f211",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -233,6 +233,54 @@
                 "source": "https://github.com/cakephp/chronos"
             },
             "time": "2020-08-22T02:42:12+00:00"
+        },
+        {
+            "name": "classic-o/nova-media-library",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/classic-o/nova-media-library.git",
+                "reference": "fd06d8944f1afcf9a93794e9181e6d789df52085"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/classic-o/nova-media-library/zipball/fd06d8944f1afcf9a93794e9181e6d789df52085",
+                "reference": "fd06d8944f1afcf9a93794e9181e6d789df52085",
+                "shasum": ""
+            },
+            "require": {
+                "intervention/image": "^2.",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ClassicO\\NovaMediaLibrary\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ClassicO\\NovaMediaLibrary\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Tool and field that will let you managing files and add them to the posts",
+            "keywords": [
+                "gallery",
+                "laravel",
+                "media",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/classic-o/nova-media-library/issues",
+                "source": "https://github.com/classic-o/nova-media-library/tree/1.0.7"
+            },
+            "time": "2021-05-31T18:58:48+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

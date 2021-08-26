@@ -46,7 +46,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        $album->load('photos');
+        return $album->load('photos');
         return view('pages.album', compact('album'));
     }
 

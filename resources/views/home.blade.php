@@ -15,13 +15,26 @@
 
         <div class="home-infos">
             <div class="infos-item item-date">
+                @if($currentEdition)
                 <span>{{ $editionDate }}</span>
+                @else
+                <span>Pas d'édition en cours</span>
+                @endif
             </div>
             <div class="infos-item item-price">
+                @if($currentEdition)
                 <span>{{ $currentEdition->price }}€ l'entrée</span>
+                @else
+                <span>Pas d'édition en cours</span>
+                @endif
             </div>
             <div class="infos-item item-adress">
+                @if($currentEdition)
                 <span>{{ $currentEdition->adress }}</span>
+                @else
+                <span>Pas d'édition en cours</span>
+                @endif
+
             </div>
         </div>
 
@@ -30,7 +43,9 @@
                 <p class="home-countdown-text">
                     Rendez-vous en {{ $monthEdition }} !
                 </p>
-                <span class="hidden" id="date-timestamp">{{strtotime($currentEdition->start_date) * 1000}}</span>
+                @if($currentEdition)
+                    <span class="hidden" id="date-timestamp">{{strtotime($currentEdition->start_date) * 1000}}</span>
+                @endif
                 <div class="countdown-wrapper">
                     <div class="countdown-item">
                         <span id="day">
