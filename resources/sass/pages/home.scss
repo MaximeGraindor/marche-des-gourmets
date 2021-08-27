@@ -182,15 +182,22 @@
     }
 }
 
-.album-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+.home-album-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    text-align: center;
+
     .album-item{
         display: flex;
         flex-direction: column;
-        width: 300px;
-        height: 300px;
+        flex: 1;
+        &:hover{
+            img{
+                object-fit: none;
+                border: 4px solid rgb(86 33 33);
+            }
+        }
         a{
             text-decoration: none;
         }
@@ -198,11 +205,15 @@
             width: 300px;
             height: 300px;
             object-fit: cover;
-            border: 3px solid rgba(86, 33, 33, 0.4);
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 2px solid rgb(86 33 33);
         }
         span{
             font-family: $font-content;
             font-size: 1.2rem;
+            text-align: left;
+            display: block;
         }
     }
 }
@@ -256,6 +267,11 @@
         .album-item{
             margin-bottom: 20px;
         }
+    }
+    .home-album {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
     }
 
 }

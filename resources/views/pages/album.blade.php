@@ -13,9 +13,9 @@
         </div>
 
         <div class="album-wrapper">
-            @foreach ($album->photos as $photo)
+            @foreach ($files as $photo)
                 <div class="photo-wrapper">
-                    <img src="{{ asset('storage/'.$photo->path) }}" alt="">
+                    <img src="{{ asset('storage/'.$photo->name) }}" alt="">
                 </div>
             @endforeach
         </div>

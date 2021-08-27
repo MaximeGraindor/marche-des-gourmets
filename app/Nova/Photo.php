@@ -49,7 +49,7 @@ class Photo extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
 
-            MediaLibrary::make('Image', 'path'),
+            MediaLibrary::make('Image', 'path')->array(),
 
             BelongsTo::make('album'),
 

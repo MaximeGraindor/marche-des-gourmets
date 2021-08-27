@@ -114,7 +114,7 @@ return [
 		'driver' => 'gd',
 
 		# 0 - 100
-		'quality' => 80,
+		'quality' => 40,
 
 		# Cropping image on the frontend
 		'front_crop' => true,
@@ -122,7 +122,7 @@ return [
 		# Maximum width and height in pixels for the original image [ width, height, upSize, upWH ]
 		# upSize {bool} - Crop image even if size will be larger. (If set to `false` - size image will be as original).
 		# upWH {bool} - Crop even if width and height image less than limits.
-		'original' => [ 1200, null, false, false ],
+		'original' => [ 800, null, false, false ],
 
 		# Crop additional image variations [ width, height, upSize, upWH ]
 		'sizes' => [

@@ -18,7 +18,14 @@ class HomeController extends Controller
         $monthEdition = $currentEdition ? $month[(($currentEdition->end_date)->format('n')) - 1] : null;
 
         $albums = Album::with('photos')->get();
-        //return $albums;
+
+        /* return $albums->photos[0];
+        $array = [];
+        foreach($albums->photos[0] as $photo){
+            array_push($array, $photo->path[0]);
+        }
+
+        return $array; */
 
         $editionDate = $currentEdition ? 'du ' . ($currentEdition->start_date)->format('j') . ' au ' . ($currentEdition->end_date)->format('j') . ' ' . $month[(($currentEdition->end_date)->format('n')) - 1] : null;
 

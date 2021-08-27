@@ -16,10 +16,25 @@ class Photo extends Model implements HasMedia
         'path'
     ];
 
+    protected $casts = [
+        'path' => 'array',
+    ];
+
     public function album()
     {
         return $this->belongsTo(Album::class);
     }
 
+    public function registerMediaConversions(Media $media = null) : void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(130)
+            ->height(130);
+    }
 
+    public function registerMediaCollections() : void
+    {
+        $this->addMediaCollection('main')->singleFile();
+        $this->addMediaCollection('my_multi_collection');
+    }
 }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Photo;
 use Illuminate\Http\Request;
+use ClassicO\NovaMediaLibrary\API;
 
 class AlbumController extends Controller
 {
@@ -46,8 +48,10 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        return $album->load('photos');
-        return view('pages.album', compact('album'));
+        $photosArrayId = $album->load('photos')->photos[0]->path;
+        $files = API::getFiles($photosArrayId, $imgSize = null, true);
+
+        return view('pages.album', compact('files', 'album'));
     }
 
     /**

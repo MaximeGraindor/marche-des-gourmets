@@ -92,11 +92,11 @@
                     Anciennes éditions
                 </h2>
             </div>
-            <div class="album-wrapper">
+            <div class="home-album-wrapper">
                 @foreach ($albums as $album)
                     <div class="album-item">
                         <a href="/album/{{ $album->id}}" class="album-link">
-                            <img src="{{ asset('/storage/' . $album->photos[0]->path) }}" alt="Photo aléatoire de l'album">
+                            <img src="http://mdg.local/storage/img/about1.jpeg" alt="Photo aléatoire de l'album">
                             <span>{{ $album->name }}</span>
                         </a>
                     </div>
