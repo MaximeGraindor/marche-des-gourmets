@@ -180,6 +180,11 @@
         font-size: 2.5rem;
         margin-bottom: 2rem;
     }
+    .home-noAlbum{
+        font-family: $font-content;
+        text-align: left;
+        font-size: 1.3rem;
+    }
 }
 
 .home-album-wrapper{
@@ -187,7 +192,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     text-align: center;
-
     .album-item{
         display: flex;
         flex-direction: column;

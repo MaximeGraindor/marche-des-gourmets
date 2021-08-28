@@ -233,7 +233,7 @@ body {
 .header-background {
   width: 100%;
   height: 400px;
-  background-image: url("/storage/img/background-header.jpg");
+  background-image: url(/images/background-header.jpg?ea96b07a7030d4780fdb0555306b1b45);
   background-position: center -750px;
   background-repeat: no-repeat;
 }
@@ -587,6 +587,12 @@ body {
   font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+}
+
+.home-album .home-noAlbum {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 1.3rem;
 }
 
 .home-album-wrapper {
@@ -985,7 +991,7 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background-image: url(/images/globe.svg?5d9eacc3e4393d492d802146c5e77556);
+  background-image: url(/images/globe.svg?35ab6f0507ea9bb0007d76478d3bfa51);
   background-repeat: no-repeat;
   vertical-align: bottom;
   margin-right: 10px;

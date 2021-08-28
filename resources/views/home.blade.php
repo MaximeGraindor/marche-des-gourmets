@@ -9,8 +9,6 @@
         <div class="home-intro">
             {!!Page::get('introduction')!!}
             <a href="/billeterie" class="home-intro-link">Acheter un ticket !</a>
-
-
         </div>
 
         <div class="home-infos">
@@ -92,7 +90,8 @@
                     Anciennes éditions
                 </h2>
             </div>
-            <div class="home-album-wrapper">
+            @if($albums->count())
+                <div class="home-album-wrapper">
                 @foreach ($albums as $album)
                     <div class="album-item">
                         <a href="/album/{{ $album->id}}" class="album-link">
@@ -101,7 +100,12 @@
                         </a>
                     </div>
                 @endforeach
-            </div>
+                </div>
+            @else
+            <p class="home-noAlbum">
+                Pas d'album photo pour le moment.
+            </p>
+            @endif
         </section>
 
     </main>
