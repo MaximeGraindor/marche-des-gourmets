@@ -47,9 +47,9 @@ class Album extends Resource
 
             ID::make(__('ID'), 'id')->sortable(),
 
-            Text::make('nom', 'name'),
+            Text::make('Nom de l\'album', 'name'),
 
-            BelongsTo::make('Edition', 'edition')->searchable(),
+            BelongsTo::make('Edition', 'edition')->searchable()->help('Rechercher le numéro de l\'édition'),
 
             HasMany::make('Photos'),
 

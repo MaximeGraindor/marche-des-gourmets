@@ -13,4 +13,8 @@ class Edition extends Model
         'start_date' => 'date',
         'end_date' => 'date'
     ];
+
+    public function album(){
+        return $this->hasMany(Album::class);
+    }
 }

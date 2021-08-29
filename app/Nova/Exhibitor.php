@@ -38,6 +38,7 @@ class Exhibitor extends Resource
     ];
 
     public static $group = 'Les exposants';
+    public static $showColumnBorders = true;
 
     /**
      * Get the displayable label of the resource.

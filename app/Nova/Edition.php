@@ -9,8 +9,10 @@ use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Country;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Edition extends Resource
@@ -27,7 +29,10 @@ class Edition extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public function title()
+    {
+        return 'Édition n°'. $this->numero . ' ' . '(' . ($this->start_date)->format('d/m/y') . ' - ' .($this->end_date)->format('d/m/y') .')';
+    }
 
     /**
      * The columns that should be searched.
@@ -35,7 +40,7 @@ class Edition extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'numero',
     ];
 
     public static $group = 'Marché des Gourmets';
@@ -64,6 +69,8 @@ class Edition extends Resource
             File::make('Carte du bar', 'bar_path'),
 
             Number::make('Prix d\'entré', 'price'),
+
+            HasMany::make('album')
 
         ];
     }
