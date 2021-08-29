@@ -8,11 +8,13 @@
         <meta name="description" content="Le Marché des Gourmets est un événement annuel organisé par le Rotary Club de Flémalle sur le prestigieux site de l'abbaye de la Paix-Dieu afin d'obtenir des fonds pour aider les plus démunis." >
 
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        <link href="{{ asset('/css/lightbox.css') }}" rel="stylesheet" />
         @livewireStyles
         <link rel="icon" type="image/png" href="/favicon.png">
 
         <script src="https://js.stripe.com/v3/"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+
 
         {{-- Social Meta --}}
         <meta property="og:type" content="website">
@@ -27,7 +29,10 @@
 
     <body>
         @yield('content')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="{{ asset('/js/app.js') }}" defer></script>
+        <script src="{{ asset('/js/lightbox.js') }}"></script>
+
         @livewireScripts
     </body>
 </html>

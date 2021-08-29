@@ -991,7 +991,7 @@ body {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background-image: url(/images/globe.svg?35ab6f0507ea9bb0007d76478d3bfa51);
+  background-image: url(/images/globe.svg?5d9eacc3e4393d492d802146c5e77556);
   background-repeat: no-repeat;
   vertical-align: bottom;
   margin-right: 10px;
@@ -1868,8 +1868,10 @@ body {
 
 .album-wrapper .photo-wrapper img {
   width: 100%;
-  border: 3px solid rgba(86, 33, 33, 0.4);
   height: 200px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid #562121;
   -o-object-fit: cover;
      object-fit: cover;
 }

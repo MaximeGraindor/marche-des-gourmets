@@ -15,7 +15,9 @@
         <div class="album-wrapper">
             @foreach ($files as $photo)
                 <div class="photo-wrapper">
-                    <img src="{{ asset('storage/'.$photo->name) }}" alt="">
+                    <a href="{{ asset('storage/'.$photo->name) }}" data-lightbox="roadtrip">
+                        <img src="{{ asset('storage/'.$photo->name) }}" alt="">
+                    </a>
                 </div>
             @endforeach
         </div>

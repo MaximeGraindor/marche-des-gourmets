@@ -114,7 +114,7 @@ return [
 		'driver' => 'gd',
 
 		# 0 - 100
-		'quality' => 40,
+		'quality' => 60,
 
 		# Cropping image on the frontend
 		'front_crop' => true,
