@@ -38,6 +38,13 @@ class Photo extends Resource
         'id',
     ];
 
+     /**
+     * The logical group associated with the resource.
+     *
+     * @var string
+    */
+    public static $group = 'Albums photos';
+
     /**
      * Get the fields displayed by the resource.
      *

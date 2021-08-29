@@ -33,6 +33,13 @@ class Contact extends Resource
     ];
 
     /**
+     * The logical group associated with the resource.
+     *
+     * @var string
+    */
+    public static $group = 'Messages';
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
