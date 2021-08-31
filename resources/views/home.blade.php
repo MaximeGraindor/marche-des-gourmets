@@ -93,12 +93,14 @@
             @if($albums->count())
                 <div class="home-album-wrapper">
                 @foreach ($albums as $album)
-                    <div class="album-item">
-                        <a href="/album/{{ $album->id}}" class="album-link">
-                            <img src="http://mdg.local/storage/img/about1.jpeg" alt="Photo aléatoire de l'album">
-                            <span>{{ $album->name }}</span>
-                        </a>
-                    </div>
+                    @foreach ($arrayIdPhotos as $coverAlbum)
+                        <div class="album-item">
+                            <a href="/album/{{ $album->id}}" class="album-link">
+                                <img src="{{ asset('storage/'.$coverAlbum->name) }}" alt="Photo aléatoire de l'album">
+                                <span>{{ $album->name }}</span>
+                            </a>
+                        </div>
+                    @endforeach
                 @endforeach
                 </div>
             @else
