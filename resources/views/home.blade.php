@@ -93,14 +93,12 @@
             @if($albums->count())
                 <div class="home-album-wrapper">
                 @foreach ($albums as $album)
-                    @foreach ($arrayIdPhotos as $coverAlbum)
-                        <div class="album-item">
-                            <a href="/album/{{ $album->id}}" class="album-link">
-                                <img src="{{ asset('storage/'.$coverAlbum->name) }}" alt="Photo aléatoire de l'album">
-                                <span>{{ $album->name }}</span>
-                            </a>
-                        </div>
-                    @endforeach
+                    <div class="album-item">
+                        <a href="/album/{{ $album->id}}" class="album-link">
+                            <img src="{{ asset('storage/'.$album->cover_album) }}" alt="Photo aléatoire de l'album">
+                            <span>{{ $album->name }}</span>
+                        </a>
+                    </div>
                 @endforeach
                 </div>
             @else

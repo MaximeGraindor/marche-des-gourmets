@@ -29,6 +29,10 @@ class HomeController extends Controller
             $arrayIdPhotos = [];
         }
 
+        foreach ($arrayIdPhotos as $key => $value) {
+            $albums[$key]->cover_album = $value->name;
+        }
+
         $editionDate = $currentEdition ? 'du ' . ($currentEdition->start_date)->format('j') . ' au ' . ($currentEdition->end_date)->format('j') . ' ' . $month[(($currentEdition->end_date)->format('n')) - 1] : null;
 
         return view('home', compact('currentEdition', 'editionDate', 'monthEdition', 'albums', 'arrayIdPhotos'));

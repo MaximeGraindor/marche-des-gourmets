@@ -32,8 +32,11 @@ class CheckoutController extends Controller
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
 
         $intent = \Stripe\PaymentIntent::create([
-            'amount' => ($request->amount) * 100,
+            'amount' => ($request->ticket) * 100,
             'currency' => 'eur',
+            "payment_method_types" => [
+                "card"
+            ],
         ]);
 
         $clientSecret = Arr::get($intent, 'client_secret');
