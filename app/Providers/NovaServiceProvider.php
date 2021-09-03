@@ -2,9 +2,12 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Gate;
-use Laravel\Nova\Cards\Help;
+use App\Models\Contact;
+use App\Models\Exhibitor;
 use Laravel\Nova\Nova;
+use IDF\HtmlCard\HtmlCard;
+use Laravel\Nova\Cards\Help;
+use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -56,7 +59,16 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            (new HtmlCard())->width('2/3')->view('cards.lastContact', [
+                'messages' => Contact::latest()->take(5)->get()
+            ]),
+            (new HtmlCard())->width('full')->view('cards.lastExhibitors', [
+                'exhibitors' => Exhibitor::latest()->take(10)->get()
+            ]),
+
+
+
+           //new Help,
         ];
     }
 

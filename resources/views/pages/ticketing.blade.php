@@ -59,9 +59,6 @@
                 <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
             </p>
         </form>
-
-
-
     </main>
 
     <x-footer/>
@@ -113,5 +110,9 @@
                 }
             });
         });
+
+        form.addEventListener('submit', function(ev) {
+            console.log('test');
+        })
     </script>
 @endsection

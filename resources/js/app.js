@@ -13,7 +13,7 @@ lightbox.option({
     'imageFadeDuration': 0,
   })
 
-/* const selectElt = document.getElementById('ticket')
+const selectElt = document.getElementById('ticket')
 
 const fixPrice = 5
 const amountElt = document.getElementById('amount')
@@ -25,7 +25,7 @@ function updateAmount(){
     amountInputHidden.value = fixPrice * selectElt.value
 }
 
-updateAmount() */
+updateAmount()
 
 //----------------------------------------------------------------
 
