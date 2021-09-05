@@ -1570,7 +1570,7 @@ body {
 }
 
 .billeterie {
-  max-width: 1340px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 7rem;
 }
@@ -1758,79 +1758,32 @@ body {
   cursor: default;
 }
 
-/* spinner/processing state, errors */
-
-.spinner,
-.spinner:before,
-.spinner:after {
-  border-radius: 50%;
-}
-
-.spinner {
-  color: #ffffff;
-  font-size: 22px;
-  text-indent: -99999px;
-  margin: 0px auto;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  box-shadow: inset 0 0 0 2px;
-  transform: translateZ(0);
-}
-
-.spinner:before,
-.spinner:after {
-  position: absolute;
-  content: "";
-}
-
-.spinner:before {
-  width: 10.4px;
-  height: 20.4px;
-  background: #5469d4;
-  border-radius: 20.4px 0 0 20.4px;
-  top: -0.2px;
-  left: -0.2px;
-  transform-origin: 10.4px 10.2px;
-  -webkit-animation: loading 2s infinite ease 1.5s;
-  animation: loading 2s infinite ease 1.5s;
-}
-
-.spinner:after {
-  width: 10.4px;
-  height: 10.2px;
-  background: #5469d4;
-  border-radius: 0 10.2px 10.2px 0;
-  top: -0.1px;
-  left: 10.2px;
-  transform-origin: 0px 10.2px;
-  -webkit-animation: loading 2s infinite ease;
-  animation: loading 2s infinite ease;
-}
-
-@-webkit-keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
+@media screen and (max-width: 1000px) {
+  .billeterie {
+    padding: 2rem;
   }
 }
 
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
+@media screen and (max-width: 630px) {
+  #payment-form {
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  100% {
-    transform: rotate(360deg);
+  .billeterie form {
+    width: initial;
+    min-width: initial;
+    align-self: center;
+    max-width: 800px;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  form {
-    width: 80vw;
+@media screen and (max-width: 560px) {
+  .informations {
+    padding: 2rem;
+  }
+
+  .informations-right iframe {
+    height: 500px;
   }
 }
 
@@ -1874,5 +1827,113 @@ body {
   border: 2px solid #562121;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.success-checkout {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3.5rem;
+}
+
+.success-checkout .success-checkout-title {
+  font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.success-checkout .success-checkout-intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.4rem;
+}
+
+.success-checkout-recap {
+  background-color: #792e2e;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.success-checkout-recap h2 {
+  border-bottom: 2px solid;
+  text-align: center;
+}
+
+.success-checkout-recap h2 span {
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  font-size: 2rem;
+}
+
+.success-checkout-list {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.success-checkout-list ul li {
+  margin-bottom: 1rem;
+}
+
+.success-checkout-actions {
+  text-align: center;
+  border-top: 2px solid black;
+  padding: 1.5rem;
+}
+
+.succes-checkout-email {
+  margin-bottom: 1rem;
+}
+
+.succes-checkout-email input {
+  padding: 1rem;
+  width: 100%;
+  background-color: #3a1717;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.succes-checkout-email input:hover {
+  background-color: #250f0f;
+}
+
+.succes-checkout-pdf input {
+  padding: 1rem;
+  width: 100%;
+  background-color: #6b1c1c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.succes-checkout-pdf input:hover {
+  background-color: #250f0f;
+}
+
+.cancel-checkout {
+  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3.5rem;
+}
+
+.cancel-checkout .cancel-checkout-title {
+  font-family: "Amaranth", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cancel-checkout .cancel-checkout-intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.4rem;
 }
 

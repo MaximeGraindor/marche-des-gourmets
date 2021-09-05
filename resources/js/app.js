@@ -13,7 +13,7 @@ lightbox.option({
     'imageFadeDuration': 0,
   })
 
-const selectElt = document.getElementById('ticket')
+const selectElt = document.getElementById('quantity')
 
 const fixPrice = 5
 const amountElt = document.getElementById('amount')

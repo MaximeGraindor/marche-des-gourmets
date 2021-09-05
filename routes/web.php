@@ -51,6 +51,10 @@ Route::get('/billeterie', [CheckoutController::class, 'index'])
     ->template(\App\Nova\Templates\Ticketing::class)
     ->name('ticketing');
 
-Route::post('checkout', [CheckoutController::class, 'checkout']);
+Route::post('/checkout', [CheckoutController::class, 'checkout']);
+Route::get('/success', [CheckoutController::class, 'successCheckout']);
+Route::get('/cancel', [CheckoutController::class, 'cancelCheckout']);
+Route::post('/send-email-checkout', [CheckoutController::class, 'resendEmailCheckout']);
+Route::post('/download-ticket', [CheckoutController::class, 'downloadTicket']);
 
 Route::get('/album/{album}', [AlbumController::class, 'show'])->name('album.show');

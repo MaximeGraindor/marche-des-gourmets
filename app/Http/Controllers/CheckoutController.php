@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use stdClass;
 use App\Models\Checkout;
+use Barryvdh\DomPDF\Facade as PDF;
 use Stripe\PaymentIntent;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Whitecube\NovaPage\Pages\Manager;
 use App\Mail\CheckoutApplyNotification;
-use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -28,85 +30,77 @@ class CheckoutController extends Controller
 
     public function checkout(Request $request)
     {
-
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        header('Content-Type: application/json');
+        $YOUR_DOMAIN = 'http://mdg.local/';
 
-        $intent = \Stripe\PaymentIntent::create([
-            'amount' => ($request->amount) * 100,
-            'currency' => 'eur',
+        $checkout_session = \Stripe\Checkout\Session::create([
+            "customer_email" => $request->email,
+            'line_items' => [
+                [
+                  'price' => 'price_1I1tyXKWEhKiOo9h8ahAyHds',
+                  'quantity' => $request->quantity,
+                ],
+            ],
+            'submit_type' => 'pay',
+            'payment_method_types' => [
+              'card',
+              'bancontact',
+              'sofort',
+            ],
+            'mode' => 'payment',
+            'success_url' => $YOUR_DOMAIN . 'success?session_id={CHECKOUT_SESSION_ID}',
+            'cancel_url' => $YOUR_DOMAIN . '/cancel',
+            "metadata" => [
+                "customer_name" => $request->name,
+                "customer_firstname" => $request->firstname,
+                "quantity_ticket" => $request->quantity,
+            ]
         ]);
 
-        $clientSecret = Arr::get($intent, 'client_secret');
-
-        Mail::to('maxime.graindor@hotmail.com')->send(new CheckoutApplyNotification($request));
-
-        return view('pages.ticketing', compact('clientSecret', 'request'));
+        return  redirect($checkout_session->url);
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function successCheckout(Request $request)
     {
-        return 'test';
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $session = \Stripe\Checkout\Session::retrieve($request->session_id);
+
+        $pdf = PDF::loadView('pdf.ticket', compact('session'));
+
+        $message = new CheckoutApplyNotification($session);
+        $message->attachData($pdf->output(), "ticket.pdf");
+
+        Mail::to($session->customer_email)
+        ->send($message);
+        return view('checkout.success', compact('session'));
+    }
+    public function resendEmailCheckout(Request $request)
+    {
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $session = \Stripe\Checkout\Session::retrieve($request->session_id);
+        $pdf = PDF::loadView('pdf.ticket', compact('session'));
+
+        $message = new CheckoutApplyNotification($session);
+        $message->attachData($pdf->output(), "ticket.pdf");
+
+        Mail::to($session->customer_email)
+        ->send($message);
+        return redirect()->back();
     }
 
-     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function cancelCheckout(Request $request)
     {
-        //
+        return view('checkout.cancel');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Checkout  $checkout
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Checkout $checkout)
+    public function downloadTicket(Request $request)
     {
-        //
-    }
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $session = \Stripe\Checkout\Session::retrieve($request->session_id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Checkout  $checkout
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Checkout $checkout)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Checkout  $checkout
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Checkout $checkout)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Checkout  $checkout
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Checkout $checkout)
-    {
-        //
+        $pdf = PDF::loadView('pdf.ticket', compact('session'));
+        return $pdf->stream();
     }
 }

@@ -1,0 +1,16 @@
+.cancel-checkout{
+    font-family: $font-content;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3.5rem;
+    .cancel-checkout-title{
+        font-family: $font-heading;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .cancel-checkout-intro{
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        line-height: 1.4rem;
+    }
+}
