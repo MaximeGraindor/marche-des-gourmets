@@ -15,17 +15,21 @@ lightbox.option({
 
 const selectElt = document.getElementById('quantity')
 
-const fixPrice = 5
-const amountElt = document.getElementById('amount')
-const amountInputHidden = document.getElementById('amountInputHidden')
+if(selectElt){
+    const fixPrice = 5
+    const amountElt = document.getElementById('amount')
+    const amountInputHidden = document.getElementById('amountInputHidden')
 
-function updateAmount(){
-    window.requestAnimationFrame(updateAmount)
-    amountElt.innerText = fixPrice * selectElt.value
-    amountInputHidden.value = fixPrice * selectElt.value
+
+    function updateAmount(){
+        window.requestAnimationFrame(updateAmount)
+        amountElt.innerText = fixPrice * selectElt.value
+        amountInputHidden.value = fixPrice * selectElt.value
+    }
+
+    updateAmount()
 }
 
-updateAmount()
 
 //----------------------------------------------------------------
 
