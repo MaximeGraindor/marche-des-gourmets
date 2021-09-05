@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CheckoutRequest;
 use stdClass;
 use App\Models\Checkout;
 use Barryvdh\DomPDF\Facade as PDF;
@@ -28,7 +29,7 @@ class CheckoutController extends Controller
         return view('pages.ticketing', compact('clientSecret', 'request', 'page'));
     }
 
-    public function checkout(Request $request)
+    public function checkout(CheckoutRequest $request)
     {
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         header('Content-Type: application/json');
@@ -50,7 +51,7 @@ class CheckoutController extends Controller
             ],
             'mode' => 'payment',
             'success_url' => $YOUR_DOMAIN . 'success?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => $YOUR_DOMAIN . '/cancel',
+            'cancel_url' => $YOUR_DOMAIN . 'cancel',
             "metadata" => [
                 "customer_name" => $request->name,
                 "customer_firstname" => $request->firstname,

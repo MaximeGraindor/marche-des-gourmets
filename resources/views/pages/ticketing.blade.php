@@ -19,18 +19,44 @@
 
         <form id="payment-form" action="/checkout" method="post">
             @csrf
-
             <div class="checkout-firstname">
                 <label for="firstname">Nom</label>
-                <input type="text" name="firstname" id="firstname">
+                <input type="text"
+                    name="firstname"
+                    id="firstname"
+                    class="{{ $errors->has('firstname') ? 'error-input' : ''}}"
+                    value="{{ old('firstname') }}">
+                @error('firstname')
+                <span>
+                    {{$message}}
+                </span>
+                @enderror
             </div>
             <div class="checkout-name">
                 <label for="name">Prénom</label>
-                <input type="text" name="name" id="name">
+                <input type="text"
+                    name="name"
+                    id="name"
+                    class="{{ $errors->has('name') ? 'error-input' : ''}}"
+                    value="{{ old('name') }}">
+                @error('name')
+                <span>
+                    {{$message}}
+                </span>
+                @enderror
             </div>
             <div class="checkout-email">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email"
+                name="email"
+                id="email"
+                class="{{ $errors->has('email') ? 'error-input' : ''}}"
+                value="{{ old('email') }}">
+                @error('email')
+                <span>
+                    {{$message}}
+                </span>
+                @enderror
             </div>
             <div class="checkout-quantity">
                 <label for="quantity">Nombre de ticket</label>

@@ -1591,73 +1591,15 @@ body {
   margin-bottom: 50px;
 }
 
-.checkout-wrap {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
-}
-
-.checkout-wrap label {
-  margin-bottom: 0.3rem;
-  font-size: 1.25rem;
-}
-
-.checkout-wrap input,
-.checkout-wrap select {
-  font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
-  padding: 0.8rem 0.9rem;
-  font-size: 1.25rem;
-  border: 1px solid rgba(86, 33, 33, 0.4);
-  box-shadow: 2px 2px 18px -11px rgba(0, 0, 0, 0.3);
-  resize: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.checkout-wrap input:focus,
-.checkout-wrap select:focus {
-  background-color: #FDEEDB;
-}
-
-.checkout-wrap .form-email {
-  grid-column: 1/5;
-}
-
-.checkout-wrap .form-name {
-  grid-column: 1/3;
-}
-
-.checkout-wrap .form-cardCode {
-  grid-column: 3/5;
-}
-
-.checkout-wrap .form-cardExpi {
-  grid-column: 1/3;
-}
-
-.checkout-wrap .form-cardExpi div {
-  display: flex;
-}
-
-.checkout-wrap .form-amount {
-  grid-column: 3/4;
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.checkout-wrap .form-submit {
-  grid-column: 4/5;
-}
-
 #payment-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   font-family: "Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#payment-form input + span {
+  color: #990101;
 }
 
 .checkout-amount {
