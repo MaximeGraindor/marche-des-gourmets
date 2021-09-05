@@ -25,7 +25,7 @@ class CheckoutController extends Controller
         $clientSecret = '';
         $page->loadForRoute($request->route());
 
-        return view('pages.ticketing', compact('clientSecret', 'request'));
+        return view('pages.ticketing', compact('clientSecret', 'request', 'page'));
     }
 
     public function checkout(Request $request)
