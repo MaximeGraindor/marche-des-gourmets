@@ -42,7 +42,7 @@
         @foreach ($allExhibitors as $exhibitor)
             <div class="exhibitors-item">
                 <span class="item-title">{{ $exhibitor->company_name ? $exhibitor->company_name : $exhibitor->firstname . ' ' . $exhibitor->name }}</span>
-                <span class="item-placement">Emplacement 15</span>
+                {{-- <span class="item-placement">Emplacement 15</span> --}}
                 <span class="item-country">{{ $exhibitor->country }}, {{ $exhibitor->location }}</span>
                 <span class="item-email">{{ $exhibitor->email }}</span>
                 <span class="item-website">{{ $exhibitor->website }}</span>
