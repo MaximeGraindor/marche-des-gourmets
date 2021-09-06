@@ -2,7 +2,7 @@
 @section('title', 'Accueil')
 @section('content')
     <h1 class="hidden" role="heading" aria-level="1">
-        Accueil - Marché des Gourmets
+        Accueil - <span itemprop="name">Marché des Gourmets</span>
     </h1>
     <x-header/>
     <main class="home">
@@ -14,7 +14,9 @@
         <div class="home-infos">
             <div class="infos-item item-date">
                 @if($currentEdition)
-                <span>{{ $editionDate }}</span>
+                <span itemprop="startDate">{{ $editionDate }}</span>
+                <span class="hidden" itemprop="startDate">{{ $currentEdition->start_date }}</span>
+                <span class="hidden" itemprop="endDate">{{ $currentEdition->end_date }}</span>
                 @else
                 <span>Pas d'édition en cours</span>
                 @endif
@@ -28,7 +30,7 @@
             </div>
             <div class="infos-item item-adress">
                 @if($currentEdition)
-                <span>{{ $currentEdition->adress }}</span>
+                <span itemprop="location">{{ $currentEdition->adress }}</span>
                 @else
                 <span>Pas d'édition en cours</span>
                 @endif

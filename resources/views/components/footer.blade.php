@@ -1,7 +1,9 @@
 <section class="home-partenaires">
     <div class="home-partenaires-wrapper">
         <h2 class="hidden partenaires-title" role="heading" aria-level="2">Nos partenaires</h2>
+        <span class="hidden" itemprop="sponsor">Province de Liège</span>
         <img src="/img/LogoProvinceDeLiege.png" alt="Logo de la Province de Liège">
+        <span class="hidden" itemprop="sponsor">club du Rotary de Flémalle</span>
         <img src="/img/LogoClub.png" alt="Logo du club du Rotary de Flémalle">
     </div>
 </section>
