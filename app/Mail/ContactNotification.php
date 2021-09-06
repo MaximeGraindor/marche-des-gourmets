@@ -28,7 +28,7 @@ class ContactNotification extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data['email'])
+        return $this->from('marchedesgourmets@gmail.com')
                     ->view('emails.contact')
                     ->subject('Vous avez un nouveau message')
                     ->with('data', $this->data);

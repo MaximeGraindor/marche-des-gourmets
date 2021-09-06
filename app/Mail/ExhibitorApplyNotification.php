@@ -30,7 +30,7 @@ class ExhibitorApplyNotification extends Mailable
      */
     public function build()
     {
-        return $this->from('example@example.com')
+        return $this->from('marchedesgourmets@gmail.com')
                     ->subject('Nouvelle candidature d\'exposant')
                     ->view('emails.exhibitorApply')->with('data', $this->data);
     }
